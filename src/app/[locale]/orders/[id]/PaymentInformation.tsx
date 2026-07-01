@@ -104,7 +104,7 @@ export default function PaymentInformation({ order, payment, refetch, confirmMod
   ];
 
   // Gambar bukti pembayaran yang bisa diklik untuk diperbesar.
-  const renderProofImage = () => (
+  const renderProofImage = (proofSrc: string) => (
     <div className="flex justify-center">
       <button
         type="button"
@@ -113,7 +113,7 @@ export default function PaymentInformation({ order, payment, refetch, confirmMod
         aria-label={t("viewProof")}
       >
         <Image
-          src={payment.paymentProof}
+          src={proofSrc}
           alt="Payment Proof"
           width={400}
           height={600}
@@ -219,7 +219,7 @@ export default function PaymentInformation({ order, payment, refetch, confirmMod
                 {t("pendingConfirmation")}
               </p>
             )}
-            {renderProofImage()}
+            {renderProofImage(payment.paymentProof)}
             <p className="text-xs text-gray-400 italic">{t("transactionId")}: {payment.transactionId}</p>
           </div>
         )}
@@ -237,7 +237,7 @@ export default function PaymentInformation({ order, payment, refetch, confirmMod
             <p className="text-xs sm:text-sm text-red-600">
               {t("rejected")}
             </p>
-            {renderProofImage()}
+            {renderProofImage(payment.paymentProof)}
             {payment.transactionId && (
               <p className="text-xs text-gray-400 italic">
                 {t("transactionId")}: {payment.transactionId}
