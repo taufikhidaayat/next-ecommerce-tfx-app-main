@@ -1,0 +1,1107 @@
+{
+    "wishlist": {
+        "title": "Wishlist",
+        "cardDescription": "Products you saved",
+        "viewAll": "View wishlist",
+        "add": "Add to wishlist",
+        "remove": "Remove from wishlist",
+        "added": "Added to wishlist",
+        "removed": "Removed from wishlist",
+        "error": "Failed to update wishlist",
+        "savedTitle": "Saved to Wishlist!",
+        "savedDesc": "This product has been saved.",
+        "pageTitle": "My Wishlist",
+        "pageSubtitle": "Products you saved for later.",
+        "emptyTitle": "Your wishlist is empty",
+        "emptyDescription": "Tap the <heart></heart> icon on a product page to save it here.",
+        "browseProducts": "Browse All Products",
+        "breadcrumb": {
+            "dashboard": "Home",
+            "profile": "Profile",
+            "wishlist": "Wishlist"
+        }
+    },
+    "login": {
+        "welcome": "Welcome Back",
+        "subtitle": "Login to your account",
+        "email": "Email",
+        "password": "Password",
+        "forgotPassword": "Forgot password?",
+        "loginButton": "Login",
+        "loggingIn": "Logging in...",
+        "newHere": "New Here?",
+        "createAccount": "Create your account and start shopping today!",
+        "createAccountButton": "Create an Account",
+        "backToDashboard": "Back to Home",
+        "fillAllFields": "Please fill in all fields.",
+        "success": "Login successful",
+        "failed": "Email or password is incorrect"
+    },
+    "register": {
+        "title": "Create Account",
+        "subtitle": "Join and get access to exclusive offers",
+        "name": "Full Name",
+        "email": "Email",
+        "phone": "Phone Number / WhatsApp",
+        "birthdate": "Birthdate",
+        "gender": "Gender",
+        "gender_male": "Male",
+        "gender_female": "Female",
+        "gender_other": "Prefer not to say",
+        "language": "Language Preference",
+        "optional": "optional",
+        "password": "Create Password",
+        "confirmPassword": "Confirm Password",
+        "signUpButton": "Sign Up",
+        "processing": "Processing...",
+        "alreadyMember": "Already a Member?",
+        "loginToContinue": "Log in to continue shopping with us.",
+        "continueToLogin": "Continue to Login",
+        "backToDashboard": "Back to Home",
+        "fillAllFields": "Please fill in all fields.",
+        "passwordsNotMatch": "Passwords do not match.",
+        "success": "Registration successful. Please check your email to verify your account.",
+        "failed": "Registration failed",
+        "unexpectedError": "Something went wrong. Try again, or use another email."
+    },
+    "forgotPassword": {
+        "title": "Reset Your Password",
+        "description": "Enter your email address, and we'll send you a link to reset your password.",
+        "emailPlaceholder": "Enter your email",
+        "sendButton": "Send Reset Link",
+        "sending": "Sending...",
+        "invalidEmail": "Please enter a valid email address.",
+        "successMessage": "If that email is registered, a reset link has been sent."
+    },
+    "resetPassword": {
+        "checkingLink": "Checking your reset link...",
+        "tokenInvalid": "Invalid or expired token. Redirecting to login.",
+        "tokenInvalidTitle": "Link Invalid or Expired",
+        "redirecting": "Redirecting to login...",
+        "title": "Reset Your Password",
+        "description": "Enter your new password below.",
+        "passwordPlaceholder": "Enter a strong password",
+        "confirmPasswordPlaceholder": "Re-enter your password",
+        "resetButton": "Reset Password",
+        "resetting": "Resetting...",
+        "passwordsNotMatch": "Passwords do not match",
+        "missingToken": "Invalid or missing token.",
+        "resetSuccessToast": "Password reset successful! Redirecting to login.",
+        "resetSuccessTitle": "Password Reset Successful",
+        "resetFailed": "Failed to reset password. Please try again."
+    },
+    "verify": {
+        "verifying": "Verifying your account...",
+        "successTitle": "Verification Successful",
+        "successMessage": "Your email has been successfully verified!",
+        "gotoLogin": "Go to Login",
+        "errorTitle": "Verification Failed",
+        "errorMessage": "Verification link is invalid or expired.",
+        "gotoRegister": "Back to Register"
+    },
+    "home": {
+        "navbar": {
+            "products": "Products",
+            "categories": "Categories",
+            "brands": "Brands",
+            "faqs": "FAQs",
+            "emailSupport": "Our Support",
+            "supportEmailUrl": "https://instagram.com/galeri_maduku"
+        },
+        "banner": {
+            "badge": "🎉 5% Off First Order",
+            "title": "Fresh Groceries Delivered at Amazing Prices",
+            "description": "Enjoy the best deals on top-quality groceries, delivered right to your doorstep. Shop now and save 5% on your first order!",
+            "cta": "Shop Now & Save 5%",
+            "imageAlt": "Delivery Hero",
+            "galeriMaduku": {
+                "badge": "Exclusive Brand",
+                "title": "Premium Selected Honey from Galeri Maduku",
+                "description": "Guaranteed quality in every drop — pure honey, carefully handpicked from trusted local beekeepers.",
+                "cta": "Shop Maduku Collection"
+            }
+        },
+        "categories": {
+            "title": "Shop by Categories",
+            "subtitle": "Explore a curated collection of top-quality products, tailored to your every need.",
+            "viewAll": "View All Categories",
+            "scrollLeft": "Scroll left",
+            "scrollRight": "Scroll right",
+            "galeriMaduku": {
+                "title": "Galeri Maduku",
+                "subtitle": "Exclusive brand"
+            },
+            "bread": {
+                "title": "Bread & Spreads",
+                "subtitle": "Bread, jams & spreads"
+            },
+            "beverages": {
+                "title": "Beverages",
+                "subtitle": "Refreshing drinks"
+            },
+            "instantFood": {
+                "title": "Instant Noodles",
+                "subtitle": "Quick & easy meals"
+            },
+            "snacks": {
+                "title": "Snacks",
+                "subtitle": "Treat yourself"
+            },
+            "homeEssentials": {
+                "title": "Home Essentials",
+                "subtitle": "Daily essentials"
+            },
+            "personalCare": {
+                "title": "Personal Care",
+                "subtitle": "Feel fresh"
+            },
+            "dairyProducts": {
+                "title": "Dairy Products",
+                "subtitle": "Milk & cheese"
+            }
+        },
+        "products": {
+            "title": "Recommended Product",
+            "subtitle": "Explore our top picks of high-quality products just for you",
+            "viewAll": "View All Products"
+        },
+        "brands": {
+            "title": "Shop by Brands",
+            "subtitle": "Discover top brands and shop the best products from trusted brands.",
+            "viewAll": "View All Brands"
+        },
+        "faq": {
+            "items": [
+                {
+                    "question": "Are organic products available?",
+                    "answer": "Yes, there are various options of organic fruits and vegetables clearly marked in the product categories."
+                },
+                {
+                    "question": "How to place an order?",
+                    "answer": "Orders can be placed easily and quickly through the website or app."
+                },
+                {
+                    "question": "Is there a minimum purchase for delivery?",
+                    "answer": "Yes, the minimum purchase for delivery service is Rp 200,000."
+                },
+                {
+                    "question": "How long does delivery take?",
+                    "answer": "Delivery time depends on location, usually within 1-3 business days."
+                },
+                {
+                    "question": "Can I pick up my order at the store?",
+                    "answer": "Yes. Choose the in-store pickup option when ordering, then collect your order at our store address."
+                },
+                {
+                    "question": "How do I earn points?",
+                    "answer": "You earn points by reviewing products you've purchased. Each review gives points that can be redeemed as a discount on your next order."
+                }
+            ]
+        },
+        "storeLocation": {
+            "title": "Store Location",
+            "subtitle": "Visit our store in person",
+            "openInMaps": "Open in Google Maps",
+            "directions": "Get Directions",
+            "addressFallback": "Store address not set yet"
+        }
+    },
+    "brands": {
+        "breadcrumb": {
+            "dashboard": "Home",
+            "brands": "Brands"
+        },
+        "title": "All Brands",
+        "subtitle": "Browse through our extensive range of top-quality brands, designed to meet all your needs.",
+        "notfound": {
+            "title": "Oops! Nothing Here",
+            "description": "Looks like there are no brands matching your search. Try changing the filters or searching something else."
+        },
+        "sort": {
+            "az": "A-Z",
+            "za": "Z-A"
+        },
+        "filter": {
+            "sortLabel": "Sort",
+            "searchPlaceholder": "Search brand..."
+        }
+    },
+    "categories": {
+        "breadcrumb": {
+            "dashboard": "Home",
+            "categories": "Categories"
+        },
+        "title": "All Categories",
+        "subtitle": "Browse through our wide range of categories to find the products you're looking for. From electronics to fashion, we've got it all!",
+        "tooltip": "Click to view products in this category"
+    },
+    "orders": {
+        "breadcrumb": {
+            "dashboard": "Home",
+            "orders": "Orders"
+        },
+        "timeline": {
+            "updatedBy": "Updated by {name}"
+        },
+        "title": "Your Orders",
+        "subtitle": "Here are the details of your recent purchases. Track shipping, view receipts, and stay updated on your order status.",
+        "tabs": {
+            "pending": "Pending",
+            "paid": "Paid",
+            "processing": "Processing",
+            "shipping": "On Shipping",
+            "completed": "Completed",
+            "canceled": "Canceled"
+        },
+        "statusMessages": {
+            "PENDING": {
+                "title": "No Pending Orders",
+                "description": "You have no orders waiting for payment confirmation."
+            },
+            "PAID": {
+                "title": "No Paid Orders",
+                "description": "You haven't made any payments yet."
+            },
+            "PROCESSING": {
+                "title": "No Orders Being Processed",
+                "description": "You have no orders currently being prepared."
+            },
+            "SHIPPED": {
+                "title": "No Shipped Orders",
+                "description": "You have no orders that are currently being shipped."
+            },
+            "COMPLETED": {
+                "title": "No Completed Orders",
+                "description": "You haven't completed any orders yet."
+            },
+            "CANCELLED": {
+                "title": "No Cancelled Orders",
+                "description": "You haven't cancelled any orders."
+            }
+        },
+        "item": {
+            "priceLabel": {
+                "retail": "Retail Price",
+                "wholesale": "Wholesale Price",
+                "default": "Price"
+            },
+            "subtotal": "Subtotal",
+            "delete": "Remove product",
+            "unnamed": "Unnamed Product"
+        }
+    },
+    "orderDetail": {
+        "page": {
+            "breadcrumb": {
+                "dashboard": "Home",
+                "orders": "Orders"
+            },
+            "title": "Your Order Details",
+            "subtitle": "Review your order summary, payment status, and delivery information below.",
+            "cancelledBannerTitle": "This order has been cancelled",
+            "cancelledBannerDesc": "This order was cancelled and is no longer being processed. You can reorder the items if needed.",
+            "processingBannerTitle": "Payment approved",
+            "processingBannerDesc": "Your order is now being processed. Please wait a moment, we'll get it ready shortly.",
+            "processingBannerDescDelivery": "Your order is being prepared. Once it's ready, we'll deliver it to your address shortly.",
+            "readyPickupBannerTitle": "Order Ready for Pickup!",
+            "readyPickupBannerDesc": "Your order is ready. Please come pick it up at the store.",
+            "readyPickupHours": "Store hours: 07.00 – 20.00 (GMT+7)",
+            "onDeliveryBannerTitle": "Your Order Is on the Way!",
+            "onDeliveryBannerDesc": "We're on our way to deliver your order to your address. Please make sure someone is available to receive it.",
+            "deliveredBannerTitle": "Order Delivered!",
+            "deliveredBannerDesc": "Your order has arrived. Thank you for shopping with us, don't forget to leave a review!",
+            "deliveredAtLabel": "Delivered at"
+        },
+        "info": {
+            "title": "Order Information",
+            "orderNumber": "Order Number",
+            "orderDate": "Order Date",
+            "lastUpdated": "Last Updated",
+            "customerName": "Customer Name"
+        },
+        "history": {
+            "title": "Order History",
+            "completed": "Order completed successfully.",
+            "shipped": "Order has been shipped.",
+            "processing": "Order is being prepared.",
+            "readyForPickup": "Order is ready for pickup.",
+            "onDelivery": "Order is on the way.",
+            "delivered": "Order has been delivered.",
+            "paid": "Payment has been confirmed.",
+            "pending": "Order was created. Awaiting payment.",
+            "cancelled": "Order has been cancelled.",
+            "paymentProofSubmitted": "Payment proof is submitted and waiting for verification."
+        },
+        "returns": {
+            "title": "Returns",
+            "description": "Below is the record of returns you made in-store. Thank you for your confirmation.",
+            "quantity": "Returned Quantity",
+            "reason": "Reason",
+            "itemsCount": "{count} item returned",
+            "viewPhoto": "View proof photo",
+            "closePreview": "Close preview",
+            "today": "Today",
+            "yesterday": "Yesterday",
+            "daysAgo": "{days} days ago",
+            "weeksAgo": "{weeks} weeks ago",
+            "monthsAgo": "{months} months ago"
+        },
+        "returnInfo": {
+            "title": "Need to Return an Item?",
+            "description": "Just bring the damaged item to the store and we'll help with the process. Items that are not damaged cannot be returned.",
+            "badge": "Returns are handled at the store",
+            "hours": "Open 07.00 – 20.00 (GMT+7)"
+        },
+        "summary": {
+            "title": "Order Summary",
+            "totalPrice": "Total Price",
+            "deliveryFee": "Delivery Fee",
+            "free": "Free",
+            "pointsUsed": "Points Discount",
+            "firstPurchaseDiscount": "New Customer Discount ({percent}%)",
+            "tax": "Admin Fee",
+            "total": "Total",
+            "orderAgain": "Order Again",
+            "leaveReview": "Write Review",
+            "updateReview": "Edit Review",
+            "reviewFinal": "Reviews Final",
+            "reviewLocked": "Reviews are final. Each item can only be edited once.",
+            "completePayment": "Complete Your Payment",
+            "cancelOrder": "Cancel Order",
+            "cannotCancelNotice": "Orders that have been paid cannot be cancelled. If you need assistance, please contact our admin.",
+            "waitingVerificationNotice": "Thank you for shopping at Toko Langgananku. Please wait for our admin to verify your payment. We'll process it as soon as possible."
+        },
+        "modal": {
+            "reorderTitle": "Reorder Items",
+            "reorderMessage": "Reordering these items will replace everything in your cart. Are you sure you want to continue?",
+            "reorderConfirmButton": "Reorder",
+            "cancelTitle": "Cancel Order",
+            "cancelMessage": "Are you sure you want to cancel this order? This action cannot be undone.",
+            "cancelConfirmButton": "Yes, Cancel Order"
+        },
+        "payment": {
+            "title": "Payment Information",
+            "method": {
+                "bankTransfer": "Bank Transfer",
+                "qris": "QRIS"
+            },
+            "changeInfo": "* You can change your payment method only once every 5 minutes, with a maximum of 3 changes in total.",
+            "waitInfo": "* You can change your payment method again in {time}.",
+            "limitInfo": "* You can no longer change your payment method because it has been updated 3 times.",
+            "confirmTitle": "Confirm Payment Method Change",
+            "confirmMessage": "Are you sure you want to change your payment method?",
+            "confirmButton": "Confirm",
+            "cancelledTitle": "Payment cancelled",
+            "cancelledDesc": "You can no longer change your payment method.",
+            "pendingConfirmation": "Your payment has been received and is pending confirmation from the admin.",
+            "confirmed": "Payment confirmed. Your order is now being prepared.",
+            "rejected": "This payment has been rejected because the proof of payment provided could not be verified or was deemed invalid.",
+            "posPaid": "This order has been marked as paid, but no transaction record is linked because it was processed through the POS system.",
+            "transactionId": "Transaction ID",
+            "viewProof": "Enlarge payment proof",
+            "toast": {
+                "success": "Payment method updated successfully.",
+                "error": "Failed to update payment method."
+            }
+        },
+        "toast": {
+            "reorderSuccess": "Product reordered! Take a look at your cart to see it.",
+            "reorderFailed": "Failed to reorder!",
+            "cancelSuccess": "Order has been cancelled successfully.",
+            "cancelFailed": "Failed to cancel order."
+        },
+        "reviews": {
+            "title": "Your Reviews",
+            "subtitle": "Click to see other reviews on the product page",
+            "public": "Public",
+            "private": "Anonymous",
+            "seeAllReviews": "See all reviews",
+            "reviewCount": "review",
+            "reviewCountPlural": "reviews"
+        }
+    },
+    "products": {
+        "frequentlyBoughtTogether": "You May Also Like",
+        "addAllToCart": "Add All",
+        "addAllSuccess": "{count} products added to cart",
+        "page": {
+            "breadcrumb": {
+                "dashboard": "Home",
+                "products": "Products"
+            },
+            "title": "All Products",
+            "subtitle": "Browse through our extensive range of top-quality products, designed to meet all your needs.",
+            "searching": "Searching for products with name",
+            "clearSearch": "Clear Search",
+            "resultCount": "Showing {count} products",
+            "resultCountSearch": "Showing {count} most relevant products",
+            "similarHeading": "Similar Products",
+            "similarSubtitle": "These might also match your search",
+            "notfound": {
+                "title": "Oops! Nothing Here",
+                "description": "Looks like there are no products matching your search. Try changing the filters or searching something else."
+            }
+        },
+        "filter": {
+            "category": "Category",
+            "brand": "Brand",
+            "priceRange": {
+                "label": "Price Range",
+                "under-10000": "Less than Rp 10,000",
+                "10000-50000": "Rp 10,000 - Rp 50,000",
+                "50000-100000": "Rp 50,000 - Rp 100,000",
+                "above-100000": "More than Rp 100,000"
+            },
+            "sort": {
+                "label": "Sort",
+                "DESC": "Newest",
+                "ASC": "Oldest"
+            },
+            "all": "All",
+            "searchInDropdown": "Search...",
+            "noResults": "No results",
+            "filterButton": "Filter",
+            "sheetTitle": "Filter Products",
+            "apply": "Apply",
+            "reset": "Reset",
+            "activeFilters": "{count} active filters"
+        },
+        "detail": {
+            "breadcrumb": {
+                "dashboard": "Home",
+                "products": "Products"
+            },
+            "imageAlt": "Product Image",
+            "off": "Off",
+            "stockInfo": "There are {remaining} items remaining",
+            "totalPrice": "Total Price:",
+            "quantity": "Quantity",
+            "outOfStock": "Out of stock",
+            "invalidQuantity": "Quantity exceeds available stock",
+            "bulkStockInsufficient": "Not enough stock for wholesale price (min. {qty})"
+        },
+        "button": {
+            "addCart": "Add to Cart",
+            "addCartShort": "Cart",
+            "adding": "Adding...",
+            "addCartSuccess": "Product added to cart successfully!",
+            "addCartFail": "Failed to add product to cart.",
+            "buyNow": "Buy Now",
+            "loginRequired": "Login to Continue",
+            "loginRequiredMsg": "To continue, please sign in to your account. It only takes a moment.",
+            "login": "Sign In"
+        },
+        "review": {
+            "title": "See What Others Are Saying",
+            "subtitle": "Discover honest experiences and real insights shared by our valued customers.",
+            "reviewsHeading": "Customer Reviews",
+            "sort": {
+                "label": "Sort",
+                "newest": "Newest",
+                "oldest": "Oldest",
+                "highest": "Highest rating",
+                "lowest": "Lowest rating"
+            },
+            "filter": {
+                "title": "Filter Reviews",
+                "reset": "Reset Filter",
+                "review": "Review",
+                "withMedia": "With Review",
+                "rating": "Rating"
+            },
+            "ratingCount": "reviews",
+            "satisfactionLabel": {
+                "noRating": "No ratings yet",
+                "poor": "Poor quality",
+                "below": "Below expectations",
+                "average": "Average experience",
+                "good": "Good product",
+                "excellent": "Excellent product"
+            }
+        }
+    },
+    "profile": {
+        "page": {
+            "breadcrumb": {
+                "dashboard": "Home",
+                "profile": "Profile"
+            },
+            "title": "My Profile",
+            "subtitle": "View and update your personal information to keep your account accurate and secure."
+        },
+        "avatar": {
+            "alt": "User Avatar",
+            "upload": "Change Photo",
+            "updating": "Uploading...",
+            "change": "Change",
+            "delete": "Remove Photo",
+            "deleteConfirmTitle": "Remove Profile Photo?",
+            "deleteConfirmMessage": "Your profile photo will be removed and replaced with the default photo.",
+            "verified": "Verified Account"
+        },
+        "points": {
+            "title": "My Points",
+            "description": "Write reviews to earn points, redeem at checkout",
+            "viewHistory": "View point history"
+        },
+        "pointsHistory": {
+            "breadcrumb": {
+                "dashboard": "Home",
+                "profile": "Profile",
+                "points": "Point History"
+            },
+            "back": "Back to Profile",
+            "title": "Point History",
+            "subtitle": "View all your point transactions — from reviews, checkouts, and adjustments.",
+            "currentBalance": "Current Balance",
+            "balanceHint": "1 point = Rp 1. Use for discount on your next order.",
+            "historyTitle": "Activity",
+            "loading": "Loading...",
+            "empty": "No point transactions yet. Start shopping and writing reviews!",
+            "prev": "Previous",
+            "next": "Next",
+            "pageOf": "Page {current} of {total}",
+            "typeLabel": {
+                "EARN_REVIEW": "Earned from review",
+                "REDEEM_ORDER": "Redeemed at checkout",
+                "ADJUST": "Admin adjustment"
+            }
+        },
+        "form": {
+            "general": "General Settings",
+            "personal": "Personal Details",
+            "language": "Language Preference",
+            "languagePlaceholder": "Select language",
+            "name": "Full Name",
+            "namePlaceholder": "Your name",
+            "email": "Email",
+            "emailPlaceholder": "you@example.com",
+            "phone": "Phone Number / WhatsApp",
+            "phonePlaceholder": "81234567890",
+            "address": "Address",
+            "addressPlaceholder": "Enter your address",
+            "birthDate": "Birthdate",
+            "gender": "Gender",
+            "genderPlaceholder": "Select gender",
+            "gender_male": "Male",
+            "gender_female": "Female",
+            "gender_other": "Prefer not to say"
+        },
+        "password": {
+            "title": "Change Password",
+            "currentPassword": "Current Password",
+            "currentPasswordPlaceholder": "Enter your current password",
+            "newPassword": "New Password",
+            "newPasswordPlaceholder": "Enter your new password",
+            "confirmPassword": "Confirm New Password",
+            "confirmPasswordPlaceholder": "Re-enter your new password",
+            "changeButton": "Change Password",
+            "changing": "Changing...",
+            "success": "Password changed successfully.",
+            "failed": "Failed to change password.",
+            "allFieldsRequired": "Please fill in all password fields.",
+            "minLength": "New password must be at least 6 characters.",
+            "mismatch": "New password and confirmation do not match.",
+            "sameAsOld": "New password cannot be the same as the old password.",
+            "currentIncorrect": "Current password is incorrect.",
+            "changeInfo": "You can only change your password 3 times per account.",
+            "waitInfo": "You can change your password again in {time}.",
+            "limitInfo": "You've reached the maximum of 3 password changes for this account.",
+            "confirmTitle": "Confirm Password Change",
+            "confirmMessage": "Are you sure you want to change your password now?",
+            "confirmButton": "Yes, Change"
+        },
+        "button": {
+            "save": "Save Changes",
+            "saving": "Saving...",
+            "updateSuccess": "User profile updated successfully.",
+            "updateFail": "Failed to update user profile.",
+            "avatarSuccess": "Avatar updated successfully.",
+            "avatarDeleteSuccess": "Profile photo removed successfully.",
+            "avatarFail": "Failed to upload avatar."
+        },
+        "address": {
+            "title": "My Addresses",
+            "subtitle": "Manage your delivery addresses",
+            "addNew": "Add New Address",
+            "edit": "Edit",
+            "delete": "Delete",
+            "setDefault": "Set as Default",
+            "default": "Default",
+            "empty": "No saved addresses",
+            "emptyDesc": "Add a delivery address for faster checkout.",
+            "label": "Address Label",
+            "labelPlaceholder": "e.g. Home, Office, Apartment",
+            "recipientName": "Recipient Name",
+            "recipientNamePlaceholder": "Full name of recipient",
+            "phone": "Phone Number / WhatsApp",
+            "phonePlaceholder": "08xxxxxxxxxx",
+            "address": "Address Details",
+            "addressPlaceholder": "Street name, number, district...",
+            "selectLocation": "Select Location on Map",
+            "locationRequired": "Location must be selected on the map",
+            "saveAddress": "Save Address",
+            "saving": "Saving...",
+            "addSuccess": "Address added successfully",
+            "addFail": "Failed to add address",
+            "updateSuccess": "Address updated successfully",
+            "updateFail": "Failed to update address",
+            "deleteSuccess": "Address deleted successfully",
+            "deleteFail": "Failed to delete address",
+            "deleteConfirm": "Are you sure you want to delete this address?",
+            "deleteTitle": "Delete Address",
+            "defaultSuccess": "Default address updated",
+            "defaultFail": "Failed to set default address",
+            "maxReached": "Maximum 5 addresses reached",
+            "useMyLocation": "Use Current Location",
+            "verifyLocation": "Verify with Current Location",
+            "verifying": "Verifying...",
+            "locationMatch": "Location matches your current position",
+            "locationMismatch": "Location does not match your current position (distance: {distance} km)",
+            "editTitle": "Edit Address",
+            "addTitle": "Add New Address",
+            "locationTitle": "New Address",
+            "viewOnMaps": "View on Maps",
+            "fromStore": "from store",
+            "inRange": "In range",
+            "outOfRange": "Out of range",
+            "contactSection": "Contact Information",
+            "addressSection": "Address Details",
+            "settingsSection": "Settings",
+            "region": "Province, City, District, Postal Code",
+            "regionPlaceholder": "Select province, city, district, postal code",
+            "regionTitle": "Select Region",
+            "province": "Province",
+            "regencyStep": "City / Regency",
+            "districtStep": "District",
+            "villageStep": "Village / Subdistrict",
+            "selectRegency": "Select City / Regency",
+            "selectDistrict": "Select District",
+            "selectVillage": "Select Village / Subdistrict",
+            "postalCode": "Postal Code",
+            "postalCodePlaceholder": "e.g. 55653",
+            "postalSearching": "Looking up postal code…",
+            "postalPick": "Pick the matching postal code:",
+            "postalManual": "Postal code not listed? Type manually",
+            "postalBackToList": "Pick from the postal code list",
+            "regionSearchPlaceholder": "Search...",
+            "regionLoading": "Loading regions...",
+            "regionEmpty": "No data found",
+            "regionError": "Failed to load regions. Check your internet connection.",
+            "street": "Street Name, Building, House No.",
+            "streetPlaceholder": "e.g. Jl. Melati No. 10, Building A",
+            "detail": "Other Details",
+            "detailPlaceholder": "e.g. Block / Unit No., Landmark (optional)",
+            "pinpointTitle": "Pinpoint Location",
+            "pinpointDesc": "Mark the exact spot on the map for accurate delivery",
+            "pinpointSet": "Location pinpointed",
+            "pinpointButton": "Pick Location on Map",
+            "pinpointChange": "Change Pinpoint",
+            "mapTitle": "Set Location Point",
+            "mapConfirm": "Use This Location",
+            "markAs": "Mark As",
+            "labelHome": "Home",
+            "labelOffice": "Office",
+            "labelOther": "Other",
+            "labelOtherPlaceholder": "Type a label (e.g. Boarding house, Apartment)",
+            "next": "Next",
+            "back": "Back",
+            "cancel": "Cancel",
+            "confirm": "Confirm",
+            "regionRequired": "Complete the region (city, district, village, postal code)",
+            "streetRequired": "Street name is required",
+            "phoneInvalid": "Please enter a valid number",
+            "pinpointRequired": "Pinpoint the location on the map first",
+            "selectedCoordinate": "Selected coordinate",
+            "locationSearchTitle": "Search Address",
+            "recommendations": "Place recommendations based on your address",
+            "searchTyping": "Type a street or place name to see recommendations",
+            "searchNoResults": "No place found. Tap \"Next\" to drop the pin manually on the map.",
+            "searchBusy": "Search is busy right now. Please wait a moment and try again.",
+            "searching": "Searching...",
+            "nextStep": "Next",
+            "selectedAddressTitle": "Selected Address",
+            "pinHere": "Your address is here",
+            "pinCheck": "Please double-check the location on the map",
+            "confirmLocationTitle": "Please confirm your location matches the map",
+            "confirmLocationMessage": "The map location must match the address for delivery to succeed.",
+            "change": "Change",
+            "locationMarked": "Location marked",
+            "streetEmpty": "Tap to search & mark location",
+            "detectingLocation": "Detecting location...",
+            "reset": "Reset",
+            "locateDenied": "Location access denied. Enable location permission in your browser.",
+            "locateTimeout": "Location request timed out. Please try again.",
+            "locateUnavailable": "Location is unavailable right now. Try again or pick a region manually.",
+            "locateOutside": "Detected location is outside DI Yogyakarta. Please select manually.",
+            "nearbyTitle": "Recommendations near you",
+            "useCurrentLocationDesc": "Auto-detect your city & district"
+        }
+    },
+    "loading": {
+        "title": "Please Wait, Loading...",
+        "desc": "We are preparing the best content for you. This process may take a few seconds. Thank you for your patience!"
+    },
+    "notFound": {
+        "imageAlt": "Not Found",
+        "title": "Oops! The page you're looking for cannot be found.",
+        "desc": "It seems like the page you were trying to reach doesn't exist or has been moved. Please check the URL or return to the homepage.",
+        "backToDashboard": "Back to Home"
+    },
+    "header": {
+        "logoAlt": "Shop Logo",
+        "shipFromLabel": "Shipping from",
+        "shipFromCity": "Yogyakarta",
+        "orders": "My Orders",
+        "points": "Points",
+        "cartPreviewTitle": "Recently Added",
+        "viewCart": "View Shopping Cart",
+        "cartEmptyShort": "Your cart is empty",
+        "cartMoreItems": "+{count} more items"
+    },
+    "button": {
+        "login": "Login",
+        "register": "Register",
+        "cart": "Cart",
+        "profile": "Profile"
+    },
+    "bottomNav": {
+        "home": "Home",
+        "categories": "Categories",
+        "products": "Products",
+        "cart": "Cart",
+        "orders": "Orders",
+        "profile": "Profile"
+    },
+    "searchBar": {
+        "placeholder": "Search your products, Categories or Brands",
+        "inputLabel": "Search input",
+        "search": "Search",
+        "clear": "Clear search"
+    },
+    "searchModal": {
+        "products": "Products",
+        "brands": "Brands",
+        "categories": "Categories"
+    },
+    "profileMenu": {
+        "profile": "Profile",
+        "orders": "Order List",
+        "logout": "Logout",
+        "logoutSuccess": "Logout successful",
+        "logoutConfirmTitle": "Sign Out?",
+        "logoutConfirmMessage": "Are you sure you want to sign out of your account?",
+        "logoutConfirmButton": "Yes, Sign Out"
+    },
+    "cart": {
+        "title": "Shopping Cart",
+        "emptyTitle": "Your cart is still empty",
+        "emptyDesc": "Let’s explore some awesome products and add them to your cart!",
+        "browseProducts": "Browse Products",
+        "cartEmpty": "Your cart is empty.",
+        "checkoutSuccess": "Checkout success!",
+        "checkoutFailed": "Failed to checkout.",
+        "updateFailed": "Failed to update cart.",
+        "deleteFailed": "Failed to delete cart.",
+        "exceedsStock": "Item quantity exceeds available stock",
+        "firstPurchaseBanner": "First Purchase Discount!",
+        "firstPurchaseBannerDesc": "You get {percent}% discount on this order as a new customer!",
+        "firstPurchaseWarning": "Make sure your order is correct. The first purchase discount can only be used once and will be forfeited after you click checkout.",
+        "loading": "Loading cart...",
+        "select": "Select",
+        "edit": "Edit",
+        "cancelSelect": "Cancel",
+        "selectAll": "Select All",
+        "selectedCount": "{count} selected",
+        "deleteSelected": "Delete ({count})",
+        "deleteAll": "Delete All",
+        "confirmDeleteSelectedTitle": "Delete Selected Items?",
+        "confirmDeleteSelectedMessage": "Selected items will be removed from your cart.",
+        "confirmDeleteAllTitle": "Delete All Items?",
+        "confirmDeleteAllMessage": "All items will be removed from your cart.",
+        "deleteSelectedFailed": "Failed to delete selected items."
+    },
+    "cartItem": {
+        "retail": "Retail Price",
+        "wholesale": "Wholesale Price",
+        "price": "Price",
+        "productImage": "Product Image",
+        "unnamed": "Unnamed Product",
+        "subtotal": "Subtotal",
+        "delete": "Delete",
+        "decrease": "Decrease quantity",
+        "increase": "Increase quantity",
+        "quantity": "Quantity",
+        "seeAll": "See All ({count})"
+    },
+    "cartPayment": {
+        "title": "Payment Details",
+        "methodLabel": "Payment Method",
+        "bank": "Bank",
+        "qris": "QRIS",
+        "noteLabel": "Message",
+        "notePlaceholder": "Leave a note for the seller",
+        "originalPrice": "Original Price",
+        "discount": "Discount",
+        "deliveryFee": "Delivery Fee",
+        "free": "Free",
+        "total": "Total",
+        "checkout": "Checkout Now",
+        "processing": "Processing...",
+        "firstPurchaseTitle": "First Purchase Discount!",
+        "firstPurchaseDesc": "You get {percent}% off on your first order!",
+        "firstPurchaseDiscount": "New Customer ({percent}%)",
+        "youSave": "You save",
+        "pointsRedeemed": "Points Redeemed ({count})",
+        "points": {
+            "title": "Use My Points",
+            "balance": "Balance: {count} points",
+            "useMax": "Use Max",
+            "hint": "Maximum {max} points (50% of total). 1 point = Rp 1.",
+            "zeroWarning": "Enter a points amount or turn off the toggle. 0 points won't be applied."
+        }
+    },
+    "delivery": {
+        "orderType": "Order Type",
+        "pickup": "Pickup",
+        "delivery": "Delivery",
+        "phone": "Phone Number / WhatsApp",
+        "address": "Delivery Address",
+        "addressPlaceholder": "e.g., Jl. Mawar No. 10, RT 02/03",
+        "deliveryNotes": "Notes for Driver",
+        "deliveryNotesPlaceholder": "e.g., House with black fence, next to the mosque",
+        "selectLocation": "Pin Your Location",
+        "useMyLocation": "Use My Location",
+        "detecting": "Detecting location...",
+        "tapToSelect": "Tap on the map to select location, or drag the marker",
+        "distanceToStore": "Distance to Store",
+        "tooFar": "Your location is outside the delivery area (max {radius} km)",
+        "minPurchaseNotMet": "Minimum purchase for delivery: {amount}",
+        "remaining": "You need {amount} more",
+        "eligible": "Your location is eligible for free delivery!",
+        "geolocationNotSupported": "Geolocation is not supported by your browser",
+        "geolocationDenied": "Location access denied. Please enable location in your browser settings.",
+        "selectSavedAddress": "Select Saved Address",
+        "selectEligibleAddress": "Select a Saved Address in Range",
+        "selectAddressPlaceholder": "Choose delivery address...",
+        "noSavedAddress": "No saved addresses.",
+        "setupAddressFirst": "Set up address in Profile first",
+        "noEligibleAddressTitle": "Your Location Is Out of Range",
+        "noEligibleAddressDesc": "Your saved address is outside our delivery range (max {radius} km from the store). No worries, you can still choose Pickup!",
+        "goToProfile": "Go to Profile",
+        "deliveryInfo": "Delivery Information",
+        "deliveryProof": "Delivery Proof",
+        "deliveredAt": "Delivered At"
+    },
+    "orderList": {
+        "hide": "Hide",
+        "seeAll": "See all ({count})",
+        "total": "Total",
+        "editReview": "Edit Review",
+        "writeReview": "Write Review",
+        "reviewFinal": "Reviews Final",
+        "reviewLocked": "Reviews are final. Each item can only be edited once.",
+        "details": "Details",
+        "delivery": "Delivery",
+        "pickup": "Pickup"
+    },
+    "orderStatus": {
+        "pending": "Waiting for Payment",
+        "paid": "Paid",
+        "processing": "Processing",
+        "readyForPickup": "Ready for Pickup",
+        "shipped": "Shipped",
+        "onDelivery": "On Delivery",
+        "delivered": "Delivered",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "verifying": "Verifying Payment"
+    },
+    "reviewModal": {
+        "updateTitle": "Update Your Review",
+        "reviewTitle": "Review Your Order",
+        "selectProduct": "Select Product",
+        "selectProductPlaceholder": "Select a Product",
+        "reviewed": "Reviewed",
+        "edited": "Edited",
+        "productImage": "Product Image",
+        "updateRating": "Update your rating for this product",
+        "rateProduct": "How would you rate this product?",
+        "review": "Review (optional)",
+        "reviewPlaceholder": "Write your product review...",
+        "shareProfile": "Show my name on this review",
+        "updateBtn": "Update Review",
+        "submitBtn": "Submit Review",
+        "cancel": "Cancel",
+        "updating": "Updating...",
+        "submitting": "Submitting...",
+        "updateSuccess": "Review updated successfully",
+        "updateFailed": "Failed to update review",
+        "addSuccess": "Review added successfully",
+        "addFailed": "Failed to add review",
+        "pointsBannerTitle": "Earn loyalty points",
+        "pointsBannerBody": "Write at least {min} characters to earn 1% in points from this item's price.",
+        "pointsAlreadyAwardedTitle": "Points already awarded",
+        "pointsAlreadyAwardedBody": "You already earned {points} points from this review. Updates won't award more points.",
+        "charCountForPoints": "{current}/{min} characters to earn points",
+        "needRatingForPoints": "Give a star rating to earn points",
+        "charReady": "Ready to earn points",
+        "estimatedPoints": "Estimate: +{points} points",
+        "pointsEarnedToast": "Review submitted! +{points} points",
+        "pointsUpdatedToast": "Review updated! +{points} points"
+    },
+    "orderFlow": {
+        "waitingPayment": "Waiting for Payment",
+        "verifyingPayment": "Payment Being Verified",
+        "preparingOrder": "Preparing Your Order",
+        "readyForPickup": "Ready for Pickup",
+        "onDelivery": "On Delivery",
+        "delivered": "Delivered",
+        "completed": "Order Completed",
+        "cancelled": "Order Cancelled"
+    },
+    "confirmModal": {
+        "title": "Confirmation",
+        "message": "Are you sure you want to proceed?",
+        "confirmButton": "Yes, Change",
+        "cancelButton": "Cancel",
+        "processing": "Processing..."
+    },
+    "checkoutConfirm": {
+        "title": "Order Confirmation",
+        "subtitle": "Please make sure your order details are correct",
+        "items": "Product",
+        "itemCount": "{count} item(s)",
+        "paymentMethod": "Payment Method",
+        "bankTransfer": "Bank Transfer",
+        "orderType": "Order Type",
+        "pickup": "Pickup at Store",
+        "delivery": "Delivery",
+        "total": "Total Payment",
+        "cancel": "Cancel",
+        "confirm": "Place Order",
+        "processing": "Processing..."
+    },
+    "paymentProof": {
+        "qrisTitle": "QRIS Payment",
+        "bankTitle": "Bank Transfer",
+        "qrisAlt": "QRIS Code",
+        "accountNumber": "Account Number",
+        "accountName": "Account Name",
+        "copy": "Copy",
+        "copied": "Copied",
+        "copiedToClipboard": "Copied to clipboard",
+        "copyFailed": "Failed to copy. Please copy manually.",
+        "uploadLabel": "Upload Payment Proof",
+        "amountLabel": "Amount to transfer",
+        "uniqueCodeNotice": "Includes a unique code of +{code}. Please transfer the exact amount shown.",
+        "cancel": "Cancel",
+        "submit": "Submit Payment",
+        "uploading": "Uploading...",
+        "fileRequired": "File is required",
+        "success": "Payment was submitted successfully!",
+        "failed": "Failed to submit your payment. Please try again.",
+        "noBankAccount": "No bank account available.",
+        "viewProof": "View proof",
+        "alreadySubmitted": "Payment proof has already been submitted and is awaiting verification."
+    },
+    "feedback": {
+        "state": {
+            "loadingAlt": "Loading...",
+            "errorAlt": "Error illustration",
+            "errorTitle": "Something Went Wrong",
+            "errorDesc": "An unexpected error occurred. Please try again later or contact support if the issue persists."
+        },
+        "notFound": {
+            "alt": "Data Not Found",
+            "title": "Data Not Found",
+            "desc": "We couldn't find any data to display. Please try again later or return to the homepage."
+        },
+        "errorPage": {
+            "title": "Oops! Something Went Wrong",
+            "desc": "Sorry, there was an error while loading the page. Please try reloading to continue.",
+            "reload": "Reload Now"
+        }
+    },
+    "registerSuccess": {
+        "title": "Registration Successful",
+        "desc": "We’ve sent a verification link to your email. Please check your inbox or spam folder to activate your account.",
+        "login": "Continue to Login"
+    },
+    "groceryOffer": {
+        "regularPrice": "Buy at regular price",
+        "bulkTitle": "Buy {qty} or more",
+        "savePercent": "Save {percent}%",
+        "bestDeal": "Best Seller",
+        "saveLabel": "Save",
+        "bulkBenefit": {
+            "discount": "Save more with bigger discounts"
+        },
+        "regularBenefit": {
+            "noDiscount": "No additional discounts available"
+        },
+        "discountLabel": "(Product discount of {percent}%)",
+        "bulkDiscountLabel": "(Bulk discount of {percent}%)"
+    },
+    "buyNow": {
+        "title": "Buy Now",
+        "success": "Checkout success!",
+        "failed": "Failed to checkout.",
+        "exceedStock": "Item quantity exceeds available stock.",
+        "minQuantity": "Quantity must be at least 1."
+    },
+    "brandCard": {
+        "tooltip": "Click to view products in this brand"
+    },
+    "reviewView": {
+        "notFoundTitle": "No reviews yet",
+        "notFoundDesc": "Purchase this product and be the first to share your experience!"
+    },
+    "reviewCard": {
+        "report": "Report this review",
+        "reported": "Review reported!",
+        "reportFailed": "Failed to send report",
+        "reportSelfDisabled": "You can't report your own review",
+        "edited": "(Edited)",
+        "yourReview": "Your Review"
+    },
+    "reportReviewModal": {
+        "title": "Report review",
+        "subtitle": "Help us keep reviews high-quality. Pick the most relevant reason.",
+        "reasonLabel": "Reason",
+        "reasons": {
+            "SPAM": "Spam or promotion",
+            "ABUSIVE": "Abusive language",
+            "IRRELEVANT": "Not relevant to the product",
+            "MISLEADING": "Misleading / fake",
+            "OTHER": "Other"
+        },
+        "noteLabel": "Additional note (optional)",
+        "noteLabelRequired": "Explain your reason",
+        "notePlaceholder": "Add context for the admin...",
+        "cancel": "Cancel",
+        "submit": "Send report",
+        "submitting": "Sending...",
+        "needReason": "Pick a reason first",
+        "needNote": "Please explain your reason (min 5 characters)"
+    },
+    "footer": {
+        "description": "Shop your daily essentials easily and quickly. Quality products, affordable prices, reliable delivery.",
+        "quickLinks": "Quick Links",
+        "products": "Products",
+        "categories": "Categories",
+        "brands": "Brands",
+        "orders": "My Orders",
+        "support": "Support",
+        "faq": "FAQ",
+        "emailSupport": "Our Support",
+        "profile": "My Profile",
+        "contactUs": "Contact Us",
+        "contactEmail": "articlehub@gmail.com",
+        "contactPhone": "0812 2830 239",
+        "chatAdmin": "Chat Store Admin",
+        "contactAddress": "Yogyakarta, Indonesia",
+        "copyright": "Copyright © {year} All rights reserved.",
+        "madeWith": "Made with"
+    }
+}

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 480" width="1600" height="480" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a3d2e"/>
+      <stop offset="100%" stop-color="#052e1f"/>
+    </linearGradient>
+    <pattern id="grid1" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#fbbf24" stroke-width="0.5" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="480" fill="url(#bg1)"/>
+  <rect width="1600" height="480" fill="url(#grid1)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="480" fill="#fbbf24"/>
+
+  <!-- ==== LEFT: BRAND BLOCK ==== -->
+  <g transform="translate(80, 130)">
+    <!-- Small dot indicator -->
+    <circle cx="0" cy="-30" r="6" fill="#fbbf24"/>
+    <text x="20" y="-23" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="16" font-weight="700" fill="#fbbf24" letter-spacing="3">PROMO PERDANA</text>
+
+    <text x="0" y="50" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="58" font-weight="900" fill="#ffffff" letter-spacing="-1">TOKO</text>
+    <text x="0" y="105" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="34" font-weight="700" fill="#ffffff" letter-spacing="2">LANGGANANKU</text>
+
+    <line x1="0" y1="135" x2="120" y2="135" stroke="#fbbf24" stroke-width="3"/>
+
+    <!-- USP 1 -->
+    <g transform="translate(0, 165)">
+      <circle cx="11" cy="0" r="11" fill="#fbbf24"/>
+      <path d="M 6 0 L 10 4 L 16 -4" stroke="#064e3b" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="6" font-family="'Inter', 'Segoe UI', sans-serif"
+            font-size="17" font-weight="800" fill="#ffffff" letter-spacing="2">GROSIR DAN ECERAN</text>
+    </g>
+
+    <!-- USP 2 -->
+    <g transform="translate(0, 200)">
+      <circle cx="11" cy="0" r="11" fill="#fbbf24"/>
+      <path d="M 6 0 L 10 4 L 16 -4" stroke="#064e3b" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="6" font-family="'Inter', 'Segoe UI', sans-serif"
+            font-size="17" font-weight="800" fill="#fbbf24" letter-spacing="2">TERLENGKAP</text>
+    </g>
+
+    <!-- USP 3 -->
+    <g transform="translate(0, 235)">
+      <circle cx="11" cy="0" r="11" fill="#fbbf24"/>
+      <path d="M 6 0 L 10 4 L 16 -4" stroke="#064e3b" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="6" font-family="'Inter', 'Segoe UI', sans-serif"
+            font-size="17" font-weight="800" fill="#fbbf24" letter-spacing="2">TERMURAH</text>
+    </g>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="440" y1="60" x2="440" y2="420" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- ==== CENTER: BIG ITALIC TEXT ==== -->
+  <g transform="translate(490, 80)" font-family="'Inter', 'Segoe UI', sans-serif" font-style="italic" font-weight="900" letter-spacing="-3">
+    <text x="0" y="130" font-size="115" fill="#ffffff">DISKON 5%</text>
+    <text x="0" y="290" font-size="115" fill="#fbbf24">5% DISKON</text>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="1210" y1="60" x2="1210" y2="420" stroke="#fbbf24" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- ==== RIGHT: DETAILS ==== -->
+  <g transform="translate(1250, 100)">
+    <text x="0" y="0" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="20" font-weight="800" fill="#fbbf24" letter-spacing="3">PEMBELIAN PERTAMA</text>
+
+    <text x="0" y="50" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="17" font-weight="500" fill="#ffffff">Khusus customer baru</text>
+    <text x="0" y="74" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="17" font-weight="500" fill="#ffffff">yang belum pernah</text>
+    <text x="0" y="98" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="17" font-weight="500" fill="#ffffff">order sebelumnya.</text>
+
+    <line x1="0" y1="130" x2="80" y2="130" stroke="#fbbf24" stroke-width="2"/>
+
+    <text x="0" y="205" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="50" font-weight="900" fill="#ffffff" letter-spacing="-1">Daftar</text>
+    <text x="0" y="258" font-family="'Inter', 'Segoe UI', sans-serif"
+          font-size="50" font-weight="900" fill="#ffffff" letter-spacing="-1">Sekarang</text>
+  </g>
+</svg>

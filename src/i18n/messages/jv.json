@@ -1,0 +1,1119 @@
+{
+    "wishlist": {
+        "title": "Wishlist",
+        "cardDescription": "Produk sing kok simpen",
+        "viewAll": "Deleng wishlist",
+        "add": "Tambah menyang wishlist",
+        "remove": "Busak saka wishlist",
+        "added": "Wis ditambahake menyang wishlist",
+        "removed": "Wis dibusak saka wishlist",
+        "error": "Gagal nganyari wishlist",
+        "savedTitle": "Wis Disimpen ing Wishlist!",
+        "savedDesc": "Produk iki wis kok simpen.",
+        "pageTitle": "Wishlist-ku",
+        "pageSubtitle": "Produk sing kok simpen kanggo mengko.",
+        "emptyTitle": "Wishlist isih kosong",
+        "emptyDescription": "Pencet ikon <heart></heart> ing kaca produk kanggo nyimpen ing kene.",
+        "browseProducts": "Delok Kabeh Produk",
+        "breadcrumb": {
+            "dashboard": "Beranda",
+            "profile": "Profil",
+            "wishlist": "Wishlist"
+        }
+    },
+    "login": {
+        "welcome": "Sugeng Rawuh",
+        "subtitle": "Mlebu menyang akun panjenengan",
+        "email": "Email",
+        "password": "Sandi",
+        "forgotPassword": "Lali sandi?",
+        "loginButton": "Mlebu",
+        "loggingIn": "Sedang mlebu...",
+        "newHere": "Anyar ing kene?",
+        "createAccount": "Gawe akun lan wiwiti blanja dina iki!",
+        "createAccountButton": "Gawe Akun",
+        "backToDashboard": "Bali menyang Dashboard",
+        "fillAllFields": "Mangga isi kabeh kolom.",
+        "success": "Mlebu sukses",
+        "failed": "Mlebu gagal. Priksa email lan sandi."
+    },
+    "register": {
+        "title": "Gawe Akun",
+        "subtitle": "Gabung lan entuk tawaran istimewa",
+        "name": "Jeneng Lengkap",
+        "email": "Email",
+        "phone": "Nomor HP / WhatsApp",
+        "birthdate": "Tanggal Lair",
+        "gender": "Jenis Kelamin",
+        "gender_male": "Lanang",
+        "gender_female": "Wadon",
+        "gender_other": "Ora pengin ngandhani",
+        "language": "Preferensi Basa",
+        "optional": "opsional",
+        "password": "Gawe Sandi",
+        "confirmPassword": "Konfirmasi Sandi",
+        "signUpButton": "Daftar",
+        "processing": "Proses...",
+        "alreadyMember": "Wis dadi anggota?",
+        "loginToContinue": "Mlebu kanggo nerusake blanja.",
+        "continueToLogin": "Nerusake mlebu",
+        "backToDashboard": "Bali menyang Dashboard",
+        "fillAllFields": "Mangga isi kabeh kolom.",
+        "passwordsNotMatch": "Sandi ora cocog.",
+        "success": "Registrasi sukses. Priksa email kanggo verifikasi akun.",
+        "failed": "Registrasi gagal",
+        "unexpectedError": "Ana kesalahan. Coba maneh utawa gunakake email liyane.",
+        "gender_male": "Lanang",
+        "gender_female": "Wadon"
+    },
+    "forgotPassword": {
+        "title": "Reset Sandi Panjenengan",
+        "description": "Lebokake alamat email, kita bakal ngirim link kanggo reset sandi.",
+        "emailPlaceholder": "Lebokake email panjenengan",
+        "sendButton": "Kirim Link Reset",
+        "sending": "Ngirim...",
+        "invalidEmail": "Mangga lebokake alamat email sing bener.",
+        "successMessage": "Yen email kadhaptar, link reset wis dikirim."
+    },
+    "resetPassword": {
+        "checkingLink": "Mriksa link reset panjenengan...",
+        "tokenInvalid": "Token ora valid utawa kadaluarsa. Nggantos mlebu.",
+        "tokenInvalidTitle": "Link Ora Valid utawa Kadaluarsa",
+        "redirecting": "Nggantos mlebu...",
+        "title": "Reset Sandi Panjenengan",
+        "description": "Lebokake sandi anyar ing ngisor iki.",
+        "passwordPlaceholder": "Lebokake sandi sing kuat",
+        "confirmPasswordPlaceholder": "Lebokake maneh sandi panjenengan",
+        "resetButton": "Reset Sandi",
+        "resetting": "Reset...",
+        "passwordsNotMatch": "Sandi ora cocog",
+        "missingToken": "Token ora valid utawa ilang.",
+        "resetSuccessToast": "Reset sandi sukses! Nggantos mlebu.",
+        "resetSuccessTitle": "Reset Sandi Sukses",
+        "resetFailed": "Gagal reset sandi. Coba maneh."
+    },
+    "verify": {
+        "verifying": "Verifikasi akun panjenengan...",
+        "successTitle": "Verifikasi Sukses",
+        "successMessage": "Email panjenengan wis diverifikasi!",
+        "gotoLogin": "Mlebu",
+        "errorTitle": "Verifikasi Gagal",
+        "errorMessage": "Link verifikasi ora valid utawa kadaluarsa.",
+        "gotoRegister": "Bali daftar"
+    },
+    "home": {
+        "navbar": {
+            "products": "Produk",
+            "categories": "Kategori",
+            "brands": "Brand",
+            "faqs": "FAQ",
+            "emailSupport": "Email Dhukungan",
+            "supportEmailUrl": "https://instagram.com/galeri_maduku"
+        },
+        "banner": {
+            "badge": "🎉 Diskon 5% Pesenan Pertama",
+            "title": "Bahan Pangan Sehat dikirim kanthi rega istimewa",
+            "description": "Nikmati penawaran terbaik bahan pangan berkualitas, dikirim langsung menyang omah panjenengan. Blanja saiki lan entuk diskon 5% pesenan pertama!",
+            "cta": "Blanja Saiki & Diskon 5%",
+            "imageAlt": "Delivery Hero",
+            "galeriMaduku": {
+                "badge": "Brand Eksklusif",
+                "title": "Madu Asli Pilihan saka Galeri Maduku",
+                "description": "Kualitas kajamin ing saben tetese, madu murni pilihan paling apik saka Kita. Jaga kesehatanmu bareng MADUKU",
+                "cta": "Deleng Koleksi Maduku"
+            }
+        },
+        "categories": {
+            "title": "Blanja Miturut Kategori",
+            "subtitle": "Jelajahi pilihan produk unggulan, cocog kebutuhan panjenengan.",
+            "viewAll": "Lihat Kabeh Kategori",
+            "scrollLeft": "Geser kiwa",
+            "scrollRight": "Geser tengen",
+            "bread": {
+                "title": "Roti & Bakery",
+                "subtitle": "Roti seger"
+            },
+            "beverages": {
+                "title": "Ombenan",
+                "subtitle": "Ombenan seger"
+            },
+            "instantFood": {
+                "title": "Panganan Instan",
+                "subtitle": "Panganan cepet"
+            },
+            "snacks": {
+                "title": "Cemilan",
+                "subtitle": "Manjakan diri"
+            },
+            "homeEssentials": {
+                "title": "Kebutuhan Omah",
+                "subtitle": "Kebutuhan harian"
+            },
+            "personalCare": {
+                "title": "Perawatan Pribadi",
+                "subtitle": "Rasakake seger"
+            },
+            "dairyProducts": {
+                "title": "Produk Olahan Susu",
+                "subtitle": "Susu & keju"
+            },
+            "galeriMaduku": {
+                "title": "Galeri Maduku",
+                "subtitle": "Madu Asli Alami"
+            }
+        },
+        "products": {
+            "title": "Produk Rekomendasi",
+            "subtitle": "Jelajahi pilihan produk unggulan kanggo panjenengan",
+            "viewAll": "Lihat Kabeh Produk"
+        },
+        "brands": {
+            "title": "Blanja Miturut Brand",
+            "subtitle": "Temokake brand terpercaya lan produk-produk paling apik.",
+            "viewAll": "Lihat Kabeh Brand"
+        },
+        "faq": {
+            "items": [
+                {
+                    "question": "Apa ana produk organik?",
+                    "answer": "Ana macem-macem pilihan buah lan sayur organik sing wis ditandai ing kategori produk."
+                },
+                {
+                    "question": "Kepriye cara pesen?",
+                    "answer": "Pesen bisa gampang lan cepet liwat situs web utawa aplikasi."
+                },
+                {
+                    "question": "Apa ana minimal belanja kanggo pengiriman?",
+                    "answer": "Ya, minimal belanja kanggo layanan pengiriman yaiku Rp 200.000."
+                },
+                {
+                    "question": "Pira wektu pengiriman?",
+                    "answer": "Wektu pengiriman gumantung lokasi, biasane 1-3 dina kerja."
+                },
+                {
+                    "question": "Apa bisa njupuk pesenan langsung ing toko?",
+                    "answer": "Bisa. Pilih opsi njupuk ing toko nalika mesen, banjur jupuk pesenanmu ing alamat toko awakdhewe."
+                },
+                {
+                    "question": "Kepriye carane entuk poin?",
+                    "answer": "Poin dientuk kanthi menehi ulasan ing produk sing wis dituku. Saben ulasan menehi poin sing bisa dituker dadi potongan rega ing pesenan sabanjure."
+                }
+            ]
+        },
+        "storeLocation": {
+            "title": "Panggonan Toko",
+            "subtitle": "Mampir langsung menyang toko awakdhewe",
+            "openInMaps": "Bukak ing Google Maps",
+            "directions": "Deleng Rute",
+            "addressFallback": "Alamat toko durung disetel"
+        }
+    },
+    "brands": {
+        "breadcrumb": {
+            "dashboard": "Dashboard",
+            "brands": "Brand"
+        },
+        "title": "Kabeh Brand",
+        "subtitle": "Jelajahi macem-macem brand berkualitas kanggo kebutuhan panjenengan.",
+        "notfound": {
+            "title": "Waduh! Ora ana brand",
+            "description": "Kayane ora ana brand cocok karo pencarian panjenengan. Coba ganti filter utawa golek liyane."
+        },
+        "sort": {
+            "az": "A-Z",
+            "za": "Z-A"
+        },
+        "filter": {
+            "sortLabel": "Urut",
+            "searchPlaceholder": "Golek brand..."
+        }
+    },
+    "categories": {
+        "breadcrumb": {
+            "dashboard": "Dashboard",
+            "categories": "Kategori"
+        },
+        "title": "Kabeh Kategori",
+        "subtitle": "Jelajahi kategori lengkap kanggo nemokake produk sing panjenengan butuhake. Saka elektronik nganti fashion, kabeh ana!",
+        "tooltip": "Klik kanggo ndeleng produk ing kategori iki"
+    },
+    "orders": {
+        "breadcrumb": {
+            "dashboard": "Dashboard",
+            "orders": "Pesenan"
+        },
+        "timeline": {
+            "updatedBy": "Dianyari dening {name}"
+        },
+        "title": "Pesenan Panjenengan",
+        "subtitle": "Iki rincian pesenan panjenengan. Lacak pengiriman, cek resi, lan update status pesenan.",
+        "tabs": {
+            "pending": "Menunggu",
+            "paid": "Wis Dibayar",
+            "shipping": "Sedang dikirim",
+            "completed": "Selesai",
+            "canceled": "Dibatalkan",
+            "processing": "Diproses"
+        },
+        "statusMessages": {
+            "PENDING": {
+                "title": "Ora Ana Pesenan Menunggu",
+                "description": "Panjenengan ora duwe pesenan sing menunggu konfirmasi pembayaran."
+            },
+            "PAID": {
+                "title": "Ora Ana Pesenan Dibayar",
+                "description": "Panjenengan durung nggawe pembayaran."
+            },
+            "SHIPPED": {
+                "title": "Ora Ana Pesenan Dikirim",
+                "description": "Panjenengan ora duwe pesenan sing lagi dikirim."
+            },
+            "COMPLETED": {
+                "title": "Ora Ana Pesenan Selesai",
+                "description": "Panjenengan durung rampungake pesenan."
+            },
+            "CANCELLED": {
+                "title": "Ora Ana Pesenan Dibatalkan",
+                "description": "Panjenengan durung mbatalake pesenan."
+            },
+            "PROCESSING": {
+                "title": "Ora Ana Pesenan Diproses",
+                "description": "Sampeyan ora duwe pesenan sing lagi dicepakake."
+            }
+        },
+        "item": {
+            "priceLabel": {
+                "retail": "Regane Eceran",
+                "wholesale": "Regane Grosir",
+                "default": "Regane"
+            },
+            "subtotal": "Subtotal",
+            "delete": "Ngilangi produk",
+            "unnamed": "Produk Tanpa Jeneng"
+        }
+    },
+    "orderDetail": {
+        "page": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "orders": "Pesenan"
+            },
+            "title": "Rincian Pesenan Panjenengan",
+            "subtitle": "Priksa rangkuman pesenan, status pembayaran, lan info pengiriman ing ngisor iki.",
+            "cancelledBannerTitle": "Pesenan iki wis dibatalake",
+            "cancelledBannerDesc": "Pesenan iki wis dibatalake lan ora diproses maneh. Sampeyan bisa pesen maneh yen perlu.",
+            "processingBannerTitle": "Pembayaran wis disetujoni",
+            "processingBannerDesc": "Pesenan sampeyan lagi diproses. Ditunggu sedhela ya, bakal cepet disiapake.",
+            "processingBannerDescDelivery": "Pesenan sampeyan lagi disiapake. Yen wis siap, bakal cepet dikirim menyang alamat sampeyan.",
+            "readyPickupBannerTitle": "Pesenan Siap Dijupuk!",
+            "readyPickupBannerDesc": "Pesenan sampeyan wis siap. Monggo dijupuk langsung neng toko ya.",
+            "readyPickupHours": "Jam bukak toko: 07.00 – 20.00 WIB",
+            "onDeliveryBannerTitle": "Pesenan Lagi Dikirim!",
+            "onDeliveryBannerDesc": "Pesenan sampeyan lagi dikirim menyang alamat sampeyan. Mangga dipesthekake ana sing siap nampani ya.",
+            "deliveredBannerTitle": "Pesenan Wis Tekan!",
+            "deliveredBannerDesc": "Pesenan sampeyan wis tekan panggonan. Matur nuwun wis blanja, aja lali menehi ulasan ya!",
+            "deliveredAtLabel": "Tekan tanggal"
+        },
+        "info": {
+            "title": "Informasi Pesenan",
+            "orderNumber": "Nomor Pesenan",
+            "orderDate": "Tanggal Pesenan",
+            "lastUpdated": "Dianyari Paling Anyar",
+            "customerName": "Jeneng Pelanggan"
+        },
+        "history": {
+            "title": "Riwayat Pesenan",
+            "completed": "Pesenan wis rampung.",
+            "shipped": "Pesenan wis dikirim.",
+            "paid": "Pembayaran wis dikonfirmasi.",
+            "pending": "Pesenan digawe. Menunggu pembayaran.",
+            "cancelled": "Pesenan wis dibatalkan.",
+            "paymentProofSubmitted": "Bukti pembayaran dikirim lan menunggu verifikasi.",
+            "processing": "Pesenan lagi dicepakake.",
+            "readyForPickup": "Pesenan wis siap dijupuk.",
+            "onDelivery": "Pesenan lagi dikirim.",
+            "delivered": "Pesenan wis dikirim.",
+            "deliveryFailed": "Pengiriman gagal."
+        },
+        "summary": {
+            "title": "Ringkesan Pesenan",
+            "totalPrice": "Total Regane",
+            "deliveryFee": "Biaya Pengiriman",
+            "couponDiscount": "Diskon Kupon",
+            "tax": "Biaya Admin",
+            "total": "Total",
+            "orderAgain": "Pesen Meneh",
+            "leaveReview": "Tulis Ulasan",
+            "updateReview": "Update Ulasan",
+            "completePayment": "Rampungake Pembayaran",
+            "cancelOrder": "Batalake Pesenan",
+            "cannotCancelNotice": "Pesenan sing wis dibayar ora bisa dibatalake. Yen butuh bantuan, hubungi admin kita.",
+            "waitingVerificationNotice": "Matur nuwun wis blanja neng Toko Langgananku. Mangga ngenteni admin mriksa pembayaranmu. Bakal dakproses sak cepete.",
+            "free": "Gratis",
+            "pointsUsed": "Diskon Poin",
+            "firstPurchaseDiscount": "Diskon Pelanggan Anyar ({percent}%)",
+            "reviewFinal": "Ulasan Final",
+            "reviewLocked": "Ulasan wis final. Saben item mung bisa diowahi 1 kali."
+        },
+        "modal": {
+            "reorderTitle": "Pesen Meneh Barang",
+            "reorderMessage": "Pesen maneh bakal ngganti isi keranjang panjenengan. Apa panjenengan yakin arep nerusake?",
+            "reorderConfirmButton": "Pesen Meneh",
+            "cancelTitle": "Batalake Pesenan",
+            "cancelMessage": "Apa sampeyan yakin arep mbatalake pesenan iki? Tindakan iki ora bisa dibatalake maneh.",
+            "cancelConfirmButton": "Ya, Batalake Pesenan"
+        },
+        "payment": {
+            "title": "Informasi Pembayaran",
+            "method": {
+                "cod": "Bayar di Tempat",
+                "bankTransfer": "Transfer Bank",
+                "qris": "QRIS"
+            },
+            "changeInfo": "* Panjenengan bisa ganti metode pembayaran mung sakwene 5 menit, maksimal 3 kali.",
+            "waitInfo": "* Panjenengan bisa ganti metode maneh ing {time}.",
+            "limitInfo": "* Panjenengan ora bisa ganti metode maneh amarga wis 3 kali.",
+            "confirmTitle": "Konfirmasi Ganti Metode Pembayaran",
+            "confirmMessage": "Apa panjenengan yakin arep ganti metode pembayaran?",
+            "confirmButton": "Konfirmasi",
+            "cancelledTitle": "Pembayaran dibatalkan",
+            "cancelledDesc": "Panjenengan ora bisa ganti metode pembayaran maneh.",
+            "pendingConfirmation": "Pembayaran wis ditampa lan menunggu konfirmasi admin.",
+            "confirmed": "Pembayaran dikonfirmasi. Pesenan disiapake.",
+            "rejected": "Pembayaran ditolak amarga bukti ora valid.",
+            "posPaid": "Pesenan wis ditandai dibayar, nanging ora ana catatan transaksi amarga liwat sistem POS.",
+            "transactionId": "ID Transaksi",
+            "viewProof": "Gedhekake bukti pembayaran",
+            "toast": {
+                "success": "Metode pembayaran sukses diganti.",
+                "error": "Gagal ngowahi metode pembayaran."
+            }
+        },
+        "toast": {
+            "reorderSuccess": "Produk wis dipesen maneh! Priksa keranjang panjenengan.",
+            "reorderFailed": "Gagal pesen maneh!",
+            "cancelSuccess": "Pesenan kasil dibatalake.",
+            "cancelFailed": "Gagal mbatalake pesenan."
+        },
+        "returns": {
+            "title": "Retur Barang",
+            "description": "Iki cathetan retur sing wis sampeyan tindakake langsung ing toko. Matur nuwun konfirmasine.",
+            "quantity": "Jumlah sing Diretur",
+            "reason": "Alesan",
+            "itemsCount": "{count} item diretur",
+            "viewPhoto": "Deleng foto bukti",
+            "closePreview": "Tutup pratinjau",
+            "today": "Dina iki",
+            "yesterday": "Wingi",
+            "daysAgo": "{days} dina kepungkur",
+            "weeksAgo": "{weeks} minggu kepungkur",
+            "monthsAgo": "{months} sasi kepungkur"
+        },
+        "returnInfo": {
+            "title": "Arep Retur Barang?",
+            "description": "Cukup gawa barang sing rusak menyang toko, mengko dibantu prosese. Barang sing ora rusak ora bisa diretur.",
+            "badge": "Retur ditindakake langsung ing toko",
+            "hours": "Bukak 07.00 – 20.00 WIB"
+        },
+        "reviews": {
+            "title": "Ulasan Sampeyan",
+            "subtitle": "Klik kanggo ndeleng ulasan liyane ing kaca produk",
+            "public": "Publik",
+            "private": "Anonim",
+            "seeAllReviews": "Deleng kabeh ulasan",
+            "reviewCount": "ulasan",
+            "reviewCountPlural": "ulasan"
+        }
+    },
+    "products": {
+        "page": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "products": "Produk"
+            },
+            "title": "Kabeh Produk",
+            "subtitle": "Jelajahi pilihan produk unggulan kanggo kebutuhan panjenengan.",
+            "searching": "Nggolek produk kanthi jeneng",
+            "clearSearch": "Resikna Golek",
+            "resultCount": "Nampilake {count} produk",
+            "resultCountSearch": "Nampilake {count} produk sing paling cocok",
+            "similarHeading": "Produk Sing Memper",
+            "similarSubtitle": "Mbok menawa uga cocok karo golekanmu",
+            "notfound": {
+                "title": "Waduh! Ora ana produk",
+                "description": "Kayane ora ana produk cocok karo pencarian panjenengan. Coba ganti filter utawa golek liyane."
+            }
+        },
+        "filter": {
+            "category": "Kategori",
+            "brand": "Brand",
+            "priceRange": {
+                "label": "Rentang Regane",
+                "under-10000": "Kurang saka Rp 10.000",
+                "10000-50000": "Rp 10.000 - Rp 50.000",
+                "50000-100000": "Rp 50.000 - Rp 100.000",
+                "above-100000": "Luwih saka Rp 100.000"
+            },
+            "sort": {
+                "label": "Urut",
+                "DESC": "Paling Anyar",
+                "ASC": "Paling Lawas"
+            },
+            "all": "Kabeh",
+            "searchInDropdown": "Goleki...",
+            "noResults": "Ora ana asil",
+            "filterButton": "Filter",
+            "sheetTitle": "Saring Produk",
+            "apply": "Terapake",
+            "reset": "Mbalèkake",
+            "activeFilters": "{count} filter aktif"
+        },
+        "detail": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "products": "Produk"
+            },
+            "imageAlt": "Gambar Produk",
+            "off": "Diskon",
+            "stockInfo": "Isih ana {remaining} barang",
+            "totalPrice": "Total Regane:",
+            "quantity": "Jumlah",
+            "outOfStock": "Stok entek",
+            "invalidQuantity": "Jumlah ngluwihi stok sing kasedhiya",
+            "bulkStockInsufficient": "Stok ora cukup kanggo rega grosir (min. {qty})"
+        },
+        "button": {
+            "addCart": "Tambah menyang Keranjang",
+            "addCartShort": "Keranjang",
+            "adding": "Nambah...",
+            "addCartSuccess": "Produk sukses ditambahake menyang keranjang!",
+            "addCartFail": "Gagal nambah produk.",
+            "buyNow": "Tuku Saiki",
+            "loginRequired": "Mlebu dhisik",
+            "loginRequiredMsg": "Kanggo nerusake, mlebu dhisik. Mung butuh sawetara menit.",
+            "login": "Mlebu"
+        },
+        "review": {
+            "title": "Pirsani Pendapat Liyane",
+            "subtitle": "Temokake pengalaman jujur saka pelanggan liya.",
+            "filter": {
+                "title": "Filter Ulasan",
+                "reset": "Reset Filter",
+                "review": "Ulasan",
+                "withMedia": "Kanthi Media",
+                "rating": "Rating"
+            },
+            "ratingCount": "ulasan",
+            "satisfactionLabel": {
+                "noRating": "Durung ana rating",
+                "poor": "Kualitas kurang",
+                "below": "Ngisor ekspektasi",
+                "average": "Pengalaman rata-rata",
+                "good": "Produk apik",
+                "excellent": "Produk istimewa"
+            },
+            "reviewsHeading": "Ulasan Pelanggan",
+            "sort": {
+                "label": "Urutake",
+                "newest": "Paling Anyar",
+                "oldest": "Paling Suwe",
+                "highest": "Rating paling dhuwur",
+                "lowest": "Rating paling endhek"
+            }
+        },
+        "frequentlyBoughtTogether": "Sampeyan Mbok Menawa Uga Seneng",
+        "addAllToCart": "Tambahake Kabeh menyang Karanjang",
+        "addAllSuccess": "{count} produk ditambahake menyang karanjang"
+    },
+    "profile": {
+        "page": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "profile": "Profil"
+            },
+            "title": "Profilku",
+            "subtitle": "Pirsani lan update info pribadi kanggo keamanan akun panjenengan."
+        },
+        "avatar": {
+            "alt": "Avatar Pengguna",
+            "upload": "Ganti Foto",
+            "change": "Ganti",
+            "delete": "Busak Foto",
+            "deleteConfirmTitle": "Busak Foto Profil?",
+            "deleteConfirmMessage": "Foto profilmu bakal dibusak lan diganti karo foto default.",
+            "verified": "Akun Keverifikasi",
+            "updating": "Nganyari..."
+        },
+        "form": {
+            "general": "Setelan Umum",
+            "personal": "Detail Pribadi",
+            "language": "Preferensi Basa",
+            "languagePlaceholder": "Pilih basa",
+            "name": "Jeneng Lengkap",
+            "namePlaceholder": "Jeneng panjenengan",
+            "email": "Email",
+            "emailPlaceholder": "sampean@example.com",
+            "phone": "Nomor HP / WhatsApp",
+            "phonePlaceholder": "81234567890",
+            "address": "Alamat",
+            "addressPlaceholder": "Lebokake alamat",
+            "birthDate": "Tanggal Lair",
+            "gender": "Jenis Kelamin",
+            "genderPlaceholder": "Pilih jenis kelamin",
+            "gender_male": "Lanang",
+            "gender_female": "Wadon",
+            "gender_other": "Ora pengin ngandhani"
+        },
+        "password": {
+            "title": "Ganti Sandi",
+            "currentPassword": "Sandi Saiki",
+            "currentPasswordPlaceholder": "Lebokna sandi saiki",
+            "newPassword": "Sandi Anyar",
+            "newPasswordPlaceholder": "Lebokna sandi anyar",
+            "confirmPassword": "Konfirmasi Sandi Anyar",
+            "confirmPasswordPlaceholder": "Lebokna maneh sandi anyar",
+            "changeButton": "Ganti Sandi",
+            "changing": "Lagi ngganti...",
+            "success": "Sandi kasil diganti.",
+            "failed": "Gagal ngganti sandi.",
+            "allFieldsRequired": "Monggo isi kabeh kolom sandi.",
+            "minLength": "Sandi anyar kudu paling sithik 6 karakter.",
+            "mismatch": "Sandi anyar lan konfirmasi ora cocog.",
+            "sameAsOld": "Sandi anyar ora kena padha karo sandi lawas.",
+            "currentIncorrect": "Sandi saiki salah.",
+            "changeInfo": "Sampeyan mung bisa ngganti sandi 3 kaping kanggo siji akun.",
+            "waitInfo": "Sampeyan bisa ngganti sandi maneh sajroning {time}.",
+            "limitInfo": "Sampeyan wis tekan wates maksimal 3 kaping ngganti sandi kanggo akun iki.",
+            "confirmTitle": "Konfirmasi Ganti Sandi",
+            "confirmMessage": "Yakin arep ngganti sandi saiki?",
+            "confirmButton": "Ya, Ganti"
+        },
+        "button": {
+            "save": "Simpen Owahan",
+            "saving": "Nyimpen...",
+            "updateSuccess": "Profil sukses diupdate.",
+            "updateFail": "Gagal ngupdate profil.",
+            "avatarSuccess": "Avatar sukses diupdate.",
+            "avatarDeleteSuccess": "Foto profil sukses dibusak.",
+            "avatarFail": "Gagal unggah avatar."
+        },
+        "address": {
+            "title": "Alamatku",
+            "subtitle": "Atur alamat pengiriman sampeyan",
+            "addNew": "Tambah Alamat Anyar",
+            "edit": "Owahi",
+            "delete": "Busak",
+            "setDefault": "Dadekke Utama",
+            "default": "Utama",
+            "empty": "Durung ana alamat sing disimpen",
+            "emptyDesc": "Tambahke alamat pengiriman supaya checkout luwih cepet.",
+            "label": "Label Alamat",
+            "labelPlaceholder": "Conto: Omah, Kantor, Kos",
+            "recipientName": "Jeneng Penerima",
+            "recipientNamePlaceholder": "Jeneng lengkap penerima",
+            "phone": "Nomer Telepon / WhatsApp",
+            "phonePlaceholder": "08xxxxxxxxxx",
+            "address": "Detail Alamat",
+            "addressPlaceholder": "Jl. Mawar No. 10, RT 02/03, Kel. Melati",
+            "selectLocation": "Pilih Lokasi ing Peta",
+            "locationRequired": "Lokasi kudu dipilih ing peta",
+            "saveAddress": "Simpen Alamat",
+            "saving": "Nyimpen...",
+            "addSuccess": "Alamat kasil ditambahke",
+            "addFail": "Gagal nambahke alamat",
+            "updateSuccess": "Alamat kasil diowahi",
+            "updateFail": "Gagal ngowahi alamat",
+            "deleteSuccess": "Alamat kasil dibusak",
+            "deleteFail": "Gagal mbusak alamat",
+            "deleteConfirm": "Yakin arep mbusak alamat iki?",
+            "deleteTitle": "Busak Alamat",
+            "defaultSuccess": "Alamat utama kasil diowahi",
+            "defaultFail": "Gagal ngowahi alamat utama",
+            "maxReached": "Maksimal 5 alamat wis kecapai",
+            "verifyLocation": "Verifikasi karo Lokasi Saiki",
+            "verifying": "Memverifikasi...",
+            "locationMatch": "Lokasi cocog karo posisi sampeyan saiki",
+            "locationMismatch": "Lokasi ora cocog karo posisi sampeyan saiki (jarak: {distance} km)",
+            "editTitle": "Owahi Alamat",
+            "addTitle": "Tambah Alamat Anyar",
+            "locationTitle": "Alamat Anyar",
+            "useMyLocation": "Gunakake Lokasi Saiki",
+            "viewOnMaps": "Deleng ing Maps",
+            "fromStore": "saka toko",
+            "inRange": "Sajroning jangkauan",
+            "outOfRange": "Njaba jangkauan",
+            "contactSection": "Informasi Kontak",
+            "addressSection": "Detail Alamat",
+            "settingsSection": "Pangaturan",
+            "region": "Provinsi, Kutha, Kecamatan, Kode Pos",
+            "regionPlaceholder": "Pilih provinsi, kutha, kecamatan, kode pos",
+            "regionTitle": "Pilih Wilayah",
+            "province": "Provinsi",
+            "regencyStep": "Kutha / Kabupaten",
+            "districtStep": "Kecamatan",
+            "villageStep": "Kelurahan / Desa",
+            "selectRegency": "Pilih Kutha / Kabupaten",
+            "selectDistrict": "Pilih Kecamatan",
+            "selectVillage": "Pilih Kelurahan / Desa",
+            "postalCode": "Kode Pos",
+            "postalCodePlaceholder": "Cth: 55653",
+            "postalSearching": "Nggoleki kode pos otomatis…",
+            "postalPick": "Pilih kode pos sing cocog:",
+            "postalManual": "Kode pos ora ana? Ketik dhewe",
+            "postalBackToList": "Pilih saka dhaftar kode pos",
+            "regionSearchPlaceholder": "Goleki...",
+            "regionLoading": "Ngemot wilayah...",
+            "regionEmpty": "Data ora ketemu",
+            "regionError": "Gagal ngemot wilayah. Priksa koneksi internet.",
+            "street": "Jeneng Dalan, Gedhong, No. Omah",
+            "streetPlaceholder": "Cth: Jl. Melati No. 10, Gedhong A",
+            "detail": "Detail Liyane",
+            "detailPlaceholder": "Cth: Blok / Unit No., Patokan (opsional)",
+            "pinpointTitle": "Pinpoint Lokasi",
+            "pinpointDesc": "Tandhani titik ing peta supaya pangiriman luwih akurat",
+            "pinpointSet": "Titik lokasi wis ditandhani",
+            "pinpointButton": "Pilih Lokasi ing Peta",
+            "pinpointChange": "Owahi Titik Lokasi",
+            "mapTitle": "Temtokake Titik Lokasi",
+            "mapConfirm": "Gunakake Lokasi Iki",
+            "markAs": "Tandhani Minangka",
+            "labelHome": "Omah",
+            "labelOffice": "Kantor",
+            "labelOther": "Liyane",
+            "labelOtherPlaceholder": "Tulis label (cth: Kos, Apartemen)",
+            "next": "Lanjut",
+            "back": "Bali",
+            "cancel": "Batal",
+            "confirm": "Konfirmasi",
+            "regionRequired": "Lengkapi wilayah (kutha, kecamatan, kelurahan, kode pos)",
+            "streetRequired": "Jeneng dalan wajib diisi",
+            "phoneInvalid": "Mangga lebokake nomer telpon sing bener",
+            "pinpointRequired": "Tandhani titik lokasi ing peta dhisik",
+            "selectedCoordinate": "Koordinat sing dipilih",
+            "locationSearchTitle": "Goleki Alamat",
+            "recommendations": "Rekomendasi panggonan adhedhasar alamatmu",
+            "searchTyping": "Ketik jeneng dalan utawa panggonan kanggo ndeleng rekomendasi",
+            "searchNoResults": "Panggonan ora ketemu. Penet \"Sabanjure\" kanggo nandhani titik ing peta kanthi manual.",
+            "searchBusy": "Pencarian lagi sibuk. Ditunggu sedhela banjur dicoba maneh ya.",
+            "searching": "Nggoleki...",
+            "nextStep": "Sabanjure",
+            "selectedAddressTitle": "Alamat sing Dipilih",
+            "pinHere": "Alamatmu ana ing kene",
+            "pinCheck": "Mangga priksa maneh lokasi peta",
+            "confirmLocationTitle": "Mangga konfirmasi lokasimu cocog karo peta",
+            "confirmLocationMessage": "Lokasi peta kudu cocog karo alamat supaya pangiriman lancar.",
+            "change": "Owahi",
+            "locationMarked": "Titik lokasi ditandhani",
+            "streetEmpty": "Klik kanggo nggoleki & nandhani lokasi",
+            "detectingLocation": "Ndeteksi lokasi...",
+            "reset": "Atur maneh",
+            "locateDenied": "Akses lokasi ditolak. Aktifake ijin lokasi ing browser.",
+            "locateTimeout": "Panjaluk lokasi kehabisan wektu. Coba maneh.",
+            "locateUnavailable": "Lokasi ora kasedhiya saiki. Coba maneh utawa pilih wilayah manual.",
+            "locateOutside": "Lokasi kadeteksi ing njaba DI Yogyakarta. Mangga pilih manual.",
+            "nearbyTitle": "Rekomendasi adhedhasar lokasimu",
+            "useCurrentLocationDesc": "Deteksi otomatis kutha & kecamatanmu"
+        },
+        "points": {
+            "title": "Poinku",
+            "description": "Tulis ulasan kanggo entuk poin, banjur gunakake nalika checkout",
+            "viewHistory": "Deleng riwayat poin"
+        },
+        "pointsHistory": {
+            "breadcrumb": {
+                "dashboard": "Beranda",
+                "profile": "Profil",
+                "points": "Riwayat Poin"
+            },
+            "back": "Bali menyang Profil",
+            "title": "Riwayat Poin",
+            "subtitle": "Deleng poin lan transaksi poin sampeyan",
+            "currentBalance": "Saldo Poin Saiki",
+            "balanceHint": "1 poin = Rp 1. Gunakake kanggo diskon ing order sabanjure.",
+            "historyTitle": "Aktivitas",
+            "loading": "Ngemot...",
+            "empty": "Durung ana transaksi poin. Ayo wiwit blanja lan tulis ulasan!",
+            "prev": "Sadurunge",
+            "next": "Sabanjure",
+            "pageOf": "Kaca {current} saka {total}",
+            "typeLabel": {
+                "EARN_REVIEW": "Poin saka ulasan",
+                "REDEEM_ORDER": "Poin dienggo nalika checkout",
+                "ADJUST": "Panyesuaian admin"
+            }
+        }
+    },
+    "loading": {
+        "title": "Mangga Enteni, Sedang Loading...",
+        "desc": "Kita nyiapake konten paling apik kanggo panjenengan. Proses iki butuh sawetara detik. Matur nuwun sabar panjenengan!"
+    },
+    "notFound": {
+        "imageAlt": "Ora Ketemu",
+        "title": "Waduh! Halaman sing digoleki ora ketemu.",
+        "desc": "Kayane halaman sing panjenengan goleki ora ana utawa wis dipindhah. Priksa URL utawa bali menyang beranda.",
+        "backToDashboard": "Bali menyang Dashboard"
+    },
+    "header": {
+        "logoAlt": "Logo Toko",
+        "shipFromLabel": "Pengiriman saka",
+        "shipFromCity": "Yogyakarta",
+        "orders": "Pesenanku",
+        "points": "Poin",
+        "cartPreviewTitle": "Lagi Ditambahake",
+        "viewCart": "Tampilake Karanjang Blanja",
+        "cartEmptyShort": "Karanjang isih kosong",
+        "cartMoreItems": "+{count} produk liyane"
+    },
+    "button": {
+        "login": "Mlebu",
+        "register": "Daftar",
+        "cart": "Keranjang",
+        "profile": "Profil"
+    },
+    "searchBar": {
+        "placeholder": "Golek produk, kategori, utawa brand",
+        "inputLabel": "Input pencarian",
+        "search": "Goleki",
+        "clear": "Resikna pencarian"
+    },
+    "searchModal": {
+        "products": "Produk",
+        "brands": "Brand",
+        "categories": "Kategori"
+    },
+    "profileMenu": {
+        "profile": "Profil",
+        "orders": "Daftar Pesenan",
+        "logout": "Metu",
+        "logoutSuccess": "Metu sukses",
+        "logoutConfirmTitle": "Metu saka Akun?",
+        "logoutConfirmMessage": "Apa kowe yakin arep metu saka akun?",
+        "logoutConfirmButton": "Iyo, Metu"
+    },
+    "cart": {
+        "title": "Keranjang Blanja",
+        "emptyTitle": "Keranjang panjenengan isih kosong",
+        "emptyDesc": "Ayo jelajahi produk menarik lan tambahake menyang keranjang!",
+        "browseProducts": "Jelajahi Produk",
+        "cartEmpty": "Keranjang panjenengan kosong.",
+        "checkoutSuccess": "Checkout sukses!",
+        "checkoutFailed": "Gagal checkout.",
+        "updateFailed": "Gagal ngupdate keranjang.",
+        "deleteFailed": "Gagal ngilangi keranjang.",
+        "exceedsStock": "Jumlah barang ngluwihi stok",
+        "firstPurchaseBanner": "Diskon Tuku Sepisanan!",
+        "firstPurchaseBannerDesc": "Sampeyan entuk diskon {percent}% ing pesenan iki minangka pelanggan anyar!",
+        "firstPurchaseWarning": "Pesthekake pesenan wis bener. Diskon tuku sepisanan mung lumaku sepisan lan bakal ilang sawise sampeyan klik checkout.",
+        "loading": "Ngemot karanjang...",
+        "select": "Pilih",
+        "edit": "Edit",
+        "cancelSelect": "Batal",
+        "selectAll": "Pilih Kabeh",
+        "selectedCount": "{count} dipilih",
+        "deleteSelected": "Busak ({count})",
+        "deleteAll": "Busak Kabeh",
+        "confirmDeleteSelectedTitle": "Busak Item Terpilih?",
+        "confirmDeleteSelectedMessage": "Item sing dipilih bakal dibusak saka karanjang.",
+        "confirmDeleteAllTitle": "Busak Kabeh Item?",
+        "confirmDeleteAllMessage": "Kabeh item bakal dibusak saka karanjang.",
+        "deleteSelectedFailed": "Gagal mbusak item terpilih."
+    },
+    "cartItem": {
+        "retail": "Regane Eceran",
+        "wholesale": "Regane Grosir",
+        "price": "Regane",
+        "productImage": "Gambar Produk",
+        "unnamed": "Produk Tanpa Jeneng",
+        "subtotal": "Subtotal",
+        "delete": "Ngilangi",
+        "decrease": "Kurangi jumlah",
+        "increase": "Tambah jumlah",
+        "seeAll": "Lihat Kabeh ({count})",
+        "quantity": "Jumlah"
+    },
+    "cartPayment": {
+        "title": "Rincian Pembayaran",
+        "methodLabel": "Metode Pembayaran",
+        "cod": "COD",
+        "bank": "Bank",
+        "qris": "QRIS",
+        "noteLabel": "Pesenan",
+        "notePlaceholder": "Tinggalake pesen kanggo penjual",
+        "originalPrice": "Regane Asli",
+        "discount": "Diskon",
+        "total": "Total",
+        "checkout": "Checkout Saiki",
+        "processing": "Proses...",
+        "deliveryFee": "Ongkos Kirim",
+        "free": "Gratis",
+        "firstPurchaseTitle": "Diskon Tuku Sepisanan!",
+        "firstPurchaseDesc": "Sampeyan entuk diskon {percent}% kanggo pesenan kapisananmu!",
+        "firstPurchaseDiscount": "Pelanggan Anyar ({percent}%)",
+        "youSave": "Sampeyan ngirit",
+        "pointsRedeemed": "Poin Dienggo ({count})",
+        "points": {
+            "title": "Gunakake Poinku",
+            "balance": "Saldo: {count} poin",
+            "useMax": "Gunakake Maks",
+            "hint": "Maksimum {max} poin (50% saka total). 1 poin = Rp 1.",
+            "zeroWarning": "Isi jumlah poin utawa pateni toggle. Saiki 0 poin ora bakal dienggo."
+        }
+    },
+    "orderList": {
+        "hide": "Sembunyikan",
+        "seeAll": "Lihat Kabeh ({count})",
+        "total": "Total",
+        "editReview": "Edit Ulasan",
+        "writeReview": "Tulis Ulasan",
+        "details": "Rincian",
+        "reviewFinal": "Ulasan Final",
+        "reviewLocked": "Ulasan wis final. Saben item mung bisa diowahi 1 kali.",
+        "delivery": "Dianter",
+        "pickup": "Jupuk ing Toko"
+    },
+    "orderStatus": {
+        "pending": "Menunggu Pembayaran",
+        "paid": "Wis Dibayar",
+        "shipped": "Dikirim",
+        "completed": "Selesai",
+        "cancelled": "Dibatalkan",
+        "verifying": "Verifikasi Pembayaran",
+        "processing": "Diproses",
+        "readyForPickup": "Siap Dijupuk",
+        "onDelivery": "Lagi Dikirim",
+        "delivered": "Wis Dikirim",
+        "deliveryFailed": "Pengiriman Gagal"
+    },
+    "reviewModal": {
+        "updateTitle": "Update Ulasan Panjenengan",
+        "reviewTitle": "Ulasan Pesenan Panjenengan",
+        "selectProduct": "Pilih Produk",
+        "selectProductPlaceholder": "Pilih Produk",
+        "productImage": "Gambar Produk",
+        "updateRating": "Update rating produk iki",
+        "rateProduct": "Pira rating produk iki?",
+        "review": "Ulasan",
+        "reviewPlaceholder": "Tulis ulasan produk...",
+        "shareProfile": "Barengake profilku karo ulasan iki",
+        "updateBtn": "Update Ulasan",
+        "submitBtn": "Kirim Ulasan",
+        "cancel": "Batal",
+        "updating": "Ngupdate...",
+        "submitting": "Ngirim...",
+        "updateSuccess": "Ulasan sukses diupdate",
+        "updateFailed": "Gagal ngupdate ulasan",
+        "addSuccess": "Ulasan sukses ditambahake",
+        "addFailed": "Gagal nambah ulasan",
+        "reviewed": "Wis Diulas",
+        "edited": "Wis Diedit",
+        "pointsBannerTitle": "Entuk poin loyalty",
+        "pointsBannerBody": "Tulis ulasan paling sithik {min} karakter kanggo entuk 1% poin saka rega item iki.",
+        "pointsAlreadyAwardedTitle": "Poin wis diwenehake",
+        "pointsAlreadyAwardedBody": "Sampeyan wis entuk {points} poin saka ulasan iki. Update ulasan ora nambah poin maneh.",
+        "charCountForPoints": "{current}/{min} karakter kanggo entuk poin",
+        "needRatingForPoints": "Wenehi rating lintang kanggo entuk poin",
+        "charReady": "Siap entuk poin",
+        "estimatedPoints": "Estimasi: +{points} poin",
+        "pointsEarnedToast": "Ulasan kasil! +{points} poin",
+        "pointsUpdatedToast": "Ulasan diperbarui! +{points} poin"
+    },
+    "orderFlow": {
+        "waitingPayment": "Menunggu Pembayaran",
+        "verifyingPayment": "Pembayaran Diverifikasi",
+        "preparingOrder": "Nyiapake Pesenan",
+        "completed": "Pesenan Selesai",
+        "cancelled": "Pesenan Dibatalkan",
+        "readyForPickup": "Siap Dijupuk",
+        "onDelivery": "Lagi Dikirim",
+        "delivered": "Wis Dikirim",
+        "deliveryFailed": "Pengiriman Gagal"
+    },
+    "confirmModal": {
+        "title": "Konfirmasi",
+        "message": "Apa panjenengan yakin arep nerusake?",
+        "confirmButton": "Ya, Ganti",
+        "cancelButton": "Wurung",
+        "processing": "Proses..."
+    },
+    "checkoutConfirm": {
+        "title": "Konfirmasi Pesenan",
+        "subtitle": "Pastikne detail pesenanmu wis bener",
+        "items": "Produk",
+        "itemCount": "{count} item",
+        "paymentMethod": "Cara Bayar",
+        "bankTransfer": "Transfer Bank",
+        "orderType": "Jenis Pesenan",
+        "pickup": "Dijupuk Dewe",
+        "delivery": "Dikirim",
+        "total": "Total Bayaran",
+        "cancel": "Wurung",
+        "confirm": "Pesen Saiki",
+        "processing": "Proses..."
+    },
+    "paymentProof": {
+        "qrisTitle": "Pembayaran QRIS",
+        "bankTitle": "Transfer Bank",
+        "qrisAlt": "Kode QRIS",
+        "accountNumber": "Nomor Rekening",
+        "accountName": "Jeneng Rekening",
+        "copy": "Salin",
+        "copied": "Wis disalin",
+        "copiedToClipboard": "Kasil disalin menyang clipboard",
+        "copyFailed": "Gagal nyalin. Salin manual wae ya.",
+        "uploadLabel": "Unggah Bukti Pembayaran",
+        "cancel": "Batal",
+        "submit": "Kirim Pembayaran",
+        "uploading": "Ngunggah...",
+        "fileRequired": "File dibutuhake",
+        "success": "Pembayaran sukses dikirim!",
+        "failed": "Gagal ngirim pembayaran. Coba maneh.",
+        "noBankAccount": "Durung ana rekening bank sing kasedhiya.",
+        "amountLabel": "Nominal sing kudu ditransfer",
+        "uniqueCodeNotice": "Wis kalebu kode unik +{code}. Mangga transfer cocog karo nominal sing kapacak.",
+        "viewProof": "Deleng bukti",
+        "alreadySubmitted": "Bukti pembayaran wis dikirim lan lagi ngenteni verifikasi."
+    },
+    "feedback": {
+        "state": {
+            "loadingAlt": "Loading...",
+            "errorAlt": "Ilustrasi Error",
+            "errorTitle": "Ana Kesalahan",
+            "errorDesc": "Ana kesalahan ora dikarepake. Coba maneh utawa hubungi dhukungan."
+        },
+        "notFound": {
+            "alt": "Data Ora Ketemu",
+            "title": "Data Ora Ketemu",
+            "desc": "Kita ora nemokake data kanggo ditampilake. Coba maneh utawa bali menyang beranda."
+        },
+        "errorPage": {
+            "title": "Waduh! Ana Kesalahan",
+            "desc": "Maaf, ana kesalahan nalika loading halaman. Coba reload maneh.",
+            "reload": "Reload Saiki"
+        }
+    },
+    "registerSuccess": {
+        "title": "Registrasi Sukses",
+        "desc": "Link verifikasi wis dikirim menyang email. Priksa inbox utawa spam kanggo aktivasi akun.",
+        "login": "Nerusake Mlebu"
+    },
+    "groceryOffer": {
+        "regularPrice": "Tuku rega biasa",
+        "bulkTitle": "Tuku {qty} utawa luwih",
+        "savePercent": "Ngirit {percent}%",
+        "bestDeal": "Paling Laris",
+        "saveLabel": "Ngirit",
+        "bulkBenefit": {
+            "discount": "Diskon luwih akeh yen tuku akeh",
+            "points": "Entuk poin saben blanja",
+            "deals": "Penawaran khusus anggota"
+        },
+        "regularBenefit": {
+            "noDiscount": "Ora ana diskon tambahan",
+            "noPoints": "Ora ana poin hadiah",
+            "noDeals": "Ora ana penawaran khusus anggota"
+        },
+        "discountLabel": "(Diskon produk {percent}%)",
+        "bulkDiscountLabel": "(Diskon grosir {percent}%)"
+    },
+    "buyNow": {
+        "title": "Tuku Saiki",
+        "success": "Checkout sukses!",
+        "failed": "Gagal checkout.",
+        "exceedStock": "Jumlah barang ngluwihi stok.",
+        "minQuantity": "Jumlah minimal kudu 1."
+    },
+    "brandCard": {
+        "tooltip": "Klik kanggo ndeleng produk ing brand iki"
+    },
+    "reviewView": {
+        "notFoundTitle": "Durung ana ulasan",
+        "notFoundDesc": "Tuku produk iki lan dadi sing pertama nuduhake pengalaman!"
+    },
+    "reviewCard": {
+        "report": "Laporke ulasan iki",
+        "reported": "Ulasan wis dilaporake!",
+        "edited": "(Diubah)",
+        "reportFailed": "Gagal ngirim laporan",
+        "reportSelfDisabled": "Ulasan dhewe ora bisa dilaporake",
+        "yourReview": "Ulasan Sampeyan"
+    },
+    "delivery": {
+        "orderType": "Jenis Pesenan",
+        "pickup": "Jupuk Dewe",
+        "delivery": "Kirim",
+        "phone": "Nomer Telepon / WhatsApp",
+        "address": "Alamat Pengiriman",
+        "addressPlaceholder": "Conto: Jl. Mawar No. 10, RT 02/03",
+        "deliveryNotes": "Cathetan kanggo Pengantar",
+        "deliveryNotesPlaceholder": "Conto: Omah pager ireng, sebelah mesjid",
+        "selectLocation": "Pilih Lokasi",
+        "useMyLocation": "Gunakake Lokasiku",
+        "detecting": "Ndeteksi lokasi...",
+        "tapToSelect": "Ketuk peta kanggo milih lokasi, utawa seret tandha",
+        "distanceToStore": "Jarak menyang Toko",
+        "tooFar": "Lokasi sampeyan sanjabane area kirim (maks {radius} km)",
+        "minPurchaseNotMet": "Minimal tuku kanggo kirim: {amount}",
+        "remaining": "Kurang {amount} maneh",
+        "eligible": "Lokasi sampeyan entuk kirim gratis!",
+        "geolocationNotSupported": "Geolokasi ora disengkuyung dening browser sampeyan",
+        "geolocationDenied": "Akses lokasi ditolak. Tulung aktifke lokasi ing setelan browser.",
+        "selectSavedAddress": "Pilih Alamat Sing Wis Disimpen",
+        "selectAddressPlaceholder": "Pilih alamat pengiriman...",
+        "noSavedAddress": "Durung ana alamat sing disimpen.",
+        "setupAddressFirst": "Atur alamat ing Profil dhisik",
+        "goToProfile": "Menyang Profil",
+        "deliveryInfo": "Info Pengiriman",
+        "deliveryProof": "Bukti Pengiriman",
+        "deliveredAt": "Dikirim Ing",
+        "selectEligibleAddress": "Pilih Alamat Kasimpen sing Cocog",
+        "noEligibleAddressTitle": "Lokasi Sampeyan Ora Nyukupi",
+        "noEligibleAddressDesc": "Alamat kasimpenmu ana ing njaba jangkauan pangiriman (maks {radius} km saka toko). Tenang, kowe isih isa milih Jupuk ing Toko kok!"
+    },
+    "bottomNav": {
+        "home": "Beranda",
+        "categories": "Kategori",
+        "products": "Produk",
+        "cart": "Karanjang",
+        "orders": "Pesenan",
+        "profile": "Profil"
+    },
+    "reportReviewModal": {
+        "title": "Laporake ulasan",
+        "subtitle": "Bantu aku njaga kualitas ulasan. Pilih alesan sing paling cocog.",
+        "reasonLabel": "Alesan",
+        "reasons": {
+            "SPAM": "Spam utawa promosi",
+            "ABUSIVE": "Tembung kasar / nyerang",
+            "IRRELEVANT": "Ora relevan karo produk",
+            "MISLEADING": "Nyasarake / goroh",
+            "OTHER": "Liyane"
+        },
+        "noteLabel": "Cathetan tambahan (opsional)",
+        "noteLabelRequired": "Jelasake alesanmu",
+        "notePlaceholder": "Tulis konteks tambahan kanggo admin...",
+        "cancel": "Batal",
+        "submit": "Kirim laporan",
+        "submitting": "Ngirim...",
+        "needReason": "Pilih salah siji alesan dhisik",
+        "needNote": "Mangga jelasake alesanmu (min 5 karakter)"
+    },
+    "footer": {
+        "description": "Blanja kabutuhan saben dina kanthi gampang lan cepet. Produk berkualitas, rega terjangkau, pangiriman kapercaya.",
+        "quickLinks": "Tautan Cepet",
+        "products": "Produk",
+        "categories": "Kategori",
+        "brands": "Brand",
+        "orders": "Pesenanku",
+        "support": "Pitulungan",
+        "faq": "FAQ",
+        "emailSupport": "Support Kita",
+        "profile": "Profilku",
+        "contactUs": "Hubungi Kita",
+        "contactEmail": "tokolanggananku@gmail.com",
+        "contactPhone": "0812 2830 239",
+        "chatAdmin": "Chat Admin Toko",
+        "contactAddress": "Yogyakarta, Indonesia",
+        "copyright": "Hak Cipta © {year} Kabeh hak dilindhungi.",
+        "madeWith": "Toko Langgaanku 'Opo-Opo Ono'"
+    }
+}
