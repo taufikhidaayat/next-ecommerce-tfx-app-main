@@ -503,7 +503,6 @@ export default function LocationSearchModal({
                                         <button
                                             type="button"
                                             onClick={detectNearby}
-                                            disabled={geoStatus === "locating"}
                                             className="flex w-full items-center gap-3 rounded-2xl border-2 border-dashed border-emerald-300 bg-emerald-50 px-4 py-4 text-left transition hover:border-emerald-400 hover:bg-emerald-100/60 active:scale-[.98] disabled:opacity-60"
                                         >
                                             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-white shadow-sm">

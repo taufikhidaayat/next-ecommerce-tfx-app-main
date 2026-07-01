@@ -129,7 +129,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
     const rowRef = useRef<HTMLDivElement>(null);
     const accRef = useRef(0);
     const rowHeightRef = useRef(0);
-    const snapTimerRef = useRef<ReturnType<typeof setTimeout>>();
+    const snapTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
     const fullyHiddenRef = useRef(false);
     // Tinggi dokumen terakhir. Bila berubah di antara dua event scroll, geseran
     // scrollY itu berasal dari layout shift (mis. gambar produk selesai dimuat di
