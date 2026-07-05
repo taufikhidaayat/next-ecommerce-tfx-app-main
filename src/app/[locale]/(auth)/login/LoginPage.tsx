@@ -193,8 +193,8 @@ export default function Login() {
                                 disabled={isPending}
                                 className={`group/btn relative w-full py-3 rounded-xl text-white font-semibold text-sm overflow-hidden transition-all duration-300
                                     ${isPending
-                                        ? "bg-emerald-600 cursor-not-allowed opacity-70"
-                                        : "bg-gradient-to-r from-emerald-700 to-emerald-800 hover:from-emerald-600 hover:to-emerald-700 shadow-lg shadow-emerald-700/25 hover:shadow-xl hover:shadow-emerald-700/40 hover:-translate-y-0.5"
+                                        ? "bg-red-600 cursor-not-allowed opacity-70"
+                                        : "bg-gradient-to-r from-red-700 to-red-800 hover:from-red-600 hover:to-red-700 shadow-lg shadow-red-700/25 hover:shadow-xl hover:shadow-red-700/40 hover:-translate-y-0.5"
                                     }`}
                             >
                                 {!isPending && (
