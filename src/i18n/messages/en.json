@@ -59,6 +59,7 @@
         "continueToLogin": "Continue to Login",
         "backToDashboard": "Back to Home",
         "fillAllFields": "Please fill in all fields.",
+        "invalidEmail": "Invalid email format.",
         "passwordsNotMatch": "Passwords do not match.",
         "success": "Registration successful. Please check your email to verify your account.",
         "failed": "Registration failed",

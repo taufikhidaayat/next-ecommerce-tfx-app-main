@@ -52,6 +52,13 @@ export default function Register() {
             return;
         }
 
+        // Validasi format email di JS (menggantikan validasi native yang
+        // dimatikan via noValidate agar submit tak terblokir diam-diam).
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            toast.error(t("invalidEmail"));
+            return;
+        }
+
         if (password !== confirmPassword) {
             toast.error(t("passwordsNotMatch"));
             return;
@@ -165,7 +172,7 @@ export default function Register() {
                         </div>
 
                         {/* Register Form */}
-                        <form className="space-y-3 sm:space-y-5" onSubmit={handleSubmit}>
+                        <form className="space-y-3 sm:space-y-5" onSubmit={handleSubmit} noValidate>
                             <FormField
                                 label={t("name")}
                                 id="name"

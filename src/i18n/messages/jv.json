@@ -59,6 +59,7 @@
         "continueToLogin": "Nerusake mlebu",
         "backToDashboard": "Bali menyang Dashboard",
         "fillAllFields": "Mangga isi kabeh kolom.",
+        "invalidEmail": "Format email ora valid.",
         "passwordsNotMatch": "Sandi ora cocog.",
         "success": "Registrasi sukses. Priksa email kanggo verifikasi akun.",
         "failed": "Registrasi gagal",
