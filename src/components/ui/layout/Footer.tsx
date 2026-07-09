@@ -115,7 +115,7 @@ export default function Footer() {
                         {t("copyright", { year: currentYear.toString() })}
                     </p>
                     <p className="text-xs text-green-400 flex items-center gap-1">
-                        {t("madeWith")} Yogyakarta<span className="text-red-400">♥</span>
+                        {t("madeWith")} Yogyakarta
                     </p>
                 </div>
             </div>
