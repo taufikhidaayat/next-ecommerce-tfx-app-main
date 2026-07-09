@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://langgananku.store"),
+  metadataBase: new URL("https://www.langgananku.store"),
   title: WEB_APP_NAME,
   description: WEB_APP_NAME_DESCRIPTION,
   icons: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://langgananku.store",
+    url: "https://www.langgananku.store",
     title: WEB_APP_NAME,
     description: WEB_APP_NAME_DESCRIPTION,
     siteName: WEB_APP_NAME,
@@ -49,18 +49,18 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://langgananku.store/#organization",
+      "@id": "https://www.langgananku.store/#organization",
       name: WEB_APP_NAME,
-      url: "https://langgananku.store",
-      logo: "https://langgananku.store/images/logo-tl-square.png",
+      url: "https://www.langgananku.store",
+      logo: "https://www.langgananku.store/images/logo-tl-square.png",
       description: WEB_APP_NAME_DESCRIPTION,
     },
     {
       "@type": "WebSite",
-      "@id": "https://langgananku.store/#website",
+      "@id": "https://www.langgananku.store/#website",
       name: WEB_APP_NAME,
-      url: "https://langgananku.store",
-      publisher: { "@id": "https://langgananku.store/#organization" },
+      url: "https://www.langgananku.store",
+      publisher: { "@id": "https://www.langgananku.store/#organization" },
     },
   ],
 };

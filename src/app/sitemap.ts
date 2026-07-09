@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales, defaultLocale } from "@/lib/i18n";
 
-const BASE_URL = "https://langgananku.store";
+const BASE_URL = "https://www.langgananku.store";
 
 // Halaman publik (relatif terhadap root locale). Halaman privat
 // (profile, orders, login, dll) sengaja tidak dimasukkan.

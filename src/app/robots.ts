@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://langgananku.store";
+const BASE_URL = "https://www.langgananku.store";
 
 export default function robots(): MetadataRoute.Robots {
   return {
