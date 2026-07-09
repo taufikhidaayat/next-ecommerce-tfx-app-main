@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { WEB_APP_NAME, WEB_APP_NAME_DESCRIPTION } from "@/lib/constant";
@@ -63,6 +63,10 @@ const jsonLd = {
       publisher: { "@id": "https://www.langgananku.store/#organization" },
     },
   ],
+};
+
+export const viewport: Viewport = {
+  themeColor: "#047857",
 };
 
 export default function RootLayout({
