@@ -10,13 +10,59 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://langgananku.store"),
   title: WEB_APP_NAME,
   description: WEB_APP_NAME_DESCRIPTION,
   icons: {
-    icon: "/images/logotoko.png",
-    shortcut: "/images/logotoko.png",
-    apple: "/images/logotoko.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/images/logo-tl-square.png", type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/images/logo-tl-square.png",
   },
+  openGraph: {
+    type: "website",
+    url: "https://langgananku.store",
+    title: WEB_APP_NAME,
+    description: WEB_APP_NAME_DESCRIPTION,
+    siteName: WEB_APP_NAME,
+    images: [
+      {
+        url: "/images/logo-tl-square.png",
+        width: 512,
+        height: 512,
+        alt: WEB_APP_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: WEB_APP_NAME,
+    description: WEB_APP_NAME_DESCRIPTION,
+    images: ["/images/logo-tl-square.png"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://langgananku.store/#organization",
+      name: WEB_APP_NAME,
+      url: "https://langgananku.store",
+      logo: "https://langgananku.store/images/logo-tl-square.png",
+      description: WEB_APP_NAME_DESCRIPTION,
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://langgananku.store/#website",
+      name: WEB_APP_NAME,
+      url: "https://langgananku.store",
+      publisher: { "@id": "https://langgananku.store/#organization" },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -27,6 +73,10 @@ export default function RootLayout({
   return (
     <html className={montserrat.variable}>
       <body className="antialiased bg-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

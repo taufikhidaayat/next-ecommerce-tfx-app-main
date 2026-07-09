@@ -12,7 +12,7 @@ export const DEFAULT_IMAGE_URL = '/images/default-product-image.webp';
 export const DEFAULT_BRAND_URL = '/images/default-brand-image.webp';
 export const DEFAULT_USER_URL = '/images/default-profile.png';
 
-export const WEB_APP_NAME = "Toko Langgananku";
+export const WEB_APP_NAME = 'Toko Langgananku "Opo - Opo Ono"';
 export const WEB_APP_NAME_DESCRIPTION = "Belanja mudah, harga terjangkau – Toko Langgananku";
 
 export const WEB_APP_NAME_CATEGORIES = "All Categories | " + WEB_APP_NAME;
