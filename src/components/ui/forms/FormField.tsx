@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent, ForwardedRef } from "react";
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import { FiEye, FiEyeOff, FiCalendar } from "react-icons/fi";
 
 type FormFieldProps = {
     label?: React.ReactNode;
@@ -84,6 +84,38 @@ export default function FormField({
                     >
                         {showPassword ? <FiEyeOff /> : <FiEye />}
                     </button>
+                </div>
+            </div>
+        );
+    }
+
+    if (type === "date") {
+        return (
+            <div>
+                {label && (
+                    <label htmlFor={id} className="block text-xs sm:text-sm font-bold text-gray-700 pl-1">
+                        {label} {required && <span className="text-red-500">*</span>}
+                    </label>
+                )}
+                <div className="relative mt-2">
+                    <input
+                        type="date"
+                        id={id}
+                        name={name ?? id}
+                        value={value}
+                        onChange={onChange}
+                        className={`date-field ${inputBaseClass} pr-11 ${!value ? "text-transparent" : ""} ${className ?? ""}`}
+                        required={required}
+                        disabled={disabled}
+                        ref={refProp}
+                        min={min}
+                    />
+                    {!value && (
+                        <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-base text-gray-400">
+                            {placeholder || "Pilih tanggal"}
+                        </span>
+                    )}
+                    <FiCalendar className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-lg text-gray-400" />
                 </div>
             </div>
         );

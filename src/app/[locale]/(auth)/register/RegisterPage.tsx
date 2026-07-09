@@ -213,6 +213,7 @@ export default function Register() {
                                 type="date"
                                 value={birthdate}
                                 onChange={(e) => setBirthdate(e.target.value)}
+                                placeholder={t("selectDate")}
                                 disabled={isPending}
                             />
 

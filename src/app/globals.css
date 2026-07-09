@@ -204,6 +204,25 @@ textarea:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px #ffffff inset; /* white on focus, match form behavior */
 }
 
+/* ===== Input tanggal: sembunyikan indikator native (chevron/kalender bawaan
+   browser) & jadikan seluruh area input dapat diklik untuk membuka date
+   picker. Ikon kalender kustom ditampilkan terpisah di FormField. ===== */
+.date-field::-webkit-calendar-picker-indicator {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Sembunyikan teks placeholder native "dd/mm/yyyy" saat kosong (warna teks
+   diset transparan via kelas di FormField), agar placeholder kustom terlihat. */
+.date-field::-webkit-datetime-edit {
+  color: inherit;
+}
+
 /* ===== Modern Toast — Card + thick bottom progress bar ===== */
 .Toastify__toast-container {
   --toastify-toast-width: 380px !important;

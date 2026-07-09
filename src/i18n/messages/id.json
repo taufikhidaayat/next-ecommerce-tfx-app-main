@@ -60,6 +60,7 @@
         "backToDashboard": "Kembali ke Beranda",
         "fillAllFields": "Silakan isi semua kolom.",
         "invalidEmail": "Format email tidak valid.",
+        "selectDate": "Pilih tanggal",
         "passwordsNotMatch": "Kata sandi tidak cocok.",
         "success": "Pendaftaran berhasil. Silakan cek email Anda untuk verifikasi akun.",
         "failed": "Pendaftaran gagal",

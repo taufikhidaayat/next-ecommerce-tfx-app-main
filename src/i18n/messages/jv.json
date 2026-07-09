@@ -60,6 +60,7 @@
         "backToDashboard": "Bali menyang Dashboard",
         "fillAllFields": "Mangga isi kabeh kolom.",
         "invalidEmail": "Format email ora valid.",
+        "selectDate": "Pilih tanggal",
         "passwordsNotMatch": "Sandi ora cocog.",
         "success": "Registrasi sukses. Priksa email kanggo verifikasi akun.",
         "failed": "Registrasi gagal",
