@@ -12,7 +12,6 @@ import { apiClient } from "@/lib/client/axios-client";
 import { useAuth } from "@/satelite/services/authService";
 import { useUser } from "@/satelite/services/userService";
 import { usePointBalance } from "@/satelite/services/pointService";
-import UserHeaderSkeleton from "@/components/skeletons/UserHeaderSkeleton";
 import ProfileMenuDropdown from "./ProfileMenuDropdown";
 import CartModal from "@/components/modal/Cart";
 import ConfirmModal from "@/components/modal/ConfirmModal";
@@ -323,9 +322,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
                         {/* Icons */}
                         <div className="flex items-center space-x-2 ml-4">
                             <LanguageSwitcher />
-                            {isLoading ? (
-                                <UserHeaderSkeleton />
-                            ) : user ? (
+                            {user ? (
                                 <>
                                     <Link href="/profile/points" className="relative group">
                                         <div
@@ -430,9 +427,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
 
                             <div className="flex shrink-0 items-center gap-1.5">
                                 <LanguageSwitcher onOpenChange={setIsLangOpen} forceClose={hideTopRow} />
-                                {isLoading ? (
-                                    <UserHeaderSkeleton />
-                                ) : user ? (
+                                {user ? (
                                     <>
                                         <Link
                                             href="/profile/points"
