@@ -51,6 +51,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
         try {
             setIsLoggingOut(true);
             await apiClient.post("/user/logout", {}, { withCredentials: true });
+            try { localStorage.setItem("tl_logged_in", "0"); } catch { /* abaikan */ }
             queryClient.removeQueries({ queryKey: ["profile"] });
             queryClient.removeQueries({ queryKey: ["user"] });
             toast.success(tMenu("logoutSuccess"));

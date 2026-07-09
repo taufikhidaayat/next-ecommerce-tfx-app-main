@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 import { useLogin } from "@/satelite/services/authService";
+import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { FaArrowLeft } from "react-icons/fa";
 import { FiMail, FiLock, FiEye, FiEyeOff } from "react-icons/fi";
@@ -23,6 +24,7 @@ export default function Login() {
     const currentLocale = pathname.split("/")[1] || "id";
 
     const { mutate: loginMutation, isPending } = useLogin();
+    const queryClient = useQueryClient();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -35,6 +37,14 @@ export default function Login() {
         loginMutation({ email, password }, {
             onSuccess: () => {
                 toast.success(t("success"));
+                // Tandai status login lebih dulu agar header tidak menampilkan
+                // tombol "Masuk" berkedip saat status auth sedang dimuat ulang.
+                try { localStorage.setItem("tl_logged_in", "1"); } catch { /* abaikan */ }
+                // Segarkan cache auth agar navbar langsung berubah ke tampilan
+                // login (avatar, keranjang, poin) tanpa perlu refresh manual.
+                queryClient.invalidateQueries({ queryKey: ["profile"] });
+                queryClient.invalidateQueries({ queryKey: ["user"] });
+                queryClient.invalidateQueries({ queryKey: ["point-balance"] });
                 router.push(`/${currentLocale}`);
             },
             onError: () => {
