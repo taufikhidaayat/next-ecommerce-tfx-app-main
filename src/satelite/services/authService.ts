@@ -33,7 +33,7 @@ export const useVerify = () => {
 };
 
 export const useAuth = () => {
-  return useQuery<DecodedToken>({
+  return useQuery<DecodedToken | null>({
     queryKey: ["profile"],
     queryFn: fetchProfile,
     gcTime: 10 * 60 * 1000,
