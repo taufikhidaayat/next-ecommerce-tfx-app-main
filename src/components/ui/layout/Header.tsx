@@ -12,6 +12,7 @@ import { apiClient } from "@/lib/client/axios-client";
 import { useAuth } from "@/satelite/services/authService";
 import { useUser } from "@/satelite/services/userService";
 import { usePointBalance } from "@/satelite/services/pointService";
+import UserHeaderSkeleton from "@/components/skeletons/UserHeaderSkeleton";
 import ProfileMenuDropdown from "./ProfileMenuDropdown";
 import CartModal from "@/components/modal/Cart";
 import ConfirmModal from "@/components/modal/ConfirmModal";
@@ -95,6 +96,38 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
     const { data: search, isPending } = useSearch({ q: debouncedQ });
     const { data: pointData } = usePointBalance();
     const pointBalance = pointData?.data?.points ?? 0;
+
+    // Ingat status login dari kunjungan sebelumnya. Saat refresh, cache auth
+    // kosong sehingga status belum diketahui sesaat — tanpa tebakan ini, user
+    // yang sudah login akan melihat tombol "Masuk/Daftar" berkedip dulu.
+    // null = belum dibaca (render awal/SSR), true/false = hasil kunjungan lalu.
+    const [prevLoggedIn, setPrevLoggedIn] = useState<boolean | null>(null);
+
+    useEffect(() => {
+        try {
+            setPrevLoggedIn(localStorage.getItem("tl_logged_in") === "1");
+        } catch {
+            setPrevLoggedIn(false);
+        }
+    }, []);
+
+    // Simpan status login aktual setiap kali auth selesai dicek.
+    useEffect(() => {
+        if (isLoading) return;
+        try {
+            localStorage.setItem("tl_logged_in", user ? "1" : "0");
+        } catch { /* localStorage tidak tersedia — abaikan */ }
+    }, [user, isLoading]);
+
+    // Tentukan tampilan area auth di header:
+    // - "loggedin": sudah pasti login → avatar & poin
+    // - "guest": sudah pasti belum login (auth selesai, atau kunjungan lalu guest) → tombol Masuk
+    // - "pending": belum tahu & kemungkinan login → skeleton (bukan tombol Masuk, agar tak berkedip)
+    const authView: "loggedin" | "guest" | "pending" = user
+        ? "loggedin"
+        : !isLoading || prevLoggedIn === false
+            ? "guest"
+            : "pending";
 
     useEffect(() => {
         if (!isProfileMenuOpen) return;
@@ -322,7 +355,9 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
                         {/* Icons */}
                         <div className="flex items-center space-x-2 ml-4">
                             <LanguageSwitcher />
-                            {user ? (
+                            {authView === "pending" ? (
+                                <UserHeaderSkeleton />
+                            ) : user ? (
                                 <>
                                     <Link href="/profile/points" className="relative group">
                                         <div
@@ -427,7 +462,9 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
 
                             <div className="flex shrink-0 items-center gap-1.5">
                                 <LanguageSwitcher onOpenChange={setIsLangOpen} forceClose={hideTopRow} />
-                                {user ? (
+                                {authView === "pending" ? (
+                                    <UserHeaderSkeleton />
+                                ) : user ? (
                                     <>
                                         <Link
                                             href="/profile/points"
