@@ -51,11 +51,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           className={`relative ${!isAuthPage ? 'px-2 py-4 pb-28 md:pb-4' : ''}`}
           style={!isAuthPage ? { paddingTop: `${headerHeight + 16}px` } : undefined}
         >
-          {isAuthPage ? (
-            children
-          ) : (
-            <PullToRefresh topOffset={8}>{children}</PullToRefresh>
-          )}
+          <PullToRefresh topOffset={8}>{children}</PullToRefresh>
         </div>
       </main>
       {!isAuthPage && <ScrollToTop />}
