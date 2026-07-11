@@ -13,6 +13,7 @@ import FormField from "@/components/ui/forms/FormField";
 import CustomSelect from "@/components/ui/forms/CustomSelect";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useTranslations } from "next-intl";
+import { toE164Phone, isValidIdPhone } from "@/utils/phone";
 
 export default function Register() {
     const t = useTranslations("register");
@@ -59,6 +60,13 @@ export default function Register() {
             return;
         }
 
+        // Nomor sudah dinormalisasi tanpa "0" depan (lihat onChange phone), tapi
+        // tetap divalidasi agar tidak mengirim nomor yang jelas salah.
+        if (!isValidIdPhone(phone)) {
+            toast.error(t("invalidPhone"));
+            return;
+        }
+
         if (password !== confirmPassword) {
             toast.error(t("passwordsNotMatch"));
             return;
@@ -69,7 +77,7 @@ export default function Register() {
                 name,
                 email,
                 password,
-                phone: `+62${phone}`,
+                phone: toE164Phone(phone),
                 birthdate,
                 gender,
                 languagePreference
@@ -183,16 +191,21 @@ export default function Register() {
                                 disabled={isPending}
                             />
 
-                            <FormField
-                                label={t("email")}
-                                id="email"
-                                type="email"
-                                value={email}
-                                onChange={e => setEmail(e.target.value)}
-                                placeholder="you@example.com"
-                                required
-                                disabled={isPending}
-                            />
+                            <div>
+                                <FormField
+                                    label={t("email")}
+                                    id="email"
+                                    type="email"
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                    placeholder="you@example.com"
+                                    required
+                                    disabled={isPending}
+                                />
+                                <p className="mt-1.5 pl-1 text-[11px] sm:text-xs text-gray-400 leading-snug">
+                                    {t("emailHint")}
+                                </p>
+                            </div>
 
                             <FormField
                                 label={t("phone")}
@@ -200,7 +213,9 @@ export default function Register() {
                                 type="tel"
                                 pattern="[0-9]{9,13}"
                                 value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
+                                // Buang "0" di depan agar hasilnya selalu +62 yang benar
+                                // (mis. ketik 0812… → 812…). FormField sudah menyaring non-digit.
+                                onChange={(e) => setPhone(e.target.value.replace(/^0+/, ""))}
                                 placeholder="81234567890"
                                 required
                                 prefix="+62"

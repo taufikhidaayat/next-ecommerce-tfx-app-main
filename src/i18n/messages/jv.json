@@ -60,6 +60,8 @@
         "backToDashboard": "Bali menyang Dashboard",
         "fillAllFields": "Mangga isi kabeh kolom.",
         "invalidEmail": "Format email ora valid.",
+        "invalidPhone": "Nomer telpon ora valid.",
+        "emailHint": "Pastikan email bener kanggo verifikasi & mlebu.",
         "selectDate": "Pilih tanggal",
         "passwordsNotMatch": "Sandi ora cocog.",
         "success": "Registrasi sukses. Priksa email kanggo verifikasi akun.",

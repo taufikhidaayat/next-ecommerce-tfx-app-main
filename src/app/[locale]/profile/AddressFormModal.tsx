@@ -19,6 +19,7 @@ import { RegionSelection, EMPTY_REGION } from "@/types/wilayah";
 import RegionPickerModal from "./RegionPickerModal";
 import LocationSearchModal from "./LocationSearchModal";
 import { useBottomSheetDrag } from "@/hooks/useBottomSheetDrag";
+import { toE164Phone, isValidIdPhone } from "@/utils/phone";
 
 // emsifa returns region names in UPPERCASE — present them in Title Case.
 const titleCase = (s: string) => s.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
@@ -76,7 +77,8 @@ export default function AddressFormModal({
         if (!isOpen) return;
         if (editingAddress) {
             setRecipientName(editingAddress.recipientName);
-            setPhone(editingAddress.phone);
+            // Tampilkan dalam format kanonik +62 (rapikan data lama bila perlu).
+            setPhone(toE164Phone(editingAddress.phone) || editingAddress.phone);
             // Prefer the raw street if stored (new format); fall back to the full
             // address for legacy rows that only kept the composed string.
             setStreet(editingAddress.street ?? editingAddress.address);
@@ -108,7 +110,9 @@ export default function AddressFormModal({
         } else {
             // New address: prefill contact from the saved profile for convenience.
             setRecipientName(defaultRecipientName);
-            setPhone(defaultPhone);
+            // Autofill dari profil → seragamkan ke +62 agar lolos validasi
+            // walau data profil tersimpan dalam format lama (mis. "+62081…").
+            setPhone(toE164Phone(defaultPhone));
             setStreet("");
             setDetail("");
             setRegion(EMPTY_REGION);
@@ -157,9 +161,8 @@ export default function AddressFormModal({
             setError(t("recipientName") + " & " + t("phone"));
             return;
         }
-        // Indonesian phone: must start with 08, +62, or 62 followed by a mobile prefix.
-        const phoneRegex = /^(\+62|62|0)8[1-9][0-9]{6,11}$/;
-        if (!phoneRegex.test(phone.trim())) {
+        // Terima format apa pun (08…, +62…, 62…) — dinormalisasi lalu divalidasi.
+        if (!isValidIdPhone(phone)) {
             setError(t("phoneInvalid"));
             return;
         }
@@ -179,7 +182,7 @@ export default function AddressFormModal({
         onSubmit({
             label,
             recipientName: recipientName.trim(),
-            phone: phone.trim(),
+            phone: toE164Phone(phone),
             address: composeAddress(),
             // Simpan bagian terstruktur agar form edit bisa di-prefill nanti.
             street: street.trim(),

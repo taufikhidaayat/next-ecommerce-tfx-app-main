@@ -60,6 +60,8 @@
         "backToDashboard": "Back to Home",
         "fillAllFields": "Please fill in all fields.",
         "invalidEmail": "Invalid email format.",
+        "invalidPhone": "Invalid phone number.",
+        "emailHint": "Make sure your email is correct — it's used for verification & login.",
         "selectDate": "Select date",
         "passwordsNotMatch": "Passwords do not match.",
         "success": "Registration successful. Please check your email to verify your account.",

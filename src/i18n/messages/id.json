@@ -60,6 +60,8 @@
         "backToDashboard": "Kembali ke Beranda",
         "fillAllFields": "Silakan isi semua kolom.",
         "invalidEmail": "Format email tidak valid.",
+        "invalidPhone": "Nomor telepon tidak valid.",
+        "emailHint": "Pastikan email benar untuk verifikasi & login.",
         "selectDate": "Pilih tanggal",
         "passwordsNotMatch": "Kata sandi tidak cocok.",
         "success": "Pendaftaran berhasil. Silakan cek email Anda untuk verifikasi akun.",
