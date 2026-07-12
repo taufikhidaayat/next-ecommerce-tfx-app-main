@@ -18,6 +18,8 @@ interface AnnouncementsResponse {
     data: Announcement[];
 }
 
+// Bar pengumuman tipis di paling atas toko (teks berjalan/berganti), mengambil
+// pengumuman aktif dari server. Sembunyi bila tidak ada pengumuman.
 export default function AnnouncementBar() {
     const [dismissed, setDismissed] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);

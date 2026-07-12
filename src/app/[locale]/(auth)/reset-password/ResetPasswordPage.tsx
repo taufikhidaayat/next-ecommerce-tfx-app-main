@@ -9,6 +9,8 @@ import { toast } from "react-toastify";
 import FormField from "@/components/ui/forms/FormField";
 import { useTranslations } from "next-intl";
 
+// Halaman reset password: membaca token dari URL, memvalidasinya, lalu menerima
+// password baru dari user dan mengirimnya ke server. Token dari email "lupa password".
 export default function ResetPasswordPage() {
     const t = useTranslations("resetPassword");
     const router = useRouter();

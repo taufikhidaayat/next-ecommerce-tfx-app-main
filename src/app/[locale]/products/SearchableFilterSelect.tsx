@@ -6,6 +6,8 @@ import { FiSearch, FiChevronDown, FiX } from "react-icons/fi";
 
 type Option = { label: string; value: string };
 
+// Dropdown filter yang BISA DICARI (ada kotak ketik di dalamnya), untuk daftar opsi
+// panjang seperti kategori atau brand di filter katalog produk.
 export function SearchableFilterSelect({
     label,
     options,

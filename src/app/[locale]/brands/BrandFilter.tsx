@@ -12,6 +12,7 @@ type BrandFilterProps = {
     onSearchChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
+// Bilah filter halaman daftar merek: pencarian + pengurutan (mis. A–Z).
 export default function BrandFilter({
     sortOptions,
     setSortOrder,

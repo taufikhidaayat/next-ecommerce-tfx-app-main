@@ -12,6 +12,8 @@ type Props = {
     isDisable?: boolean;
 };
 
+// Input pakai poin saat checkout: user memilih berapa poin dipakai untuk potongan.
+// Dibatasi maksimal 50% dari total dan tidak melebihi saldo poin (sesuai aturan backend).
 export default function PointsRedeemInput({
     totalPrice,
     pointsToRedeem,

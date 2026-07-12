@@ -6,6 +6,7 @@ export const metadata = {
     description: WEB_APP_NAME_ORDER_DESCRIPTION,
 };
 
+// Halaman "Pesanan Saya" (daftar pesanan pelanggan, per tab status). Logika ada di komponen Orders.
 export default function OrdersPage() {
     return <Orders />;
 }

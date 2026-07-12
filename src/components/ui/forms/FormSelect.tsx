@@ -21,6 +21,7 @@ type FormSelectProps = {
     isLoading?: boolean;
 };
 
+// Dropdown pilihan untuk form (label + opsi). Dipakai di form-form toko.
 export default function FormSelect({
     label,
     id,

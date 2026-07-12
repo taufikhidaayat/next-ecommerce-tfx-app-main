@@ -8,6 +8,8 @@ type RatingStarProps = {
     label?: string;
 };
 
+// Deretan bintang rating. Bila onChange diberikan → bisa diklik (mode input rating);
+// tanpa onChange → hanya menampilkan (read-only), mis. rata-rata rating produk.
 export default function RatingStars({ value = 0, onChange, className }: RatingStarProps) {
     const [hover, setHover] = useState(0);
     const isEditable = typeof onChange === "function";

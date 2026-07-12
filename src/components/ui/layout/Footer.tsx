@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { FiMapPin } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
+// Footer toko: info toko, tautan, dan hak cipta di bagian bawah halaman.
 export default function Footer() {
     const t = useTranslations("footer");
     const currentYear = new Date().getFullYear();
@@ -87,7 +88,7 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-4">
                             <li>
-                                {/* Tombol WhatsApp — full-width di mobile. Lift dipasang di <span>
+                                {/* Tombol WhatsApp, full-width di mobile. Lift dipasang di <span>
                                     bagian dalam (bukan <a>) supaya area hover tetap diam → halus, tanpa jitter. */}
                                 <a
                                     href={`https://wa.me/${t("contactPhone").replace(/\D/g, "").replace(/^0/, "62")}`}

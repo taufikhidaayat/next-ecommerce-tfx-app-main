@@ -8,6 +8,6 @@ export const recordSearchQuery = async (query: string): Promise<void> => {
     try {
         await apiClient.post(`/product/search-log`, { query: q });
     } catch {
-        // abaikan — tracking gagal tidak boleh mengganggu pencarian.
+        // abaikan, tracking gagal tidak boleh mengganggu pencarian.
     }
 };

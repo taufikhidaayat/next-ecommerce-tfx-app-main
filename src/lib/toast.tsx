@@ -1,10 +1,14 @@
 import { toast, ToastOptions } from "react-toastify";
 
+// Pembungkus notifikasi toast dengan format seragam (judul + deskripsi opsional).
+// Dipakai di seluruh app lewat showSuccessToast/showErrorToast/dst, supaya semua
+// notifikasi tampil konsisten tanpa menulis JSX-nya berulang.
 type ToastBody = {
     title: string;
     description?: string;
 };
 
+// Membentuk isi toast (judul tebal + deskripsi kecil di bawahnya).
 function buildBody({ title, description }: ToastBody) {
     return (
         <div className="toast-content">

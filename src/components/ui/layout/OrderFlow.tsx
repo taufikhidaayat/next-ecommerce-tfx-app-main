@@ -18,6 +18,8 @@ interface OrderFlowProps {
     orderType?: string;
 }
 
+// Penanda progres pesanan (stepper) di halaman detail order pelanggan: deretan tahap
+// dengan tahap aktif/lewat diberi warna. `step` (dari util currentStep) menentukan posisinya.
 export default function OrderFlow({
     currentStep,
     isCancelled = false,
@@ -37,7 +39,7 @@ export default function OrderFlow({
             if (isCancelled) {
                 baseSteps.push({ label: t("cancelled"), icon: <FaTimesCircle /> });
             } else {
-                // "Telah Diantar" lalu "Selesai" — keduanya otomatis hijau begitu pesanan diantar
+                // "Telah Diantar" lalu "Selesai", keduanya otomatis hijau begitu pesanan diantar
                 // (tidak ada langkah manual tambahan).
                 baseSteps.push({ label: t("delivered"), icon: <FaCheckCircle /> });
                 baseSteps.push({ label: t("completed"), icon: <FaCheckCircle /> });
@@ -125,7 +127,7 @@ export default function OrderFlow({
                         {index < steps.length - 1 && (
                             <div className="flex items-center h-8 sm:h-10 sm:flex-1 sm:px-2">
                                 {isActiveConnector ? (
-                                    // Bar terisi dari kiri ke kanan (mengulang) — kesan "sedang berproses".
+                                    // Bar terisi dari kiri ke kanan (mengulang), kesan "sedang berproses".
                                     <div className="relative h-1 w-8 sm:w-full overflow-hidden rounded-full bg-emerald-100">
                                         <div className="absolute inset-0 origin-left rounded-full bg-emerald-500 animate-progress-fill" />
                                     </div>

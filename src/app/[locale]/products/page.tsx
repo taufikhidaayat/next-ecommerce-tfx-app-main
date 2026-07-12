@@ -6,6 +6,7 @@ export const metadata = {
     description: WEB_APP_NAME_PRODUCTS_DESCRIPTION,
 };
 
+// Halaman katalog produk toko. Kerangka tipis, logika (filter, daftar, dll) ada di komponen Products.
 export default function ProductsPage() {
     return <Products />;
 }

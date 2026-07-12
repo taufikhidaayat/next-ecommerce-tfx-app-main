@@ -19,9 +19,14 @@ type ProductCardProps = {
     product: Product;
 };
 
+// Hitung harga setelah diskon persen (tidak boleh negatif).
 const getDiscountedPrice = (price: number, discount: number) =>
     Math.max(0, price - price * discount / 100);
 
+// Kartu produk di etalase toko (dipakai di beranda, katalog, hasil pencarian, dll).
+// Menampilkan gambar, nama, rating, harga (dengan coretan bila diskon), badge diskon,
+// dan tombol "tambah ke keranjang". Menghitung diskon retail vs grosir dan menampilkan
+// yang terbesar sebagai badge.
 export default function ProductCard({ product }: ProductCardProps) {
     const t = useTranslations("products");
     const router = useRouter();
@@ -29,7 +34,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     const [isAdding, setIsAdding] = useState(false);
     const [imageError, setImageError] = useState(false);
     const queryClient = useQueryClient();
-    // Diskon harga normal (retail) — menentukan harga yang ditampilkan & coretannya.
+    // Diskon harga normal (retail), menentukan harga yang ditampilkan & coretannya.
     const normalDiscount = product.discountPercentage ?? 0;
     const hasRetailDiscount = normalDiscount > 0;
     const discountedPrice = hasRetailDiscount
@@ -49,6 +54,9 @@ export default function ProductCard({ product }: ProductCardProps) {
     const imageUrl = (!imageError && product.imageUrl) ? product.imageUrl : DEFAULT_PRODUCT_URL;
     const isOutOfStock = (product.stock ?? 0) <= 0;
 
+    // Tambah ke keranjang. preventDefault/stopPropagation agar klik tombol tidak ikut
+    // membuka link detail produk (kartunya dibungkus Link). Belum login → ke halaman login;
+    // stok habis → tolak; sedang menambah → abaikan klik ganda.
     const handleAddToCart = async (e: React.MouseEvent) => {
         e.preventDefault();
         e.stopPropagation();
@@ -105,7 +113,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                         )}
                     </div>
 
-                    {/* Diskon — kanan atas (terbesar antara normal & grosir) */}
+                    {/* Diskon, kanan atas (terbesar antara normal & grosir) */}
                     {hasBadge && (
                         <div className="absolute top-0 right-0">
                             <span className="bg-red-500 text-white text-[11px] sm:text-sm font-bold px-2 py-0.5 rounded-bl-md rounded-tr-xl block">
@@ -113,7 +121,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                             </span>
                         </div>
                     )}
-                    {/* Kategori — kiri bawah (menempel di bawah area gambar) */}
+                    {/* Kategori, kiri bawah (menempel di bawah area gambar) */}
                     {product.categoryName && (
                         <span className="absolute bottom-0 left-0">
                             <span className="bg-[#FDBA12] text-gray-700 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-tr-md block">

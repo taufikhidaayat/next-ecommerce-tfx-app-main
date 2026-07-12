@@ -10,6 +10,8 @@ type Props = {
   user: User;
 };
 
+// Info pesanan di halaman detail: nomor order, tanggal, tipe (ambil/kirim), dan
+// alamat/penerima bila delivery.
 export default function OrderInformation({ order, user }: Props) {
   const t = useTranslations("orderDetail.info");
   const td = useTranslations("delivery");

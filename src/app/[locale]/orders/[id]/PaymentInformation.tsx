@@ -21,6 +21,8 @@ type Props = {
   setConfirmModalOpen: (show: boolean) => void;
 };
 
+// Info pembayaran di halaman detail order: metode bayar, status, bukti transfer,
+// dan opsi mengganti metode bayar (bila masih boleh) atau membatalkan pesanan.
 export default function PaymentInformation({ order, payment, refetch, confirmModalOpen, setConfirmModalOpen }: Props) {
   const t = useTranslations("orderDetail.payment");
 

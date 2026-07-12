@@ -25,6 +25,8 @@ function RevealSection({ children, className = "scroll-reveal", id }: {
     );
 }
 
+// Penyusun isi beranda toko: mengambil data banner sekali di sini, lalu merangkai
+// semua bagian (banner, kategori, brand, produk, promo, penawaran, FAQ) berurutan.
 export default function DashboardWrapper() {
 
     const { data: banners, isPending } = useBanners({

@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useTranslations } from "next-intl";
 import { usePointBalance } from "@/satelite/services/pointService";
 
+// Kartu ringkas saldo poin di profil, dengan tautan ke halaman riwayat poin lengkap.
 export default function PointsCard() {
     const router = useRouter();
     const t = useTranslations("profile.points");

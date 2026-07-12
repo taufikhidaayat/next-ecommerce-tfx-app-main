@@ -17,6 +17,8 @@ function isValidOrderStatus(value: string): value is OrderStatus {
     return Object.values(OrderStatus).includes(value.toUpperCase() as OrderStatus);
 }
 
+// Isi halaman "Pesanan Saya": daftar pesanan pelanggan dengan tab per status
+// (Menunggu/Dikirim/Selesai/Batal). Tab aktif bisa dibaca dari query URL.
 export default function Orders() {
     const t = useTranslations("orders");
     const searchParams = useSearchParams();

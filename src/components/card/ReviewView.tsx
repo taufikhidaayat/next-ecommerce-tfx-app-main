@@ -8,6 +8,7 @@ type ReviewViewProps = {
     currentUserId?: string;
 };
 
+// Daftar ulasan: merender banyak ReviewCard, menandai mana ulasan milik user sendiri.
 export default function ReviewView({ reviews, currentUserId }: ReviewViewProps) {
     const t = useTranslations("reviewView");
 

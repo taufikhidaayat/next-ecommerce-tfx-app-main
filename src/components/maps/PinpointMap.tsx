@@ -38,7 +38,7 @@ function FlyController({ target }: { target: { lat: number; lng: number; key: nu
     const map = useMap();
     useEffect(() => {
         // Lewati flyTo bila peta sudah berada di titik yang sama (mis. saat baru
-        // masuk dari pencarian — map sudah di-mount di koordinat itu). Membandingkan
+        // masuk dari pencarian, map sudah di-mount di koordinat itu). Membandingkan
         // posisi aktual peta lebih kuat daripada flag mount (tahan StrictMode).
         const c = map.getCenter();
         const sameSpot = Math.abs(c.lat - target.lat) < 1e-6 && Math.abs(c.lng - target.lng) < 1e-6;
@@ -57,6 +57,9 @@ interface PinpointMapProps {
     onDragStateChange?: (dragging: boolean) => void;
 }
 
+// Peta interaktif (Leaflet + OpenStreetMap) untuk memilih titik alamat, gaya Shopee:
+// pin diam di tengah layar, PETANYA yang digeser di bawahnya. Koordinat yang dipilih =
+// titik tengah peta, dibaca setiap kali geser berhenti (moveend). Dipakai di form alamat pelanggan.
 export default function PinpointMap({ initialLat, initialLng, flyTarget, onMove, onDragStateChange }: PinpointMapProps) {
     return (
         <MapContainer

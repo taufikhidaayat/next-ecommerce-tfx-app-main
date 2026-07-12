@@ -8,6 +8,7 @@ interface BrandCardProps {
     isList?: boolean;
 }
 
+// Kartu satu merek (logo + nama). isList mengubah tata letak (grid vs baris daftar).
 export default function BrandCard({ brand, isList = false }: BrandCardProps) {
     const t = useTranslations("brandCard");
 

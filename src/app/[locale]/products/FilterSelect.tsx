@@ -1,6 +1,7 @@
 import { SortOrder } from "@/enum/sortOrder";
 import { useTranslations } from "next-intl";
 
+// Dropdown pilihan sederhana untuk filter katalog produk (mis. urutan, rentang harga).
 export function FilterSelect({
     label,
     options,

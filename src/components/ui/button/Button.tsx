@@ -17,6 +17,8 @@ type ButtonProps = {
     icon?: ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
+// Tombol serba-guna toko (varian warna, status loading dengan spinner, ikon opsional).
+// Sepadan dengan Button di CMS agar tampilan tombol seragam di seluruh aplikasi.
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     (
         {

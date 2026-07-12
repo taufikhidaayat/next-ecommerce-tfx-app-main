@@ -23,6 +23,8 @@ type Props = {
     withQuantity?: boolean;
 };
 
+// Tampilan satu item di dalam detail pesanan: gambar, nama, jumlah, harga (snapshot
+// saat order dibuat). Menampilkan harga & subtotal yang dibayar sebenarnya.
 export default function OrderItemView({
     order,
     orderItem,
@@ -85,7 +87,7 @@ export default function OrderItemView({
                             <h2 className="font-semibold text-base md:text-lg text-green-700 truncate flex-1 min-w-0">
                                 {order.orderId}
                             </h2>
-                            {/* Tipe pesanan — versi MOBILE (nempel di Order ID) */}
+                            {/* Tipe pesanan, versi MOBILE (nempel di Order ID) */}
                             {order.orderType && (
                                 <span className={`md:hidden inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold whitespace-nowrap shrink-0 ${
                                     order.orderType === OrderType.DELIVERY
@@ -107,7 +109,7 @@ export default function OrderItemView({
                 </div>
                 {/* Grup badge kanan: tipe pesanan (desktop) + status, ukuran seragam & sejajar */}
                 <div className="flex items-center gap-2 shrink-0 md:pl-4">
-                    {/* Tipe pesanan — versi DESKTOP (digabung dengan status) */}
+                    {/* Tipe pesanan, versi DESKTOP (digabung dengan status) */}
                     {order.orderType && (
                         <span className={`hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap border ${
                             order.orderType === OrderType.DELIVERY

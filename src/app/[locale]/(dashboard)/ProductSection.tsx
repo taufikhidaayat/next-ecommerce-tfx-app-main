@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { useTranslations } from "next-intl";
 
+// Bagian "Produk" di beranda: menampilkan produk rekomendasi untuk pengunjung.
 export default function ProductSection() {
     const t = useTranslations("home.products");
     // Rekomendasi content-based: personal (berdasarkan produk yang dibuka) bila login,

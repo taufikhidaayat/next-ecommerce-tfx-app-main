@@ -19,6 +19,8 @@ type ReportReviewModalProps = {
 
 const MIN_NOTE_LEN = 5;
 
+// Modal lapor ulasan: user memilih alasan (spam/kasar/menyesatkan/dll) + catatan,
+// lalu mengirim laporan agar ditinjau admin.
 export default function ReportReviewModal({
     isOpen,
     onClose,

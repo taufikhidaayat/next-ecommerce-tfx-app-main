@@ -3,6 +3,7 @@
 import { FaInstagram } from "react-icons/fa";
 import { useTranslations } from "next-intl";
 
+// Bar navigasi atas toko: logo, pencarian, keranjang, menu profil, pemilih bahasa.
 export default function Navbar() {
     const t = useTranslations("home.navbar");
 

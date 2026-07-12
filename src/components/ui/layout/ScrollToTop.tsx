@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { LuChevronsUp } from "react-icons/lu";
 
+// Tombol "kembali ke atas" yang muncul saat halaman digulir jauh ke bawah.
 export default function ScrollToTop() {
     const [visible, setVisible] = useState(false);
 

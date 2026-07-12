@@ -20,6 +20,8 @@ const formatCountdown = (totalSeconds: number) => {
     return `${minutes}:${seconds}`;
 };
 
+// Bagian ganti password di profil: isi password lama + baru + konfirmasi, lalu kirim.
+// Backend membatasi (maks 3x, jeda 30 menit), di sini menampilkan pesan/sisa waktunya.
 export default function PasswordSection() {
     const t = useTranslations("profile.password");
     const [currentPassword, setCurrentPassword] = useState("");

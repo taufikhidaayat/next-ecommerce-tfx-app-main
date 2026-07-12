@@ -6,6 +6,7 @@ export const metadata = {
     description: WEB_APP_NAME_REGISTER_DESCRIPTION,
 };
 
+// Halaman daftar akun pelanggan. Logika ada di komponen Register.
 export default function RegisterPage() {
     return <Register />;
 }

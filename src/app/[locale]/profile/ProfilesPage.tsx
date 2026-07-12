@@ -17,6 +17,8 @@ import { profileSchema } from "@/types/schemas/profileSchema";
 import { useTranslations } from "next-intl";
 
 
+// Isi halaman Profil: menyusun bagian-bagian akun pelanggan (data diri, avatar,
+// alamat, password, poin, wishlist), tiap bagian komponen terpisah di folder ini.
 export default function Profiles() {
     const t = useTranslations("profile.page");
     const tBtn = useTranslations("profile.button");

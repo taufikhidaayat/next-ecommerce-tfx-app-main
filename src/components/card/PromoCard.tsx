@@ -12,6 +12,7 @@ interface PromoCardProps {
     isPending?: boolean;
 }
 
+// Kartu promo/banner kecil yang bisa diklik menuju tujuannya (produk/kategori/dll).
 export default function PromoCard({
     backgroundImage,
     link = "#",

@@ -77,6 +77,8 @@ const VARIANT_STYLES: Record<ConfirmVariant, VariantStyle> = {
     },
 };
 
+// Popup konfirmasi generik ("Yakin?") sisi toko, dipakai sebelum aksi penting
+// (mis. batalkan pesanan, hapus alamat). Sepadan dengan ConfirmModal di CMS.
 export default function ConfirmModal({
     open,
     loading = false,

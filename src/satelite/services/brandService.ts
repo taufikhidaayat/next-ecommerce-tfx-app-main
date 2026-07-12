@@ -3,6 +3,8 @@ import { fetchBrands } from "../hook/brand/useBrands";
 import { QueryFunctionContext, useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { BrandsResponse } from "@/types/brand/brandsResponse";
 
+// Service brand sisi toko (baca daftar/detail merek untuk filter & halaman produk).
+// Pola React Query sama seperti di CMS.
 export const useBrands = (params: FetchParams) => {
   return useQuery({
     queryKey: ['brands', params],

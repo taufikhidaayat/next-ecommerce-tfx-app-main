@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { useTranslations } from "next-intl";
 
+// Isi halaman daftar kategori: grid semua kategori untuk dijelajah pengunjung.
 export default function Categories() {
     const t = useTranslations("categories");
     const { data: categories, isPending: isPendingCategories } = useCategories({

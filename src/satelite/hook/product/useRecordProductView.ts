@@ -5,6 +5,6 @@ export const recordProductView = async (productId: string): Promise<void> => {
     try {
         await apiClient.post(`/product/${productId}/view`);
     } catch {
-        // abaikan — tracking gagal tidak boleh mengganggu pengalaman user.
+        // abaikan, tracking gagal tidak boleh mengganggu pengalaman user.
     }
 };

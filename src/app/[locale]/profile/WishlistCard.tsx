@@ -6,6 +6,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useTranslations } from "next-intl";
 import { useWishlistIds } from "@/satelite/services/wishlistService";
 
+// Kartu ringkas wishlist di profil, dengan tautan ke halaman daftar favorit lengkap.
 export default function WishlistCard() {
     const router = useRouter();
     const t = useTranslations("wishlist");

@@ -8,6 +8,8 @@ import {
     setDefaultUserAddress,
 } from "../hook/user/useUserAddress";
 
+// Service alamat pengiriman pelanggan (daftar, tambah, ubah, hapus, jadikan default).
+// Pola React Query standar seperti service lain.
 export const useUserAddresses = () => {
     return useQuery<UserAddressResponse, Error>({
         queryKey: ["user-addresses"],

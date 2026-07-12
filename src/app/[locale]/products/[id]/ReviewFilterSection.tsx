@@ -13,6 +13,8 @@ type FilterProps = {
     isPending: boolean;
 };
 
+// Filter ulasan produk: tombol pilih bintang (1–5 / semua) & "hanya yang ada teks",
+// untuk menyaring daftar ulasan yang ditampilkan.
 export function ReviewFilterSection({
     selectedRatings,
     onRatingChange,

@@ -19,6 +19,7 @@ type AvatarSectionProps = {
     handleDeleteAvatar: () => void;
 };
 
+// Bagian foto profil (avatar): tampilkan foto sekarang + tombol ganti foto.
 export default function AvatarSection({
     previewUrl,
     userName,
@@ -127,7 +128,7 @@ export default function AvatarSection({
                         )}
                     </div>
 
-                    {/* Verified badge — bottom-right */}
+                    {/* Verified badge, bottom-right */}
                     <div className="absolute -bottom-1 -right-1 z-20 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center shadow-md border-2 border-white">
                         <BsCheckLg className="w-4 h-4 text-white" strokeWidth={1} />
                     </div>
@@ -146,7 +147,7 @@ export default function AvatarSection({
                     {t("verified")}
                 </span>
 
-                {/* Delete button — hanya saat ada custom avatar */}
+                {/* Delete button, hanya saat ada custom avatar */}
                 {hasCustomAvatar && (
                     <button
                         onClick={() => setShowDeleteConfirm(true)}

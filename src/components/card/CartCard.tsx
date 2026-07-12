@@ -19,6 +19,7 @@ type CartCardProps = {
     onSelect?: (id: string) => void;
 };
 
+// Kartu satu item di dalam panel keranjang: gambar, nama, harga, kontrol jumlah, hapus.
 export default function CartCard({
     item,
     onDelete,
@@ -59,7 +60,7 @@ export default function CartCard({
             className={`relative flex items-center transition-all duration-200 ${isSelectMode ? "cursor-pointer" : ""}`}
             onClick={isSelectMode ? () => onSelect?.(item.id!) : undefined}
         >
-            {/* Checkbox — slide in saat select mode */}
+            {/* Checkbox, slide in saat select mode */}
             <div className={`shrink-0 overflow-hidden ${isSelectMode ? "w-6 ml-1 mr-3 opacity-100" : "w-0 opacity-0"}`}>
                 <RoundCheckbox checked={isSelected} onToggle={() => onSelect?.(item.id!)} />
             </div>

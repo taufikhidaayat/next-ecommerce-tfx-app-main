@@ -11,6 +11,7 @@ type Props = {
     item: HistoryOrder;
 };
 
+// Satu titik pada garis waktu (timeline) status pesanan: judul tahap + penanda aktif/lewat.
 export default function OrderTimelineItem({ title, active, isLast, item }: Props) {
     const t = useTranslations("orders.timeline");
     const locale = useLocale();

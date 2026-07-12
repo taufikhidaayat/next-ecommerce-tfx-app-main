@@ -22,6 +22,8 @@ type PersonalSectionProps = {
     children?: React.ReactNode;
 };
 
+// Bagian data diri di halaman profil: form nama, telepon, tanggal lahir, gender, bahasa.
+// Semua nilai & handler dikirim dari induk (Profiles), komponen ini fokus ke tampilan form.
 export default function PersonalSection({
     userEmail,
     formData,

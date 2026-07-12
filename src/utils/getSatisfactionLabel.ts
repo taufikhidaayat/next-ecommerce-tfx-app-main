@@ -1,3 +1,5 @@
+// Mengubah rata-rata rating jadi label kepuasan (mis. "Sangat Baik", "Cukup").
+// Parameter t = fungsi terjemahan, jadi label mengikuti bahasa yang aktif.
 export function getSatisfactionLabel(
     avgRating: number,
     ratingCount: number,

@@ -166,7 +166,7 @@ function GaleriMadukuSlide({ isTransitioning, t }: { isTransitioning: boolean; t
                     transform: isTransitioning ? 'translateX(16px)' : 'translateX(0)',
                 }}
             >
-                {/* Brand text watermark — editorial style */}
+                {/* Brand text watermark, editorial style */}
                 <div className="hidden sm:block absolute top-1 right-4 sm:top-2 sm:right-6 text-amber-500/20 text-3xl sm:text-5xl font-black tracking-tighter select-none pointer-events-none italic">
                     MADUKU
                 </div>
@@ -284,6 +284,9 @@ function DefaultSlide({ slide, isTransitioning, t }: { slide: Slide; isTransitio
     );
 }
 
+// Banner utama di paling atas beranda berupa CAROUSEL (slider) yang berganti otomatis.
+// `current` = indeks slide yang sedang tampil; isTransitioning menjaga animasi geser
+// tidak tumpang-tindih. Bisa digeser manual dan otomatis maju setiap beberapa detik.
 export default function BannerSection({ banners = [] }: BannerSectionProps) {
     const t = useTranslations("home.banner");
     const [current, setCurrent] = useState(0);
@@ -364,7 +367,7 @@ export default function BannerSection({ banners = [] }: BannerSectionProps) {
                 >
                     {slideContent}
 
-                    {/* Dots — desktop only (inside green section) */}
+                    {/* Dots, desktop only (inside green section) */}
                     {slides.length > 1 && (
                         <div className="hidden sm:flex justify-center gap-2 mt-4">
                             {slides.map((_, idx) => {
@@ -395,7 +398,7 @@ export default function BannerSection({ banners = [] }: BannerSectionProps) {
                 </div>
             </section>
 
-            {/* Dots — mobile only (outside green section) */}
+            {/* Dots, mobile only (outside green section) */}
             {slides.length > 1 && (
                 <div className="flex sm:hidden justify-center gap-2 mt-3">
                     {slides.map((_, idx) => {

@@ -134,6 +134,8 @@ interface LocationSearchModalProps {
     onConfirm: (street: string, lat: number, lng: number, region: RegionSelection | null) => void;
 }
 
+// Modal pilih lokasi di peta untuk alamat: cari alamat (autocomplete) atau geser pin
+// di peta (PinpointMap). Menghasilkan koordinat + alamat yang dipilih untuk form alamat.
 export default function LocationSearchModal({
     isOpen,
     initialStreet,
@@ -176,7 +178,7 @@ export default function LocationSearchModal({
         return () => setMounted(false);
     }, []);
 
-    // Pantau perubahan izin lokasi — jangan preemptif set "denied" saat modal buka,
+    // Pantau perubahan izin lokasi, jangan preemptif set "denied" saat modal buka,
     // biarkan user coba dulu. Error hanya ditampilkan setelah getCurrentPosition gagal.
     useEffect(() => {
         if (!isOpen || !navigator.permissions) return;
@@ -227,7 +229,7 @@ export default function LocationSearchModal({
         }
     }, [isOpen, initialStreet, initialLat, initialLng]);
 
-    // Auto-deteksi rekomendasi saat buka HANYA jika izin lokasi sudah granted —
+    // Auto-deteksi rekomendasi saat buka HANYA jika izin lokasi sudah granted,
     // langsung tampilkan tempat terdekat tanpa menunggu klik & tanpa memunculkan
     // prompt. Kalau belum granted (prompt/denied) atau browser tak mendukung
     // Permissions API, tombol manual "Gunakan Lokasi Saat Ini" tetap menjadi fallback.
@@ -362,7 +364,7 @@ export default function LocationSearchModal({
     const handleConfirm = async () => {
         if (!coords) return;
         // Reverse-geocode the final pin so the saved address is complete
-        // (kecamatan, kabupaten, provinsi, kode pos) and matches the chosen point —
+        // (kecamatan, kabupaten, provinsi, kode pos) and matches the chosen point,
         // even if the user dragged the pin after searching.
         setIsConfirming(true);
         let address = label.trim() || query.trim();
@@ -376,7 +378,7 @@ export default function LocationSearchModal({
             if (data?.display_name) address = data.display_name;
             region = await matchRegion((data?.address ?? {}) as Record<string, string>);
         } catch {
-            /* network error — keep the search label as fallback */
+            /* network error, keep the search label as fallback */
         }
         setIsConfirming(false);
         onConfirm(address, coords.lat, coords.lng, region);
@@ -393,9 +395,9 @@ export default function LocationSearchModal({
                 style={sheetStyle}
                 className="flex w-full sm:max-w-md flex-col overflow-hidden rounded-t-3xl sm:rounded-3xl bg-white shadow-2xl sm:h-[85vh] sm:animate-zoom-in"
             >
-            {/* Grab zone — tarik untuk menutup di mobile (handle + header). Peta tidak ikut agar gestur peta tetap normal. */}
+            {/* Grab zone, tarik untuk menutup di mobile (handle + header). Peta tidak ikut agar gestur peta tetap normal. */}
             <div className="shrink-0 touch-none select-none" {...dragHandlers}>
-                {/* Drag handle — affordance bottom-sheet (mobile only) */}
+                {/* Drag handle, affordance bottom-sheet (mobile only) */}
                 <div className="sm:hidden flex justify-center pt-3 pb-2">
                     <div className="h-1.5 w-12 rounded-full bg-gray-300" />
                 </div>
@@ -578,7 +580,7 @@ export default function LocationSearchModal({
                             }}
                         />
 
-                        {/* Selected address card — gaya iOS: frosted glass + pill */}
+                        {/* Selected address card, gaya iOS: frosted glass + pill */}
                         <div className="absolute left-3 right-3 top-3 z-[1000] flex items-center gap-3 rounded-2xl border border-white/60 bg-white/70 p-2.5 shadow-xl shadow-black/10 ring-1 ring-black/5 backdrop-blur-xl backdrop-saturate-150">
                             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-emerald-100/90 text-emerald-600">
                                 <FiMapPin size={18} />
@@ -598,16 +600,16 @@ export default function LocationSearchModal({
                             </button>
                         </div>
 
-                        {/* Bayangan di tanah (titik tengah) — tetap di tempat walau ikon terangkat */}
+                        {/* Bayangan di tanah (titik tengah), tetap di tempat walau ikon terangkat */}
                         <span
                             className={`pointer-events-none absolute left-1/2 top-1/2 z-[999] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-black/40 blur-[2px] transition-all duration-200 ease-out ${
                                 isPinMoving ? "h-1.5 w-3.5 opacity-30" : "h-2 w-5 opacity-45"
                             }`}
                         />
 
-                        {/* Fixed center pin + tooltip — gaya iOS */}
+                        {/* Fixed center pin + tooltip, gaya iOS */}
                         <div className="pointer-events-none absolute left-1/2 top-1/2 z-[1000] flex -translate-x-1/2 -translate-y-full flex-col items-center">
-                            {/* Label frosted dengan ekor menunjuk ke pin — disembunyikan saat peta digeser */}
+                            {/* Label frosted dengan ekor menunjuk ke pin, disembunyikan saat peta digeser */}
                             {!isPinMoving && (
                                 <div className="relative mb-2 rounded-2xl bg-emerald-600/95 px-3.5 py-2 text-center shadow-lg shadow-emerald-900/25 ring-1 ring-emerald-700/30 backdrop-blur-sm">
                                     <p className="text-xs font-bold leading-tight text-white">{t("pinHere")}</p>

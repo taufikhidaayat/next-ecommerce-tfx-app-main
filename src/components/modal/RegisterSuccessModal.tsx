@@ -8,6 +8,7 @@ type RegisterSuccessModalProps = {
     onClose: () => void;
 };
 
+// Modal sukses setelah daftar: memberitahu user agar cek email untuk verifikasi akun.
 export default function RegisterSuccessModal({ isOpen, onClose }: RegisterSuccessModalProps) {
     const t = useTranslations("registerSuccess");
     const locale = useLocale();

@@ -1,3 +1,4 @@
+// Ikon loading berputar sederhana, ditampilkan saat menunggu data/proses.
 export default function LoadingSpinner() {
     return (
         <div className="flex justify-center items-center py-4">

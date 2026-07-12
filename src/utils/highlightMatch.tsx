@@ -3,6 +3,9 @@ type HighlightMatchProps = {
     query: string;
 };
 
+// Menyorot (highlight) bagian teks yang cocok dengan kata pencarian, mis. di hasil
+// pencarian, huruf yang diketik user ditandai warna hijau. Caranya: pecah teks di
+// sekitar kecocokan, lalu bungkus bagian yang cocok dengan <span> berwarna.
 export default function HighlightMatch({ text, query }: HighlightMatchProps) {
     if (!query) return <>{text}</>;
     const regex = new RegExp(`(${query})`, "ig");

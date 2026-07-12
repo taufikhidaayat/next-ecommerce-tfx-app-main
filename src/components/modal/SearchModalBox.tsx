@@ -18,6 +18,8 @@ type SearchModalProps = {
     searchBoxRef: React.RefObject<HTMLDivElement | null>;
 };
 
+// Kotak/panel pencarian toko: user mengetik → menampilkan saran hasil (produk/brand/
+// kategori) secara langsung (dengan debounce). Memakai searchService.
 export default function SearchModalBox({
     isOpen,
     onClose,

@@ -1,8 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { DIY_PROVINCE, WilayahItem } from "@/types/wilayah";
 
-// Free, key-less Indonesian region API. The app already requires internet for
-// OSM map tiles + Nominatim, so this adds no new offline constraint.
+// Service data WILAYAH Indonesia (kabupaten → kecamatan → kelurahan) untuk form alamat.
+// Mengambil dari API publik gratis emsifa (tanpa API key), plus API kode pos terpisah.
+// Bertingkat: pilih kabupaten → memuat kecamatannya → pilih kecamatan → memuat kelurahannya.
+// Datanya di-cache 24 jam karena wilayah administratif hampir tidak pernah berubah.
 const BASE_URL = "https://www.emsifa.com/api-wilayah-indonesia/api";
 
 // emsifa returns names in UPPERCASE; keep them as-is to match official spelling.
@@ -39,7 +41,7 @@ export async function fetchKodepos(query: string): Promise<KodeposItem[]> {
     }
 }
 
-// Cache aggressively — administrative regions practically never change.
+// Cache aggressively, administrative regions practically never change.
 const STALE_TIME = 1000 * 60 * 60 * 24; // 24h
 
 export function useRegencies() {

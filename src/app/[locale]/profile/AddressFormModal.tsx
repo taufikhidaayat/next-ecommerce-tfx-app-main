@@ -21,7 +21,7 @@ import LocationSearchModal from "./LocationSearchModal";
 import { useBottomSheetDrag } from "@/hooks/useBottomSheetDrag";
 import { toE164Phone, isValidIdPhone } from "@/utils/phone";
 
-// emsifa returns region names in UPPERCASE — present them in Title Case.
+// emsifa returns region names in UPPERCASE, present them in Title Case.
 const titleCase = (s: string) => s.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
 
 interface AddressFormModalProps {
@@ -34,6 +34,9 @@ interface AddressFormModalProps {
     defaultPhone?: string;
 }
 
+// Modal form tambah/ubah alamat pengiriman. Cukup kompleks: memilih wilayah bertingkat
+// (kabupaten→kecamatan→kelurahan via RegionPickerModal), menaruh titik di peta
+// (PinpointMap/LocationSearchModal), dan mengisi detail. editingAddress != null = mode ubah.
 export default function AddressFormModal({
     isOpen,
     onClose,
@@ -161,12 +164,12 @@ export default function AddressFormModal({
             setError(t("recipientName") + " & " + t("phone"));
             return;
         }
-        // Terima format apa pun (08…, +62…, 62…) — dinormalisasi lalu divalidasi.
+        // Terima format apa pun (08…, +62…, 62…), dinormalisasi lalu divalidasi.
         if (!isValidIdPhone(phone)) {
             setError(t("phoneInvalid"));
             return;
         }
-        // Region (wilayah) is optional — the full address is derived from the map pin.
+        // Region (wilayah) is optional, the full address is derived from the map pin.
         if (!street.trim()) {
             setError(t("streetRequired"));
             return;
@@ -214,9 +217,9 @@ export default function AddressFormModal({
                     style={sheetStyle}
                     className="flex w-full max-w-xl flex-col rounded-t-3xl sm:rounded-3xl bg-gray-50 shadow-2xl sm:max-h-[94vh] overflow-hidden sm:animate-zoom-in"
                 >
-                    {/* Grab zone — tarik untuk menutup di mobile (handle + header) */}
+                    {/* Grab zone, tarik untuk menutup di mobile (handle + header) */}
                     <div className="shrink-0 touch-none select-none" {...dragHandlers}>
-                        {/* Drag handle — affordance bottom-sheet (mobile only) */}
+                        {/* Drag handle, affordance bottom-sheet (mobile only) */}
                         <div className="sm:hidden flex justify-center bg-white pt-3 pb-2">
                             <div className="h-1.5 w-12 rounded-full bg-gray-300" />
                         </div>

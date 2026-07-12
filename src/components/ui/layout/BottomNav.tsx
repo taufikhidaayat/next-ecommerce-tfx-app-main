@@ -29,6 +29,8 @@ const rightItems: SideItem[] = [
     { href: "/profile", icon: LuUser, key: "profile" },
 ];
 
+// Navigasi bawah khusus HP (ikon: Beranda, Kategori, Pesanan, Profil) yang menempel
+// di bawah layar, pola umum aplikasi mobile.
 export default function BottomNav() {
     const t = useTranslations("bottomNav");
     const pathname = usePathname();
@@ -103,7 +105,7 @@ export default function BottomNav() {
 <div className="relative mx-auto flex max-w-md items-stretch overflow-hidden rounded-full border border-gray-200 bg-white shadow-[0_10px_30px_-8px_rgba(0,0,0,0.15)]">
                     {leftItems.map(renderItem)}
 
-                    {/* Center slot — same width as items for even spacing; FAB floats above */}
+                    {/* Center slot, same width as items for even spacing; FAB floats above */}
                     <div className="flex flex-1 flex-col items-center justify-center py-1.5">
                         <span className="flex flex-col items-center gap-0.5 px-3 py-1.5">
                             <span className="h-[22px]" aria-hidden />
@@ -114,7 +116,7 @@ export default function BottomNav() {
                     {rightItems.map(renderItem)}
                 </div>
 
-                {/* Floating Cart button (FAB) — outside the pill so overflow-hidden doesn't clip it */}
+                {/* Floating Cart button (FAB), outside the pill so overflow-hidden doesn't clip it */}
                 <button
                     type="button"
                     onClick={handleCartClick}

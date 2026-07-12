@@ -11,6 +11,8 @@ type BreadcrumbsProps = {
     items: BreadcrumbItem[];
 };
 
+// Breadcrumb (jejak navigasi), mis. "Beranda / Produk / Nama Produk", agar user tahu
+// posisinya dan bisa mundur ke halaman sebelumnya.
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     return (
         <nav className="text-sm font-extrabold text-gray-600 mb-5">

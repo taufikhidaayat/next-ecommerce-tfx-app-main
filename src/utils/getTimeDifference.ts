@@ -1,3 +1,5 @@
+// Ubah waktu jadi teks relatif Bahasa Indonesia: "baru saja", "5 menit lalu",
+// "2 hari lalu", dst. Dipakai mis. untuk kapan sebuah ulasan/pesanan dibuat.
 export function getTimeDifference(inputDate: string | Date): string {
     const now = new Date().getTime();
     const target = new Date(inputDate).getTime();

@@ -8,7 +8,7 @@ export const fetchProfile = async (): Promise<DecodedToken | null> => {
         return response.data.user;
     } catch (error: unknown) {
         if (error instanceof AxiosError) {
-            // Belum login (401) bukan error — perlakukan sebagai state "guest".
+            // Belum login (401) bukan error, perlakukan sebagai state "guest".
             // Dengan mengembalikan null (bukan throw), react-query menyimpannya
             // sebagai hasil sukses yang di-cache, sehingga tidak refetch tiap
             // pindah halaman → navbar tidak "kedip" saat guest mengklik-klik.

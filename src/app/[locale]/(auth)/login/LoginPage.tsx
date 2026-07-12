@@ -12,6 +12,8 @@ import Image from "next/image";
 import ForgotPasswordRequestModal from "@/components/modal/ForgotPasswordRequestModal";
 import { useTranslations } from "next-intl";
 
+// Isi form login pelanggan: input email+password, kirim ke server, simpan token,
+// lalu arahkan ke beranda. (Berbeda dari CMS: pelanggan boleh role apa saja, bukan hanya admin.)
 export default function Login() {
     const t = useTranslations("login");
 

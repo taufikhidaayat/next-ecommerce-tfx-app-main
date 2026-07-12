@@ -16,6 +16,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useQueryParamManager } from "@/satelite/hook/common/useQueryParamManager";
 import { useTranslations } from "next-intl";
 
+// Isi halaman daftar merek: grid semua brand (dengan filter huruf awal) untuk dijelajah.
 export default function Brands() {
     const t = useTranslations("brands");
     const searchParams = useSearchParams();

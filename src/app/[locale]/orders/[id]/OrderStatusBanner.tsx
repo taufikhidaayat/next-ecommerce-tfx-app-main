@@ -22,6 +22,8 @@ type Props = {
  * Pesan & visual menyesuaikan tipe pesanan (Ambil di Toko vs Antar ke Rumah)
  * sehingga pelanggan delivery tidak melihat instruksi "ambil di toko".
  */
+// Banner besar di atas halaman detail order yang merangkum status sekarang dengan
+// kalimat & warna ramah pengguna (mis. "Menunggu pembayaran", "Sedang diantar").
 export default function OrderStatusBanner({
   orderStatus,
   orderType,
@@ -34,7 +36,7 @@ export default function OrderStatusBanner({
   const locale = useLocale();
   const isDelivery = orderType === OrderType.DELIVERY;
 
-  // 1. Pembayaran disetujui — pesanan sedang disiapkan (delivery & pickup).
+  // 1. Pembayaran disetujui, pesanan sedang disiapkan (delivery & pickup).
   if (step === 2 && !isCancelled) {
     return (
       <div className="flex items-center gap-3 p-4 bg-emerald-50 border border-emerald-200 rounded-2xl shadow-sm">
@@ -49,7 +51,7 @@ export default function OrderStatusBanner({
     );
   }
 
-  // 2. Ambil di Toko — pesanan siap diambil (tidak pernah tampil untuk delivery).
+  // 2. Ambil di Toko, pesanan siap diambil (tidak pernah tampil untuk delivery).
   if (!isDelivery && orderStatus === OrderStatus.READY_FOR_PICKUP) {
     return (
       <div className="relative overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50 via-teal-50 to-emerald-50 p-5 shadow-sm">
@@ -82,7 +84,7 @@ export default function OrderStatusBanner({
     );
   }
 
-  // 3. Antar ke Rumah — pesanan sedang diantar kurir.
+  // 3. Antar ke Rumah, pesanan sedang diantar kurir.
   if (isDelivery && orderStatus === OrderStatus.ON_DELIVERY) {
     return (
       <div className="relative overflow-hidden rounded-2xl border border-sky-200 bg-gradient-to-br from-sky-50 via-blue-50 to-sky-50 p-5 shadow-sm">
@@ -111,7 +113,7 @@ export default function OrderStatusBanner({
     );
   }
 
-  // 4. Antar ke Rumah — pesanan telah sampai tujuan.
+  // 4. Antar ke Rumah, pesanan telah sampai tujuan.
   if (isDelivery && (orderStatus === OrderStatus.DELIVERED || orderStatus === OrderStatus.COMPLETED)) {
     return (
       <div className="relative overflow-hidden rounded-2xl border border-emerald-200 bg-gradient-to-br from-emerald-50 via-green-50 to-emerald-50 p-5 shadow-sm">

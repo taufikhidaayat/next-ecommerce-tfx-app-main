@@ -28,6 +28,8 @@ type OrderSummaryProps = {
     refetch: () => void;
 };
 
+// Ringkasan pesanan di halaman detail: daftar item + rincian harga/diskon/ongkir/total,
+// serta tombol bayar (membuka modal bukti pembayaran) bila pesanan belum dibayar.
 export default function OrderSummary({ order, items, showPaymentModal, setShowPaymentModal, refetch }: OrderSummaryProps) {
     const t = useTranslations("orderDetail.summary");
     const modalT = useTranslations("orderDetail.modal");
@@ -201,7 +203,7 @@ export default function OrderSummary({ order, items, showPaymentModal, setShowPa
 
                 {isUnpaid && (
                     <div className="flex flex-col sm:flex-row gap-2.5">
-                        {/* Aksi utama — paling menonjol */}
+                        {/* Aksi utama, paling menonjol */}
                         <button
                             className="flex-[2] inline-flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm md:text-base text-white bg-green-700 hover:bg-green-800 shadow-md hover:shadow-lg transition-shadow"
                             onClick={handlePaymentClick}
@@ -209,7 +211,7 @@ export default function OrderSummary({ order, items, showPaymentModal, setShowPa
                             <FiCreditCard size={18} className="shrink-0" />
                             <span>{t("completePayment")}</span>
                         </button>
-                        {/* Aksi destruktif — diredam jadi outline agar tidak bersaing dengan aksi utama */}
+                        {/* Aksi destruktif, diredam jadi outline agar tidak bersaing dengan aksi utama */}
                         {canCancel && (
                             <button
                                 className="flex-1 inline-flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm md:text-base bg-white text-red-600 border-[3px] border-red-200 hover:bg-red-50 hover:border-red-300 transition disabled:opacity-50 disabled:cursor-not-allowed"

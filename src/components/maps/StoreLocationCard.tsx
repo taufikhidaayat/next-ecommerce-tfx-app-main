@@ -7,6 +7,8 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { useStoreSettings } from "@/satelite/services/storeSettingsService";
 
+// Kartu lokasi toko: menampilkan alamat + peta kecil posisi toko (dari pengaturan toko),
+// mis. di halaman kontak/tentang atau saat memilih pengambilan sendiri.
 export default function StoreLocationCard() {
     const t = useTranslations("home.storeLocation");
     const { data, isPending } = useStoreSettings();
@@ -19,7 +21,7 @@ export default function StoreLocationCard() {
         typeof lng === "number" &&
         !(lat === 0 && lng === 0);
 
-    // Google Maps directions link derived straight from store settings — it updates
+    // Google Maps directions link derived straight from store settings, it updates
     // automatically whenever the admin changes the coordinate in Store Settings.
     // Opening it lands the user directly on the route to the store.
     const directionsUrl = hasCoords

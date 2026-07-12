@@ -35,6 +35,11 @@ interface CartModalProps {
 const SHEET_FULL_VH = 0.92; // height when fully expanded
 const SHEET_PEEK_VH = 0.62; // height on first open (the "peek" snap point)
 
+// Panel keranjang belanja (muncul dari samping/bawah). Komponen kompleks yang jadi
+// pintu CHECKOUT: menampilkan isi keranjang, mengatur jumlah, memilih metode bayar,
+// alamat pengiriman/ambil sendiri, catatan, poin, lalu membuat order.
+// Mengumpulkan banyak data sekaligus: isi keranjang, pengaturan toko (ongkir),
+// alamat user, dan status diskon pembelian pertama.
 export default function CartModal({ onClose, isCartOpen }: CartModalProps) {
   const t = useTranslations("cart");
   const { data: itemsOrder, isPending: isLoading, isError, refetch } = useCartsByUserId();
@@ -161,7 +166,7 @@ export default function CartModal({ onClose, isCartOpen }: CartModalProps) {
   useScrollLock(isCartOpen);
 
   // Entrance: start at height 0, then grow straight up to FULL (slides up).
-  // Snap peek (tengah) tetap tersedia saat di-drag — ini hanya posisi default
+  // Snap peek (tengah) tetap tersedia saat di-drag, ini hanya posisi default
   // ketika keranjang pertama dibuka.
   useEffect(() => {
     if (!isCartOpen || !isMobile) return;
@@ -231,7 +236,7 @@ export default function CartModal({ onClose, isCartOpen }: CartModalProps) {
   };
 
   // Pull-to-dismiss dari area konten (body): hanya aktif saat scroll di paling
-  // atas dan ditarik ke bawah — supaya geser-tutup juga bisa dari tengah modal.
+  // atas dan ditarik ke bawah, supaya geser-tutup juga bisa dari tengah modal.
   useEffect(() => {
     const el = bodyRef.current;
     if (!isCartOpen || !isMobile || !el) return;
@@ -320,7 +325,7 @@ export default function CartModal({ onClose, isCartOpen }: CartModalProps) {
     return d <= storeSettings.maxDeliveryRadius;
   };
 
-  // Pre-fill delivery data when switching to delivery — prefer the default
+  // Pre-fill delivery data when switching to delivery, prefer the default
   // address, but only if it is within range; otherwise the first in-range one.
   const handleOrderTypeChange = (type: OrderType) => {
     setOrderType(type);
@@ -511,7 +516,7 @@ export default function CartModal({ onClose, isCartOpen }: CartModalProps) {
   const sheetStyle: CSSProperties = isMobile
     ? {
         // Saat sheetH belum di-set, biarkan CSS (max-h-[92dvh]) yang membatasi
-        // tinggi — supaya body tetap ter-constrain & bisa di-scroll.
+        // tinggi, supaya body tetap ter-constrain & bisa di-scroll.
         height: sheetH != null ? sheetH : undefined,
         transition: isDragging ? "none" : "height 0.32s cubic-bezier(0.32, 0.72, 0, 1)",
       }
@@ -617,7 +622,7 @@ export default function CartModal({ onClose, isCartOpen }: CartModalProps) {
                   </div>
                 )}
 
-                {/* Items list — scroll internal HANYA di desktop; di mobile biar body
+                {/* Items list, scroll internal HANYA di desktop; di mobile biar body
                     yang scroll (kalau list ini juga overflow-y-auto, sentuhan di tengah
                     "terjebak" di sini sehingga hanya bisa scroll dari pinggir). */}
                 <div className="space-y-3 sm:space-y-4 sm:overflow-y-auto sm:overscroll-y-contain flex-1 min-h-0 px-1.5 sm:px-2 py-1">

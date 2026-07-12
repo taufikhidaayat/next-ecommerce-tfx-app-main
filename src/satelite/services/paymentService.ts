@@ -4,6 +4,7 @@ import { CreatePaymentInput } from "@/types/payment/createPaymentInput";
 import { fetchPayment } from "../hook/payment/usePayment";
 import { FetchParams } from "@/types/fetchParams";
 
+// Service pembayaran sisi pelanggan: kirim bukti transfer + lihat rekening/QRIS tujuan.
 export const useAddPayment = () => {
     return useMutation({
         mutationFn: (paymentData: CreatePaymentInput & { file: File }) => addPayment(paymentData)

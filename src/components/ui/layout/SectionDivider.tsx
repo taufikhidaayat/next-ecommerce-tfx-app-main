@@ -3,6 +3,7 @@ type SectionDividerProps = {
     className?: string;
 };
 
+// Garis pemisah antar bagian, opsional dengan teks label di tengahnya.
 export function SectionDivider({ label, className = "" }: SectionDividerProps) {
     return (
         <div className={`flex items-center gap-4 pt-6 ${className}`}>

@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 import { useTranslations } from "next-intl";
 
+// Bagian "Merek" di beranda: menampilkan deretan brand agar pengunjung bisa menjelajah per merek.
 export default function BrandSection() {
     const t = useTranslations("home.brands");
     const { data: brands, isPending } = useBrands({

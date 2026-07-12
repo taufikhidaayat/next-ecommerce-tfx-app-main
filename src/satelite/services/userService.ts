@@ -6,6 +6,7 @@ import { updateUser } from "../hook/user/useUpdateUser";
 import { updateUserAvatar } from "../hook/user/userUpdateUserAvatar";
 import { changePassword } from "../hook/user/useChangePassword";
 
+// Service profil pelanggan (data akun sendiri, ubah profil, ganti avatar/password).
 export const useUser = (options?: { enabled?: boolean }) => {
     return useQuery<UserResponse, Error>({
         queryKey: ['user'],

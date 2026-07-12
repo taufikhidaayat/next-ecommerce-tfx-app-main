@@ -11,6 +11,8 @@ type Props = {
     onClose: () => void;
 };
 
+// Panel kecil "tersimpan ke wishlist" yang muncul sesaat setelah menambah favorit,
+// dengan tautan cepat ke halaman wishlist.
 export default function WishlistSavedSheet({ isOpen, onClose }: Props) {
     const router = useRouter();
     const tWish = useTranslations("wishlist");
@@ -25,7 +27,7 @@ export default function WishlistSavedSheet({ isOpen, onClose }: Props) {
             {/* Overlay */}
             <div className="fixed inset-0 z-40 bg-black/40" onClick={onClose} />
 
-            {/* Mobile — bottom sheet */}
+            {/* Mobile, bottom sheet */}
             <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl px-5 pt-4 pb-10 shadow-2xl animate-slide-up">
                 <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-gray-200" />
                 <div className="flex items-center justify-between">
@@ -47,7 +49,7 @@ export default function WishlistSavedSheet({ isOpen, onClose }: Props) {
                 </div>
             </div>
 
-            {/* Desktop — modal tengah */}
+            {/* Desktop, modal tengah */}
             <div className="hidden sm:flex fixed inset-0 z-50 items-center justify-center">
                 <div className="bg-white w-full max-w-sm mx-4 rounded-2xl shadow-xl overflow-hidden animate-fade-scale">
                     {/* Header */}

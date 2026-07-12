@@ -15,6 +15,8 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useTranslations } from "next-intl";
 import { toE164Phone, isValidIdPhone } from "@/utils/phone";
 
+// Isi form daftar akun pelanggan: isi data → kirim → akun dibuat (belum aktif) dan
+// email verifikasi dikirim. User lalu diminta cek email untuk mengaktifkan akun.
 export default function Register() {
     const t = useTranslations("register");
 
@@ -47,7 +49,7 @@ export default function Register() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        // birthdate, gender & languagePreference bersifat opsional — tidak diwajibkan.
+        // birthdate, gender & languagePreference bersifat opsional, tidak diwajibkan.
         if (!email || !password || !name || !phone) {
             toast.error(t("fillAllFields"));
             return;

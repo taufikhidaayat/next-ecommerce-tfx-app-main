@@ -11,7 +11,9 @@ type Props = {
 
 // Info retur untuk pelanggan: hanya muncul setelah barang diterima
 // (Telah Diantar / Pesanan Selesai), berlaku untuk pickup & delivery.
-// Retur dilakukan langsung di toko — komponen ini hanya menginformasikan.
+// Retur dilakukan langsung di toko, komponen ini hanya menginformasikan.
+// Pemberitahuan info retur di halaman detail order (mis. syarat/cara mengajukan retur),
+// muncul saat status pesanan memungkinkan retur.
 export default function ReturnInfoNotice({ orderStatus }: Props) {
     const t = useTranslations("orderDetail.returnInfo");
 

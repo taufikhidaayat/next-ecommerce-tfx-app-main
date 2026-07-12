@@ -20,16 +20,21 @@ import { useTranslations } from "next-intl";
 import { OrderStatus } from "@/enum/orderStatus";
 import { FiXCircle } from "react-icons/fi";
 
+// Halaman DETAIL/PELACAKAN pesanan pelanggan (/[locale]/orders/[id]). Menampilkan
+// progres pesanan (OrderFlow), info pengiriman & pembayaran, riwayat status, ulasan,
+// dan retur. id pesanan diambil dari URL. currentStep() menerjemahkan status jadi
+// nomor langkah untuk stepper.
 export default function OrderPage() {
   const t = useTranslations("orderDetail.page");
   const params = useParams();
-  const id = params?.id as string;
+  const id = params?.id as string; // id pesanan dari URL
 
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   const [confirmModalOpen, setConfirmModalOpen] = useState(false);
 
   const { data: order, isPending, isError, refetch } = useOrderById(id);
 
+  // Hitung langkah aktif untuk penanda progres (dan apakah pesanan dibatalkan).
   const { step, isCancelled } = order?.data?.order
     ? currentStep(order.data.order.orderStatus, order.data.order.paymentStatus, order.data.order.orderType)
     : { step: 0, isCancelled: false };

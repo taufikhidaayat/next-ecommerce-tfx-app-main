@@ -33,6 +33,8 @@ type RatingMutationResponse = {
     };
 };
 
+// Modal tulis ulasan: pilih bintang + tulis komentar untuk sebuah produk yang dibeli.
+// Bisa dapat poin (lihat aturan poin di backend). Juga dipakai untuk mengedit ulasan.
 export default function ReviewModal({
     orderItem,
     isOpen,
@@ -54,7 +56,7 @@ export default function ReviewModal({
 
     useScrollLock(isOpen);
 
-    // --- Drag bottom-sheet (mobile) — tarik handle/header ke bawah untuk menutup ---
+    // --- Drag bottom-sheet (mobile), tarik handle/header ke bawah untuk menutup ---
     const [isMobile, setIsMobile] = useState(false);
     const [viewportH, setViewportH] = useState(0);
     const [translateY, setTranslateY] = useState<number | null>(null);
@@ -339,14 +341,14 @@ export default function ReviewModal({
                     style={sheetStyle}
                     className="flex w-full max-w-md flex-col rounded-t-3xl sm:rounded-3xl bg-gray-50 shadow-2xl sm:max-h-[94vh] overflow-hidden sm:animate-zoom-in"
                 >
-                {/* Grab zone — tarik untuk menutup di mobile (handle + header) */}
+                {/* Grab zone, tarik untuk menutup di mobile (handle + header) */}
                 <div
                     className="shrink-0 touch-none select-none"
                     onTouchStart={(e) => beginDrag(e.touches[0].clientY)}
                     onTouchMove={(e) => moveDrag(e.touches[0].clientY)}
                     onTouchEnd={endDrag}
                 >
-                    {/* Drag handle — affordance bottom-sheet (mobile only) */}
+                    {/* Drag handle, affordance bottom-sheet (mobile only) */}
                     <div className="sm:hidden flex justify-center bg-white pt-3 pb-2">
                         <div className="h-1.5 w-12 rounded-full bg-gray-300" />
                     </div>

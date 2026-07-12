@@ -17,6 +17,8 @@ type Props = {
     isSelected?: boolean;
 };
 
+// Daftar item keranjang (merender banyak CartCard). Mendukung mode pilih (centang item
+// untuk checkout sebagian) dan mode beli-sekarang. Semua aksi diteruskan ke induk.
 export default function CartItemView({ cartItems, onIncrease, onDecrease, onDelete, onQuantityChange, onNavigate, showLess = false, isBuyNow = false, isSelectMode = false, isSelected = false }: Props) {
     const [showAll, setShowAll] = useState(false);
     const t = useTranslations("cartItem");

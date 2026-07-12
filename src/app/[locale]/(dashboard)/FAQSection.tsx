@@ -64,6 +64,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: {
     );
 }
 
+// Bagian "FAQ" (tanya-jawab) di beranda: daftar pertanyaan yang bisa dibuka-tutup (accordion).
 export default function FAQSection({ banners = [], isPending = false }: FAQSectionProps) {
     const t = useTranslations("home.faq");
     const [activeIndices, setActiveIndices] = useState<Set<number>>(new Set([0]));
@@ -110,7 +111,7 @@ export default function FAQSection({ banners = [], isPending = false }: FAQSecti
                         </div>
                     )}
 
-                    {/* Store location — auto-syncs with coordinates from Store Settings */}
+                    {/* Store location, auto-syncs with coordinates from Store Settings */}
                     <StoreLocationCard />
                 </div>
 

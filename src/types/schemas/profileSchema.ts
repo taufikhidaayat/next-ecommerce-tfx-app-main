@@ -12,7 +12,7 @@ export const profileSchema = z.object({
         ),
     // Address is managed separately in "Alamat Saya" (AddressSection), so it is optional here.
     address: z.string().optional(),
-    // Tanggal lahir & jenis kelamin opsional (boleh kosong) — selaras dengan form daftar.
+    // Tanggal lahir & jenis kelamin opsional (boleh kosong), selaras dengan form daftar.
     birthDate: z.string().optional(),
     gender: z.enum(enumValues(Gender)),
 });

@@ -8,6 +8,7 @@ type ProfileMenuDropdownProps = {
     onRequestLogout?: () => void;
 };
 
+// Menu dropdown profil di navbar: tautan ke profil/pesanan/wishlist/poin + tombol logout.
 export default function ProfileMenuDropdown({ onCloseMenu, onRequestLogout }: ProfileMenuDropdownProps) {
     const t = useTranslations("profileMenu");
 

@@ -15,6 +15,8 @@ import { addCart } from "@/satelite/hook/cart/useAddCart";
 import { formatCurrency } from "@/utils/formatCurrency";
 import { DEFAULT_PRODUCT_URL } from "@/lib/constant";
 
+// Bagian "Sering Dibeli Bersama" di halaman detail produk: menampilkan produk yang
+// biasanya dibeli bareng produk ini (datanya dari analisis pembelian di backend).
 export default function FrequentlyBoughtTogether({ productId }: { productId: string }) {
     const t = useTranslations("products");
     const router = useRouter();

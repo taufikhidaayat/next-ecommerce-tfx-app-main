@@ -9,6 +9,7 @@ type OfferSectionProps = {
     isPending?: boolean;
 };
 
+// Bagian "Penawaran" di beranda: menampilkan banner bertipe penawaran/offer.
 export default function OfferSection({ banners = [], isPending = false }: OfferSectionProps) {
     if (isPending) {
         return <OfferSectionSkeleton />;

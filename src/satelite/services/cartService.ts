@@ -10,6 +10,10 @@ import { FetchParams } from "@/types/fetchParams";
 import { CreateCartInput } from "@/types/cart/createCartInput";
 import { reorderByOrderId } from "../hook/cart/useReorderByOrderId";
 
+// Service React Query untuk keranjang belanja pelanggan. Pola sama seperti service CMS;
+// tiap perubahan memanggil invalidateCarts agar isi keranjang & badge jumlah selalu segar.
+
+// Ambil isi keranjang milik user yang login.
 export const useCartsByUserId = (query?: FetchParams) => {
   return useQuery<CartsByUserIdResponse, Error>({
     queryKey: ["carts", query],

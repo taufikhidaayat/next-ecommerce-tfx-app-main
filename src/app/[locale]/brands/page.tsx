@@ -6,6 +6,7 @@ export const metadata = {
     description: WEB_APP_NAME_BRANDS_DESCRIPTION,
 };
 
+// Halaman daftar merek/brand toko. Logika ada di komponen Brands.
 export default function BrandsPage() {
     return <Brands />;
 }

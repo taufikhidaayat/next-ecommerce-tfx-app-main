@@ -12,6 +12,8 @@ import { verifyResetToken } from "../hook/auth/useVerifyResetToken";
 import { ResetPasswordInput } from "@/types/user/resetPasswordInput";
 import { resetPassword } from "../hook/auth/useResetPassword ";
 
+// Service autentikasi pelanggan (login, daftar, verifikasi email, lupa/reset password,
+// profil). Pola React Query sama seperti authService di CMS.
 export const useLogin = () => {
   return useMutation({
     mutationFn: (credentials: { email: string; password: string }) =>

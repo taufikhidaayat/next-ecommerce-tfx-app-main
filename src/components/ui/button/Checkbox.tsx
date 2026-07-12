@@ -6,6 +6,7 @@ type CheckboxProps = {
     disabled?: boolean;
 };
 
+// Kotak centang (checkbox) bergaya, mis. untuk memilih item keranjang atau setuju S&K.
 export function Checkbox({
     checked,
     onChange,

@@ -16,6 +16,8 @@ interface CartMenuProps {
     variant?: "desktop" | "mobile";
 }
 
+// Ikon keranjang di navbar dengan badge jumlah item. Klik → membuka panel keranjang.
+// variant menyesuaikan tampilan untuk desktop vs mobile.
 export default function CartMenu({ onOpenCart, variant = "desktop" }: CartMenuProps) {
     const t = useTranslations("header");
     const tBtn = useTranslations("button");

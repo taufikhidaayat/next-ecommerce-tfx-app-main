@@ -17,6 +17,9 @@ import { ReturnsByOrderResponse } from "@/types/order/returnByOrder";
 import { OrderStatus } from "@/enum/orderStatus";
 import { isCompletedOrder } from "@/utils/isCompletedOrder";
 
+// Service order sisi pelanggan: lihat pesanan sendiri (daftar/detail/item), buat order
+// (checkout), ganti metode bayar, batalkan, cek diskon pembelian pertama, dan lihat retur.
+// Pola React Query standar; mutation menyegarkan cache order terkait setelah sukses.
 export const useOrderById = (orderId: string | undefined) => {
   return useQuery<OrderByIdResponse, Error>({
     queryKey: ['order', orderId],

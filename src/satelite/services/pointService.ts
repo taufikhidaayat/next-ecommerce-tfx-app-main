@@ -2,6 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/lib/client/axios-client";
 import { PointBalanceResponse, PointHistoryResponse } from "@/types/point";
 
+// Service poin loyalitas pelanggan: saldo poin + riwayat poin. File ini menggabungkan
+// fungsi pemanggil API (fetch*) dan hook React Query-nya (use*) dalam satu file.
 export const fetchPointBalance = async (): Promise<PointBalanceResponse> => {
     const response = await apiClient.get<PointBalanceResponse>(`/points/balance`);
     return response.data;

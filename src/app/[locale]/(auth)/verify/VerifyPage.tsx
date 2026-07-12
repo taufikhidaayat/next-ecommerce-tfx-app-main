@@ -9,6 +9,8 @@ import { useQueryParamManager } from "@/satelite/hook/common/useQueryParamManage
 import { useVerify } from "@/satelite/services/authService";
 import { useTranslations } from "next-intl";
 
+// Halaman verifikasi email: membaca token dari URL, mengirimnya ke server untuk
+// mengaktifkan akun, lalu menampilkan hasil (berhasil/gagal) + tautan ke login.
 export default function VerifyPage() {
     const t = useTranslations("verify");
     const router = useRouter();

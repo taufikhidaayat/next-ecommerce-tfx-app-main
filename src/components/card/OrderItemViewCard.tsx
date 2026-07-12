@@ -13,6 +13,7 @@ type OrderItemViewCardProps = {
     withQuantity: boolean;
 };
 
+// Varian ringkas tampilan item pesanan (opsional menampilkan jumlah), dipakai di daftar order.
 export default function OrderItemViewCard({ orderItem, withQuantity }: OrderItemViewCardProps) {
     const t = useTranslations("orders.item");
 
@@ -108,7 +109,7 @@ export default function OrderItemViewCard({ orderItem, withQuantity }: OrderItem
                     )}
                 </div>
             </div>
-            {/* Chevron affordance — muncul saat hover untuk menandakan kartu bisa diklik */}
+            {/* Chevron affordance, muncul saat hover untuk menandakan kartu bisa diklik */}
             {isLinkable && (
                 <FiChevronRight
                     className="hidden md:block shrink-0 text-gray-300 transition-all duration-300 group-hover:text-emerald-500 group-hover:translate-x-0.5"

@@ -6,6 +6,7 @@ type Props = {
   histories: HistoryOrder[];
 };
 
+// Riwayat status pesanan (timeline): daftar perubahan status beserta waktu & catatannya.
 export default function HistoriesOrder({ histories }: Props) {
   const t = useTranslations("orderDetail.history");
 

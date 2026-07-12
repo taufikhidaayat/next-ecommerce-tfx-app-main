@@ -19,6 +19,8 @@ type ReviewCardProps = {
     isOwner?: boolean;
 };
 
+// Kartu satu ulasan: nama pengulas (disamarkan), bintang, teks, waktu. isOwner=true
+// (ulasan milik user sendiri) menampilkan opsi tambahan; selain itu bisa dilaporkan.
 export default function ReviewCard({ review, isOwner = false }: ReviewCardProps) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [reportModalOpen, setReportModalOpen] = useState(false);

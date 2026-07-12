@@ -54,6 +54,8 @@ function ClickHandler({ onChange }: { onChange: (lat: number, lng: number) => vo
     return null;
 }
 
+// Peta pemilih lokasi (Leaflet) versi klik-untuk-taruh-pin: user klik di peta → titik
+// dipindahkan ke situ, koordinatnya dikirim balik lewat onChange. Dipakai untuk memilih alamat.
 export default function LocationPickerMap({ latitude, longitude, onChange }: LocationPickerMapProps) {
     const hasLocation = latitude !== null && longitude !== null && latitude !== 0 && longitude !== 0;
     const markerPos: [number, number] = hasLocation ? [latitude!, longitude!] : DEFAULT_CENTER;

@@ -2,7 +2,7 @@
 // (081..., 81..., +6281..., "62 812-3456-7890", bahkan data lama "+62081..."
 // yang telanjur salah) diseragamkan supaya validasi & penyimpanan konsisten.
 
-/** Nomor nasional tanpa 0 / +62 / karakter non-digit — selalu diawali "8". */
+/** Nomor nasional tanpa 0 / +62 / karakter non-digit, selalu diawali "8". */
 export function toNationalPhone(raw: string): string {
     let d = (raw ?? "").replace(/\D/g, ""); // sisakan digit saja
     if (d.startsWith("62")) d = d.slice(2); // buang kode negara

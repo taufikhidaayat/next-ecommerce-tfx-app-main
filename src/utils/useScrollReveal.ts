@@ -8,6 +8,10 @@ interface ScrollRevealOptions {
     once?: boolean;
 }
 
+// Hook animasi "muncul saat di-scroll": elemen jadi terlihat (isVisible=true) begitu
+// masuk area layar. Dipakai untuk efek fade-in bagian halaman ketika pengguna menggulir.
+// Memakai IntersectionObserver (deteksi elemen masuk viewport) + pengecekan manual
+// sebagai cadangan untuk kasus layout yang berubah setelah data selesai dimuat.
 export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
     options: ScrollRevealOptions = {}
 ) {

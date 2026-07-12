@@ -47,6 +47,9 @@ const BRAND_TO_CATEGORY: Record<string, string> = Object.fromEntries(
 const PAIRED_BRANDS = new Set(Object.values(EXCLUSIVE_CATEGORY_BRAND));
 const PAIRED_CATEGORIES = new Set(Object.keys(EXCLUSIVE_CATEGORY_BRAND));
 
+// Isi halaman KATALOG produk toko. Menampilkan grid produk dengan filter (kategori,
+// brand, harga, urutan) dan "infinite scroll" (muat lebih banyak saat digulir).
+// observerRef dipakai untuk mendeteksi ujung daftar → memuat halaman berikutnya.
 export default function Products() {
     const t = useTranslations("products.page");
     const filterT = useTranslations("products.filter");
@@ -74,7 +77,7 @@ export default function Products() {
     }, []);
 
     // Apply several filters at once in a SINGLE URL update. Calling each
-    // useQueryParamManager.setValue separately would race — they each build the
+    // useQueryParamManager.setValue separately would race, they each build the
     // URL from the same stale snapshot, so only the last write survives.
     const applyFilters = useCallback(
         (next: { category: string; brand: string; priceRange: string; sort: string }) => {
@@ -120,7 +123,7 @@ export default function Products() {
     // Brand is intentionally NOT validated against the loaded brand list.
     // The list is capped (limit: 100) while there are more brands than that, so
     // validating here would silently strip the param for any brand beyond the
-    // cap — the filter would vanish on click. Let the backend (case-insensitive
+    // cap, the filter would vanish on click. Let the backend (case-insensitive
     // name match) decide whether the brand yields results instead.
     const {
         value: brand,
@@ -200,7 +203,7 @@ export default function Products() {
         [applyFilters, brand, priceRange, sortOrder]
     );
 
-    // Ganti brand: simetris — brand eksklusif → pasang kategorinya; pindah dari
+    // Ganti brand: simetris, brand eksklusif → pasang kategorinya; pindah dari
     // brand eksklusif → bersihkan kategori pasangannya.
     const handleBrandChange = useCallback(
         (nextBrand: string) => {
@@ -298,7 +301,7 @@ export default function Products() {
 
     // Potong daftar ke kelipatan jumlah kolom agar baris terakhir selalu penuh.
     // Sisa yang belum genap 1 baris (termasuk saat baru < 1 baris) DITAHAN selama
-    // masih ada halaman berikutnya — diganti skeleton, lalu muncul saat data cukup.
+    // masih ada halaman berikutnya, diganti skeleton, lalu muncul saat data cukup.
     // Saat sudah halaman terakhir (tidak ada lagi data), tampilkan apa adanya.
     const toFullRows = useCallback(
         (list: Product[]) => {
@@ -486,7 +489,7 @@ export default function Products() {
                             </div>
                         )}
 
-                        {/* Produk serupa — hasil yang kurang sesuai (fuzzy/kategori/brand) */}
+                        {/* Produk serupa, hasil yang kurang sesuai (fuzzy/kategori/brand) */}
                         {isSearching && similarProducts.length > 0 && (
                             <>
                                 <div className={relevantProducts.length > 0 ? "mt-8 mb-3 sm:mt-10 sm:mb-4" : "mb-3 sm:mb-4"}>
@@ -508,7 +511,7 @@ export default function Products() {
                             </>
                         )}
 
-                        {/* Skeleton halaman berikutnya — selalu di baris sendiri (1 baris
+                        {/* Skeleton halaman berikutnya, selalu di baris sendiri (1 baris
                             penuh sesuai jumlah kolom), tidak menyempil di antara produk. */}
                         {isFetchingNextPage && (
                             <div className={`${gridClass} mt-3 sm:mt-6`}>

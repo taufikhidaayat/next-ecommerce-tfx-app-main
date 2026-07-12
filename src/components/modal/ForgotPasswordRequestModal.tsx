@@ -14,6 +14,7 @@ type ForgotPasswordRequestModalProps = {
     onClose: () => void;
 };
 
+// Modal "Lupa Password": user memasukkan email, sistem mengirim email berisi link reset.
 export default function ForgotPasswordRequestModal({
     isOpen,
     onClose,

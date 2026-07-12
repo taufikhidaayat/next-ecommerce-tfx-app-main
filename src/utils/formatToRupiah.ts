@@ -1,3 +1,4 @@
+// Ubah nilai (teks/angka) jadi format rupiah "Rp 15.000". Nilai kosong/invalid → "Rp 0".
 export function formatToRupiah(value: string | undefined): string {
     if (value === undefined || value === null || value === "") return "Rp 0";
 

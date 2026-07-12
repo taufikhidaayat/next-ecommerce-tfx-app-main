@@ -14,6 +14,8 @@ type ModalBoxProps = {
     modalHeight?: string;
 };
 
+// Kerangka modal serba-guna sisi toko (kotak putih di tengah + latar gelap + tombol tutup),
+// dengan sub-komponen Header/Body/Footer. Sepadan dengan ModalBox di CMS.
 function ModalBox({
     isOpen,
     onClose,

@@ -16,6 +16,9 @@ import { FrequentlyBoughtTogetherResponse } from "@/types/product/frequentlyBoug
 import { fetchRecommendedProducts, RecommendedProductsResponse } from "../hook/product/useRecommendedProducts";
 import { recordProductView } from "../hook/product/useRecordProductView";
 
+// Service produk sisi toko: daftar produk (filter/infinite scroll), detail, rekomendasi,
+// ulasan, rating, dan pencatatan view/pencarian (sinyal rekomendasi). Pola React Query
+// sama seperti di CMS, dengan lebih banyak query khusus etalase pelanggan.
 export const useProducts = (params: FetchProductsParams) => {
   return useQuery({
     queryKey: ['products', params],

@@ -24,6 +24,8 @@ type ProductFilterProps = {
     onSortChange: (sortVal: string) => void;
 };
 
+// Bilah filter katalog produk (versi desktop): pilihan kategori, brand, harga, urutan.
+// Nilainya dikontrol halaman induk (Products) untuk memuat produk sesuai filter.
 export default function ProductFilterBar({
     categories,
     category,

@@ -6,6 +6,7 @@ export const metadata = {
     description: WEB_APP_NAME_VERIFY_DESCRIPTION,
 };
 
+// Halaman verifikasi email (dibuka dari link email pendaftaran). Logika ada di komponen VerifyPage.
 export default function RegisterPage() {
     return <VerifyPage />;
 }

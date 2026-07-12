@@ -16,6 +16,8 @@ type Props = {
     forceClose?: boolean;
 };
 
+// Pemilih bahasa: dropdown daftar bahasa; memilih satu akan menyimpan pilihan (cookie)
+// dan memuat ulang halaman dengan awalan bahasa baru di URL (/id, /en, dst).
 export default function LanguageSwitcher({ onOpenChange, forceClose }: Props) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);

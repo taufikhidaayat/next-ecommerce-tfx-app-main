@@ -6,6 +6,7 @@ export const metadata = {
     description: WEB_APP_NAME_PROFILE_DESCRIPTION,
 };
 
+// Halaman profil pelanggan (akun, alamat, dll). Logika ada di komponen Profiles.
 export default function ProfilePage() {
     return <Profiles />;
 }

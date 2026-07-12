@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { GrFavorite } from "react-icons/gr";
 
+// Halaman Wishlist (daftar produk favorit pelanggan) di dalam profil.
 export default function WishlistPage() {
     const t = useTranslations("wishlist");
     const router = useRouter();

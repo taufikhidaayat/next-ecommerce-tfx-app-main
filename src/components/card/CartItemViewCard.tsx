@@ -22,6 +22,7 @@ type CartItemViewCardProps = {
     isSelected?: boolean;
 }
 
+// Varian tampilan kartu daftar item keranjang (dipakai di konteks tertentu, mis. ringkasan).
 export default function CartItemsViewCard({
     cartItems,
     onIncrease,
@@ -82,7 +83,7 @@ export default function CartItemsViewCard({
 
     const tag = getPriceLabel();
 
-    // Seluruh kartu bisa diklik menuju detail produk — dimatikan di mode buy-now / select
+    // Seluruh kartu bisa diklik menuju detail produk, dimatikan di mode buy-now / select
     const productId = cartItems.product.id;
     const isLinkable = !isBuyNow && !isSelectMode && Boolean(productId);
     const productName = cartItems.product.name ?? t("unnamed");

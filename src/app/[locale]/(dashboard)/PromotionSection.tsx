@@ -11,6 +11,7 @@ type PromotionsSectionProps = {
     isPending?: boolean;
 };
 
+// Bagian "Promosi" di beranda: menampilkan banner bertipe promosi (diterima dari induk).
 export default function PromotionsSection({
     banners = [],
     isPending = false,

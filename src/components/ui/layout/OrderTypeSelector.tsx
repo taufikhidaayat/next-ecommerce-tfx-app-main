@@ -32,6 +32,8 @@ interface OrderTypeSelectorProps {
     onNavigateAway?: () => void;
 }
 
+// Pemilih tipe pesanan saat checkout: Ambil Sendiri (PICKUP) vs Diantar (DELIVERY).
+// Pilihan ini menentukan apakah perlu alamat & ongkir.
 export default function OrderTypeSelector({
     orderType,
     onOrderTypeChange,
@@ -94,7 +96,7 @@ export default function OrderTypeSelector({
                 {t("orderType")}
             </label>
 
-            {/* Toggle: the whole control is one switch — clicking anywhere flips it. */}
+            {/* Toggle: the whole control is one switch, clicking anywhere flips it. */}
             <button
                 type="button"
                 role="switch"
@@ -107,7 +109,7 @@ export default function OrderTypeSelector({
                 }
                 className={`relative flex w-full rounded-xl border border-gray-200 bg-white p-1 ${isDisable ? disableClass : ""}`}
             >
-                {/* Sliding pill — filled blue when active */}
+                {/* Sliding pill, filled blue when active */}
                 <span
                     className={`pointer-events-none absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-lg bg-blue-600 shadow-sm transition-transform duration-300 ease-out ${
                         orderType === OrderType.DELIVERY ? "translate-x-full" : "translate-x-0"

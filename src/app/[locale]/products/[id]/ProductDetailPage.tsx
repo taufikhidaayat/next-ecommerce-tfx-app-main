@@ -34,6 +34,9 @@ type ProductDetailPageProps = {
 const useIsomorphicLayoutEffect =
     typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
+// Isi halaman DETAIL PRODUK (komponen di balik products/[id]/page.tsx). Menampilkan
+// galeri gambar, harga/diskon, stok, tombol tambah keranjang & beli sekarang, wishlist,
+// ulasan, dan "sering dibeli bersama". Juga mencatat bahwa produk ini dilihat (sinyal rekomendasi).
 export default function ProductDetail({ productId }: ProductDetailPageProps) {
     const router = useRouter();
     const t = useTranslations("products.detail");
@@ -43,9 +46,9 @@ export default function ProductDetail({ productId }: ProductDetailPageProps) {
     const { data: product, isPending: isLoading, isError } = useProductById(productId);
 
     // Di production (App Router + loading.tsx streaming), navigasi dari daftar
-    // produk yang sudah ter-scroll kadang tidak reset ke atas di desktop — posisi
+    // produk yang sudah ter-scroll kadang tidak reset ke atas di desktop, posisi
     // scroll lama "terbawa" hingga mendarat di bagian ulasan. Reset SEBELUM paint
-    // (useLayoutEffect) agar frame pertama sudah di atas — tanpa lompatan terlihat.
+    // (useLayoutEffect) agar frame pertama sudah di atas, tanpa lompatan terlihat.
     useIsomorphicLayoutEffect(() => {
         window.scrollTo(0, 0);
     }, [productId]);
@@ -63,7 +66,7 @@ export default function ProductDetail({ productId }: ProductDetailPageProps) {
     const [showSavedSheet, setShowSavedSheet] = useState(false);
     const prevWishlistedRef = useRef<boolean | null>(null);
 
-    // Catat produk yang dibuka (sinyal rekomendasi content-based) — sekali per produk,
+    // Catat produk yang dibuka (sinyal rekomendasi content-based), sekali per produk,
     // hanya untuk user login. Best-effort; gagal tidak mengganggu UI.
     const { mutate: trackView } = useRecordProductView();
     const trackedRef = useRef<string | null>(null);
@@ -77,7 +80,7 @@ export default function ProductDetail({ productId }: ProductDetailPageProps) {
 
     useEffect(() => {
         // Tunggu kedua data siap (produk + daftar wishlist) sebelum menetapkan
-        // baseline — kalau tidak, urutan load yang berbeda bisa salah deteksi
+        // baseline, kalau tidak, urutan load yang berbeda bisa salah deteksi
         // "false → true" dan memunculkan modal padahal user tidak klik apa-apa.
         if (!Array.isArray(wishlistIdsData?.data) || !product?.data?.id) return;
         if (prevWishlistedRef.current === null) {
@@ -123,7 +126,7 @@ export default function ProductDetail({ productId }: ProductDetailPageProps) {
         product?.data?.bulkDiscountEnabled !== false && (product?.data?.bulkDiscountPrice || 0) > 0;
     const canSelectBulk = bulkAvailable && stockProduct >= minQuantity;
 
-    // Badge diskon di gambar — ambil yang TERBESAR antara diskon normal & grosir
+    // Badge diskon di gambar, ambil yang TERBESAR antara diskon normal & grosir
     // (Math.floor agar konsisten dengan badge di ProductCard).
     const normalDiscountPct = product?.data?.discountPercentage ?? 0;
     const productPrice = product?.data?.price ?? 0;

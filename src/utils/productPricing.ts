@@ -1,7 +1,11 @@
 import { ProductPriceInput } from "@/types/statistics/productPriceInput";
 
+// Perhitungan harga (satuan/subtotal/total), kembaran logika di backend agar harga
+// yang tampil di toko selalu sama dengan tagihan asli. (Mirip priceUtils.ts & versi CMS.)
+
 /**
- * Calculate the unit price of a product based on its quantity and discount.
+ * Hitung harga SATUAN: pakai termurah antara harga diskon-persen dan harga grosir
+ * (jika jumlah beli memenuhi minimal grosir).
  */
 export function calculateUnitPrice({
   quantity,

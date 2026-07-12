@@ -4,6 +4,8 @@ import { QueryFunctionContext, useQuery } from "@tanstack/react-query";
 import { fetchCategoryById } from "../hook/category/useCategoryById";
 import { CategoryByIdResponse } from "@/types/category/categoryByIdResponse";
 
+// Service kategori sisi toko (baca daftar/detail kategori untuk filter produk).
+// Pola React Query sama seperti di CMS.
 export const useCategories = (params: FetchParams) => {
   return useQuery({
     queryKey: ['categories', params],

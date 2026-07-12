@@ -2,6 +2,10 @@ import { OrderStatus } from "@/enum/orderStatus";
 import { OrderType } from "@/enum/orderType";
 import { PaymentStatus } from "@/enum/paymentStatus";
 
+// Menerjemahkan status order + status bayar + tipe order menjadi NOMOR LANGKAH
+// untuk penanda progres (stepper) di halaman detail pesanan pelanggan. Alur pickup
+// dan delivery beda tahapnya, jadi dipisah. Mengembalikan juga flag isCancelled
+// (order batal) supaya UI bisa menampilkan tampilan khusus "dibatalkan".
 export const currentStep = (
     orderStatus: OrderStatus,
     paymentStatus: PaymentStatus,

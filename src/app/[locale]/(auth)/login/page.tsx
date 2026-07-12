@@ -6,6 +6,7 @@ export const metadata = {
   description: WEB_APP_NAME_LOGIN_DESCRIPTION,
 };
 
+// Halaman login pelanggan. Logika ada di komponen Login.
 export default function LoginPage() {
   return <Login />;
 }

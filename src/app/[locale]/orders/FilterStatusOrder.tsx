@@ -9,6 +9,8 @@ type FilterStatusOrderProps = {
     onChange: (status: OrderStatus) => void;
 };
 
+// Tab filter status di halaman "Pesanan Saya" (Menunggu/Dikirim/Selesai/Batal),
+// masing-masing dengan angka badge jumlahnya (counts).
 export default function FilterStatusOrder({
     activeStatus,
     counts,

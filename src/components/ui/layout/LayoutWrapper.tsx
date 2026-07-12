@@ -21,9 +21,12 @@ const queryClient = new QueryClient({
   },
 });
 
+// Kerangka tampilan yang membungkus SEMUA halaman toko: menyediakan QueryClient
+// (React Query), navbar/header atas, menu bawah (mobile), footer, notifikasi toast, dll.
+// Menyembunyikan navigasi di halaman tertentu (mis. login) berdasarkan URL saat ini.
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const pathWithoutLocale = stripLocale(pathname || "/");
+  const pathWithoutLocale = stripLocale(pathname || "/"); // URL tanpa awalan bahasa (/id, /en)
   const [headerHeight, setHeaderHeight] = useState(100);
 
   // Toast: desktop top-right (standar web), mobile snackbar bottom-center
@@ -67,7 +70,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         pauseOnHover
         theme="light"
         className="!z-[9999]"
-        // Mobile: hanya angkat container di atas BottomNav — JANGAN override
+        // Mobile: hanya angkat container di atas BottomNav, JANGAN override
         // posisi/transform container (itu bikin toast ke-clip "setengah" karena
         // bentrok dgn animasi bawaan react-toastify).
         style={

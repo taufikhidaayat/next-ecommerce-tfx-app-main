@@ -20,6 +20,8 @@ type ReviewSectionProps = {
     isLoading: boolean;
 };
 
+// Bagian ulasan di halaman detail produk: ringkasan rating (rata-rata + sebaran bintang)
+// dan daftar ulasan pembeli, bisa difilter per bintang (via ReviewFilterSection).
 export function ReviewSection({ product, isLoading }: ReviewSectionProps) {
     const t = useTranslations("products.review");
     const { data: authData } = useAuth();

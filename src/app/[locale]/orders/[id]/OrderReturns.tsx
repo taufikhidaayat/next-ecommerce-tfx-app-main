@@ -11,6 +11,7 @@ type Props = {
     orderId: string;
 };
 
+// Bagian retur di halaman detail order: menampilkan riwayat retur untuk pesanan ini (bila ada).
 export default function OrderReturns({ orderId }: Props) {
     const t = useTranslations("orderDetail.returns");
     const { data, isPending, isError } = useReturnsByOrderId(orderId);

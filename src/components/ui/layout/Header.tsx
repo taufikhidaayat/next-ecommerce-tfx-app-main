@@ -24,6 +24,8 @@ import { useTranslations } from "next-intl";
 import AnnouncementBar from "./AnnouncementBar";
 import LanguageSwitcher from "./LanguageSwitcher";
 
+// Header toko (versi mobile): logo + pencarian + keranjang, menempel di atas.
+// Melaporkan tingginya ke induk (onHeightChange) agar konten di bawahnya tidak tertutup.
 export default function Header({ onHeightChange }: { onHeightChange?: (h: number) => void }) {
     const t = useTranslations("header");
     const headerRef = useRef<HTMLElement>(null);
@@ -99,7 +101,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
     const pointBalance = pointData?.data?.points ?? 0;
 
     // Ingat status login dari kunjungan sebelumnya. Saat refresh, cache auth
-    // kosong sehingga status belum diketahui sesaat — tanpa tebakan ini, user
+    // kosong sehingga status belum diketahui sesaat, tanpa tebakan ini, user
     // yang sudah login akan melihat tombol "Masuk/Daftar" berkedip dulu.
     // null = belum dibaca (render awal/SSR), true/false = hasil kunjungan lalu.
     const [prevLoggedIn, setPrevLoggedIn] = useState<boolean | null>(null);
@@ -117,7 +119,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
         if (isLoading) return;
         try {
             localStorage.setItem("tl_logged_in", user ? "1" : "0");
-        } catch { /* localStorage tidak tersedia — abaikan */ }
+        } catch { /* localStorage tidak tersedia, abaikan */ }
     }, [user, isLoading]);
 
     // Tentukan tampilan area auth di header:
@@ -211,7 +213,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
             if (rowHeight === 0) return;
 
             // Di paling atas: SELALU tampilkan Row 1 penuh. Cek ini didahulukan agar
-            // tidak ikut ter-skip oleh penjaga layout-shift di bawah — kalau ter-skip,
+            // tidak ikut ter-skip oleh penjaga layout-shift di bawah, kalau ter-skip,
             // Row 1 bisa nyangkut tersembunyi saat scroll ke atas berbarengan dengan
             // gambar yang baru selesai dimuat.
             if (currentScrollY <= 0) {
@@ -280,7 +282,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
     }, [applyRowHeight, measureRow]);
 
     // Saat dropdown profil/bahasa terbuka, Row 1 (mobile) tidak boleh meng-clip-nya
-    // — .header-row-animated punya overflow:hidden + tinggi fixed — dan harus
+    //, .header-row-animated punya overflow:hidden + tinggi fixed, dan harus
     // menumpuk di atas baris pencarian di bawahnya. Dipulihkan saat menu ditutup.
     useEffect(() => {
         const el = rowRef.current;
@@ -436,7 +438,7 @@ export default function Header({ onHeightChange }: { onHeightChange?: (h: number
 
                     {/* MOBILE */}
                     <div className="w-full flex flex-col md:hidden">
-                        {/* Row 1: Logo + actions — hides on scroll down */}
+                        {/* Row 1: Logo + actions, hides on scroll down */}
                         <div ref={rowRef} className="header-row-animated">
                         <div className={`min-h-0 ${(isProfileMenuOpen || isLangOpen) ? "" : "overflow-hidden"}`}>
                         <div className="flex items-center justify-between gap-2 mb-2.5">

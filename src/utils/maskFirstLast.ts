@@ -1,3 +1,5 @@
+// Menyamarkan teks jadi "huruf-pertama***huruf-terakhir", mis. "Budi" → "B***i".
+// Dipakai untuk privasi, mis. menampilkan nama pengulas tanpa membocorkan nama penuh.
 export function maskFirstLast(input: string): string {
     if (!input) return "";
 

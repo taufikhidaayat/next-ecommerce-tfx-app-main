@@ -28,6 +28,8 @@ interface RegionPickerModalProps {
     onConfirm: (value: RegionSelection) => void;
 }
 
+// Modal pemilih wilayah bertingkat: pilih Kabupaten → memuat Kecamatan → pilih →
+// memuat Kelurahan. Datanya dari wilayahService. Hasilnya (nama + id + kode pos) dikirim balik.
 export default function RegionPickerModal({ isOpen, value, onClose, onConfirm }: RegionPickerModalProps) {
     const t = useTranslations("profile.address");
 
@@ -81,7 +83,7 @@ export default function RegionPickerModal({ isOpen, value, onClose, onConfirm }:
         setManualPostal(!!value.postalCode);
     }, [isOpen, value]);
 
-    // Pantau perubahan izin lokasi (granted/prompt) — tapi jangan preemptif blokir tombol
+    // Pantau perubahan izin lokasi (granted/prompt), tapi jangan preemptif blokir tombol
     // hanya karena query() melaporkan "denied". Biarkan user coba dulu, baru tampil error
     // kalau getCurrentPosition benar-benar gagal.
     useEffect(() => {
@@ -120,7 +122,7 @@ export default function RegionPickerModal({ isOpen, value, onClose, onConfirm }:
         setQuery("");
     };
 
-    // Mengganti wilayah di atasnya membatalkan pilihan di bawahnya — termasuk kode pos,
+    // Mengganti wilayah di atasnya membatalkan pilihan di bawahnya, termasuk kode pos,
     // supaya tidak ada sisa kode pos lama yang nyangkut di breadcrumb.
     const resetPostal = () => {
         setPostalCode("");
@@ -172,7 +174,7 @@ export default function RegionPickerModal({ isOpen, value, onClose, onConfirm }:
         setManualPostal(false);
         try {
             const results = await fetchKodepos(vil.name);
-            // Cocokkan kelurahan + kecamatan + kabupaten — nama kelurahan sering kembar
+            // Cocokkan kelurahan + kecamatan + kabupaten, nama kelurahan sering kembar
             // di provinsi lain, jadi jangan menebak agar kode pos tidak salah.
             const matches = results.filter(
                 (r) =>
@@ -279,7 +281,7 @@ export default function RegionPickerModal({ isOpen, value, onClose, onConfirm }:
             },
             (err) => {
                 setIsLocating(false);
-                // Pesan sesuai penyebab — jangan selalu bilang "diblokir".
+                // Pesan sesuai penyebab, jangan selalu bilang "diblokir".
                 if (err.code === err.PERMISSION_DENIED) {
                     setPermState("denied");
                     setLocateError(t("locateDenied"));
@@ -330,9 +332,9 @@ export default function RegionPickerModal({ isOpen, value, onClose, onConfirm }:
                 style={sheetStyle}
                 className="flex w-full max-w-lg flex-col rounded-t-3xl sm:rounded-3xl bg-white shadow-2xl sm:h-[80vh] overflow-hidden sm:animate-zoom-in"
             >
-                {/* Grab zone — tarik untuk menutup di mobile (handle + header) */}
+                {/* Grab zone, tarik untuk menutup di mobile (handle + header) */}
                 <div className="shrink-0 touch-none select-none" {...dragHandlers}>
-                    {/* Drag handle — affordance bottom-sheet (mobile only) */}
+                    {/* Drag handle, affordance bottom-sheet (mobile only) */}
                     <div className="sm:hidden flex justify-center pt-3 pb-2">
                         <div className="h-1.5 w-12 rounded-full bg-gray-300" />
                     </div>
@@ -390,7 +392,7 @@ export default function RegionPickerModal({ isOpen, value, onClose, onConfirm }:
                         ))}
                     </div>
 
-                    {/* Use current location — hanya saat belum mulai memilih (belum ada kabupaten) */}
+                    {/* Use current location, hanya saat belum mulai memilih (belum ada kabupaten) */}
                     {!regency && (
                         <>
                             <button

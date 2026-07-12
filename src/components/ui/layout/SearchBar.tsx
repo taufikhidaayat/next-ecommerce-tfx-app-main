@@ -12,6 +12,8 @@ type Props = {
     onClose: () => void;
 };
 
+// Kotak input pencarian di navbar. Nilainya dikontrol induk; membuka SearchModalBox
+// untuk menampilkan saran hasil.
 export default function SearchBar({ query, setQuery, onClose }: Props) {
     const router = useRouter();
     const t = useTranslations("searchBar");
@@ -20,7 +22,7 @@ export default function SearchBar({ query, setQuery, onClose }: Props) {
     const handleSearch = () => {
         if (!query.trim()) return;
         // Tutup keyboard mobile: klik tombol otomatis mem-blur input, tapi tekan
-        // Enter tidak — jadi blur manual supaya keyboard tutup di kedua cara.
+        // Enter tidak, jadi blur manual supaya keyboard tutup di kedua cara.
         inputRef.current?.blur();
         // Best-effort: catat pencarian sebagai sinyal rekomendasi (fire-and-forget).
         void recordSearchQuery(query.trim());
@@ -52,7 +54,7 @@ export default function SearchBar({ query, setQuery, onClose }: Props) {
     return (
         <div className="flex flex-grow mx-0 md:mx-4">
             <div className="group flex w-full items-center rounded-full border border-gray-200 bg-white pl-4 shadow-sm transition-all duration-200 hover:border-emerald-300 hover:shadow focus-within:border-emerald-500 focus-within:shadow-md focus-within:ring-4 focus-within:ring-emerald-500/10">
-                {/* Leading icon — jadi emerald saat input fokus */}
+                {/* Leading icon, jadi emerald saat input fokus */}
                 <FaSearch
                     className="shrink-0 text-gray-400 transition-colors duration-200 group-focus-within:text-emerald-600"
                     size={15}
@@ -69,7 +71,7 @@ export default function SearchBar({ query, setQuery, onClose }: Props) {
                     aria-label={t("inputLabel")}
                 />
 
-                {/* Clear — muncul halus saat ada teks */}
+                {/* Clear, muncul halus saat ada teks */}
                 {query && (
                     <button
                         type="button"
@@ -81,7 +83,7 @@ export default function SearchBar({ query, setQuery, onClose }: Props) {
                     </button>
                 )}
 
-                {/* CTA submit — nempel di kanan, full height */}
+                {/* CTA submit, nempel di kanan, full height */}
                 <button
                     type="button"
                     onClick={handleSearch}

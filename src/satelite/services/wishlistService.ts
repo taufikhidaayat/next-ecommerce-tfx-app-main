@@ -7,6 +7,9 @@ import {
 } from "../hook/wishlist/useWishlist";
 import { WishlistResponse, WishlistIdsResponse } from "@/types/wishlist/wishlist";
 
+// Service React Query untuk wishlist (produk favorit). Dua query: daftar lengkap
+// (useWishlist) dan hanya daftar ID (useWishlistIds, untuk menandai ikon hati).
+// Tambah/hapus menyegarkan keduanya.
 export const WISHLIST_QUERY_KEY = ["wishlist"] as const;
 export const WISHLIST_IDS_QUERY_KEY = ["wishlist-ids"] as const;
 

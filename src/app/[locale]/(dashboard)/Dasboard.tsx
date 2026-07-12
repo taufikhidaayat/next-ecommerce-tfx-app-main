@@ -1,5 +1,7 @@
 import DashboardWrapper from "./DasboardWrapper";
 
+// Beranda toko. Hanya kerangka lebar halaman; isi (banner, kategori, produk, promo,
+// FAQ) disusun oleh DashboardWrapper dan komponen *Section di folder ini.
 export default async function Dashboard() {
     return (
         <main className="min-h-screen w-full">

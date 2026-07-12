@@ -24,7 +24,7 @@ type ProductFilterSheetProps = {
     sortOptions: { label: string; value: SortOrder }[];
     sortOrder: string;
 
-    /** Applies all filters in a single update — avoids racing URL writes. */
+    /** Applies all filters in a single update, avoids racing URL writes. */
     onApply: (next: { category: string; brand: string; priceRange: string; sort: string }) => void;
 };
 
@@ -62,6 +62,8 @@ function PillGroup({
     );
 }
 
+// Versi filter katalog untuk HP: panel yang muncul dari bawah (bottom sheet) berisi
+// filter yang sama dengan ProductFilterBar, agar nyaman di layar kecil.
 export default function ProductFilterSheet({
     categories,
     category,
@@ -77,7 +79,7 @@ export default function ProductFilterSheet({
     const [open, setOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
 
-    // Staged values — applied only when the user taps "Terapkan".
+    // Staged values, applied only when the user taps "Terapkan".
     const [draftCategory, setDraftCategory] = useState(category);
     const [draftBrand, setDraftBrand] = useState(brand);
     const [draftPrice, setDraftPrice] = useState(priceRange);
@@ -164,7 +166,7 @@ export default function ProductFilterSheet({
 
     return (
         <>
-            {/* Trigger — mobile only; desktop keeps the inline filter bar. */}
+            {/* Trigger, mobile only; desktop keeps the inline filter bar. */}
             <button
                 type="button"
                 onClick={() => setOpen(true)}

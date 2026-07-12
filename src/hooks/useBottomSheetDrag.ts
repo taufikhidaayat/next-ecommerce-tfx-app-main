@@ -12,14 +12,14 @@ type Options = {
 };
 
 /**
- * Bottom-sheet drag behaviour for mobile modals — identical feel to the Cart
- * and payment-proof sheets:
- * - Slides up on open (JS-driven so it doesn't fight the drag transform).
- * - Drag the handle/header down to dismiss.
- * - Pull-to-dismiss from the scroll body when it's already scrolled to the top.
+ * Perilaku "bottom sheet" (panel yang muncul dari bawah layar) untuk modal di HP,
+ * rasanya sama seperti panel keranjang & bukti bayar:
+ * - Muncul meluncur dari bawah saat dibuka (digerakkan JS agar tidak bentrok dengan drag).
+ * - Seret gagang/header ke bawah untuk menutup.
+ * - Bisa ditarik-tutup dari isi panel saat sudah di-scroll paling atas.
  *
- * Wire the returned `sheetRef`/`sheetStyle` to the sheet container, `bodyRef`
- * to the scrollable body, and spread `dragHandlers` onto the grab zone.
+ * Cara pakai: sambungkan `sheetRef`/`sheetStyle` ke wadah panel, `bodyRef` ke area isi
+ * yang bisa di-scroll, dan sebar `dragHandlers` ke area gagang yang bisa diseret.
  */
 export function useBottomSheetDrag({ isOpen, onClose, canClose, sheetVh = 0.92 }: Options) {
     const [isMobile, setIsMobile] = useState(false);
@@ -149,7 +149,7 @@ export function useBottomSheetDrag({ isOpen, onClose, canClose, sheetVh = 0.92 }
         // Ke bawah → geser sheet turun (gestur tutup). Ke atas (melewati posisi diam)
         // → JANGAN geser ke atas (biar dasar sheet tetap nempel di bawah); cukup
         // tumbuhkan tinggi sheet sedikit secara elastis (teredam & dibatasi), lalu
-        // mantul balik di endDrag — meniru rubber-band keranjang tanpa bikin celah.
+        // mantul balik di endDrag, meniru rubber-band keranjang tanpa bikin celah.
         const translate = raw > 0 ? raw : 0;
         const grow = raw < 0 ? Math.min(-raw * 0.2, 48) : 0;
         currentTranslateRef.current = translate;

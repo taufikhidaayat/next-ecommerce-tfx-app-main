@@ -12,6 +12,8 @@ type OrderReviewsProps = {
     items: OrderItems[];
 };
 
+// Bagian ulasan di halaman detail order: untuk pesanan yang sudah selesai, pelanggan
+// bisa memberi rating & ulasan tiap produk (membuka ReviewModal).
 export default function OrderReviews({ items }: OrderReviewsProps) {
     const t = useTranslations("orderDetail.reviews");
 

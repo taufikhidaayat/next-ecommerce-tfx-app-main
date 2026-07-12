@@ -46,6 +46,8 @@ interface CheckoutButtonProps {
     isPending?: boolean;
 }
 
+// Rincian pembayaran di keranjang/checkout: subtotal, diskon, ongkir, potongan poin,
+// dan total akhir yang harus dibayar.
 export default function CartPaymentInfo({
     initialTotalPrice,
     actualTotalPrice,

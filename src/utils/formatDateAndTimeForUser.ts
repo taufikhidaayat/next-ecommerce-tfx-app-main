@@ -1,5 +1,6 @@
-// Map the app's locales (id, en, jv) to BCP-47 tags for Intl. Date formatting
-// for Javanese is unreliable across runtimes, so fall back to Indonesian.
+// Format tanggal+jam mengikuti bahasa pengguna. Peta ini menerjemahkan kode bahasa app
+// (id, en, jv) ke kode format Intl. Bahasa Jawa (jv) tidak andal di semua runtime,
+// jadi dialihkan ke format Indonesia.
 const LOCALE_TO_BCP47: Record<string, string> = {
   id: "id-ID",
   en: "en-US",

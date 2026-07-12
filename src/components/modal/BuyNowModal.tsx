@@ -28,6 +28,8 @@ interface BuyNowModalProps {
     quantityData: number;
 }
 
+// Modal "Beli Sekarang": checkout cepat untuk SATU produk tanpa lewat keranjang.
+// Pilih jumlah + metode bayar + alamat, lalu langsung buat order.
 export default function BuyNowModal({
     userId,
     onClose,

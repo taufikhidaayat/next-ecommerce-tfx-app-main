@@ -1,3 +1,5 @@
+// Ubah objek filter jadi query string URL (mis. { page:1, search:"abc" } → "page=1&search=abc").
+// Nilai kosong dilewati. Dipakai semua pemanggilan API daftar. (Sama seperti util di CMS.)
 export function buildQueryString(query: unknown): string {
     const params = new URLSearchParams();
 

@@ -18,6 +18,7 @@ type GroceryOfferCardProps = {
     onClick?: () => void;
 };
 
+// Kartu penawaran/promo bergaya belanja harian yang tampil di bagian penawaran beranda.
 export default function GroceryOfferCard({
     minQuantityForDiscount,
     discount,

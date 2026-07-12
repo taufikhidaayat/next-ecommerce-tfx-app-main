@@ -27,6 +27,8 @@ import ConfirmModal from "@/components/modal/ConfirmModal";
 const formatDistance = (km: number) =>
     km < 1 ? `${Math.round(km * 1000)} m` : `${km.toFixed(1)} km`;
 
+// Bagian daftar alamat di profil: lihat alamat tersimpan, tambah/ubah/hapus, dan
+// menetapkan alamat default. Membuka AddressFormModal untuk tambah/ubah.
 export default function AddressSection() {
     const t = useTranslations("profile.address");
     const queryClient = useQueryClient();
@@ -140,7 +142,7 @@ export default function AddressSection() {
                     {addresses.map((addr) => {
                         const hasCoords = addr.latitude !== 0 && addr.longitude !== 0;
                         const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${addr.latitude},${addr.longitude}`;
-                        // Jarak dari toko (dinamis dari store settings) — merah bila di luar jangkauan kirim.
+                        // Jarak dari toko (dinamis dari store settings), merah bila di luar jangkauan kirim.
                         const distanceKm =
                             hasCoords && store
                                 ? calculateEuclideanDistance(addr.latitude, addr.longitude, store.storeLatitude, store.storeLongitude)
@@ -273,7 +275,7 @@ export default function AddressSection() {
                 </div>
             )}
 
-            {/* Add new (bottom, outlined) — disembunyikan saat sudah 5 alamat, muncul lagi bila dihapus */}
+            {/* Add new (bottom, outlined), disembunyikan saat sudah 5 alamat, muncul lagi bila dihapus */}
             {addresses.length < 5 ? (
                 <button
                     type="button"

@@ -65,6 +65,8 @@ function CopyButton({ text }: { text: string }) {
     );
 }
 
+// Modal unggah bukti pembayaran: menampilkan rekening/QRIS tujuan + nominal (termasuk
+// kode unik), lalu pelanggan mengunggah foto bukti transfer untuk diverifikasi admin.
 export default function ModalPaymentProof({
     orderId,
     paymentMethod,
@@ -82,7 +84,7 @@ export default function ModalPaymentProof({
 
     useScrollLock(true);
 
-    // --- Drag bottom-sheet (mobile) — tarik header/handle ke bawah untuk menutup ---
+    // --- Drag bottom-sheet (mobile), tarik header/handle ke bawah untuk menutup ---
     const [isMobile, setIsMobile] = useState(false);
     const [viewportH, setViewportH] = useState(0);
     const [translateY, setTranslateY] = useState<number | null>(null);
@@ -105,7 +107,7 @@ export default function ModalPaymentProof({
         return () => window.removeEventListener("resize", update);
     }, []);
 
-    // JS-driven entrance (mobile): posisikan off-screen lalu slide ke 0 —
+    // JS-driven entrance (mobile): posisikan off-screen lalu slide ke 0,
     // tanpa CSS animation supaya tidak bentrok dengan sistem drag/transition.
     useEffect(() => {
         if (!isMobile || hasEnteredRef.current) return;
@@ -123,7 +125,7 @@ export default function ModalPaymentProof({
     }, [isMobile]);
 
     // Pull-to-dismiss dari area konten (body): hanya aktif saat scroll di paling
-    // atas dan ditarik ke bawah — supaya geser-tutup juga bisa dari tengah modal.
+    // atas dan ditarik ke bawah, supaya geser-tutup juga bisa dari tengah modal.
     useEffect(() => {
         const el = bodyRef.current;
         if (!isMobile || !el) return;
@@ -189,9 +191,9 @@ export default function ModalPaymentProof({
     const moveDrag = (clientY: number) => {
         if (!isMobile || !dragStartRef.current) return;
         let next = dragStartRef.current.startTranslate + (clientY - dragStartRef.current.startY);
-        if (next < 0) next = 0; // kunci di batas penuh — tidak boleh ditarik ke atas (biar dasar sheet tetap nempel)
+        if (next < 0) next = 0; // kunci di batas penuh, tidak boleh ditarik ke atas (biar dasar sheet tetap nempel)
         currentTranslateRef.current = next;
-        // Update DOM langsung — tanpa re-render React selama drag
+        // Update DOM langsung, tanpa re-render React selama drag
         if (sheetRef.current) sheetRef.current.style.transform = `translateY(${next}px)`;
     };
 
@@ -205,7 +207,7 @@ export default function ModalPaymentProof({
         } else {
             setTranslateY(0); // jentik kembali ke posisi penuh (atau saat sedang mengirim)
             currentTranslateRef.current = 0;
-            // Set transform imperatif juga — kalau state sudah 0, React melewati
+            // Set transform imperatif juga, kalau state sudah 0, React melewati
             // update sehingga sheet bisa macet di posisi terakhir drag.
             if (sheetRef.current) {
                 sheetRef.current.style.transition = "transform 0.32s cubic-bezier(0.32, 0.72, 0, 1)";
@@ -228,7 +230,7 @@ export default function ModalPaymentProof({
     const { mutate: createPayment, isPending } = useAddPayment();
     const { data, isPending: isPendingPayment, isError } = usePayment(filters);
 
-    // Cegah menutup modal selagi pembayaran sedang dikirim — supaya tidak terkirim ganda.
+    // Cegah menutup modal selagi pembayaran sedang dikirim, supaya tidak terkirim ganda.
     const handleClose = () => {
         if (isPending) return;
         onClose();
@@ -260,7 +262,7 @@ export default function ModalPaymentProof({
     };
 
     const handleSubmit = () => {
-        if (isPending) return; // sudah ada pengiriman berjalan — abaikan klik ganda
+        if (isPending) return; // sudah ada pengiriman berjalan, abaikan klik ganda
         if (!file) {
             toast.error(t("fileRequired"));
             return;
@@ -301,14 +303,14 @@ export default function ModalPaymentProof({
                 className="flex w-full max-w-lg flex-col rounded-t-3xl sm:rounded-3xl bg-gray-50 shadow-2xl sm:max-h-[94vh] overflow-hidden sm:animate-zoom-in"
             >
 
-                {/* Grab zone — tarik untuk menutup di mobile */}
+                {/* Grab zone, tarik untuk menutup di mobile */}
                 <div
                     className="shrink-0 touch-none select-none"
                     onTouchStart={(e) => beginDrag(e.touches[0].clientY)}
                     onTouchMove={(e) => moveDrag(e.touches[0].clientY)}
                     onTouchEnd={endDrag}
                 >
-                    {/* Drag handle — bottom-sheet affordance (mobile only) */}
+                    {/* Drag handle, bottom-sheet affordance (mobile only) */}
                     <div className="sm:hidden flex justify-center bg-white pt-3 pb-2">
                         <div className="h-1.5 w-12 rounded-full bg-gray-300" />
                     </div>

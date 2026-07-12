@@ -19,6 +19,7 @@ const categoryVisuals = [
     { key: "dairyProducts", dbCategory: "susu cair & bubuk", icon: '/images/categories/milk.png', bgColor: 'bg-gradient-to-br from-[#8C4C2B] to-[#6E371C]' },
 ];
 
+// Bagian "Kategori" di beranda: deretan kategori sebagai pintu jelajah produk per kategori.
 export default function CategorySection() {
     const t = useTranslations("home.categories");
     const router = useRouter();

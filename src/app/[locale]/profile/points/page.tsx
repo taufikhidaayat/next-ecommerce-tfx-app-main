@@ -20,6 +20,7 @@ import { PointTransaction } from "@/types/point";
 import Breadcrumbs from "@/components/ui/layout/Breadcrumb";
 import ErrorComponent from "@/components/ui/feedback/Error";
 
+// Halaman riwayat poin (loyalty) pelanggan di dalam profil: saldo + daftar transaksi poin.
 export default function PointsHistoryPage() {
     const t = useTranslations("profile.pointsHistory");
     const [page, setPage] = useState(1);

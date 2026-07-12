@@ -14,6 +14,8 @@ type BuyNowCardProps = {
     isDisable?: boolean;
 };
 
+// Kartu produk di dalam alur "Beli Sekarang" (checkout cepat 1 produk tanpa keranjang):
+// menampilkan produk + kontrol jumlah.
 export default function BuyNowCard({
     onIncrease,
     onDecrease,

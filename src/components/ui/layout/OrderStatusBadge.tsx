@@ -7,6 +7,8 @@ type OrderStatusBadgeProps = {
     payementStatus?: PaymentStatus;
 };
 
+// Label kecil berwarna yang menampilkan status pesanan (mis. "Menunggu", "Selesai"),
+// warnanya menyesuaikan status agar mudah dikenali sekilas.
 export default function OrderStatusBadge({ status, payementStatus }: OrderStatusBadgeProps) {
     const t = useTranslations("orderStatus");
     const statusStyles: Record<OrderStatus, {

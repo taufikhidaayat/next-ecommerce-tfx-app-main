@@ -31,6 +31,8 @@ type CheckoutConfirmModalProps = {
     onCancel: () => void;
 };
 
+// Modal konfirmasi terakhir sebelum membuat pesanan: menampilkan ringkasan (total,
+// metode, alamat) dan tombol konfirmasi checkout.
 export default function CheckoutConfirmModal({
     open,
     loading = false,
@@ -137,7 +139,7 @@ export default function CheckoutConfirmModal({
                     >
                         <FaTimes size={13} />
                     </button>
-                    {/* Drag pill — visible only on mobile */}
+                    {/* Drag pill, visible only on mobile */}
                     <div className="w-10 h-1 rounded-full bg-gray-300 mb-4 sm:hidden" />
                     <Image
                         src="/images/verify_checkout.png"

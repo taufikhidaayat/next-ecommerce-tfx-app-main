@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 const THRESHOLD = 72; // px the user must pull before a release triggers refresh
 const MAX_PULL = 110; // hard cap on how far the indicator travels
-const DAMPING = 0.5; // resistance — finger moves further than the indicator
+const DAMPING = 0.5; // resistance, finger moves further than the indicator
 const HOLD = 52; // indicator resting position while refreshing
 const MIN_SPIN_MS = 650; // keep the spinner visible at least this long
 const GREEN = "#00AA5B"; // Tokopedia-style green
@@ -39,13 +39,15 @@ function Spinner({ progress, refreshing }: { progress: number; refreshing: boole
     );
 }
 
+// "Tarik untuk menyegarkan" ala aplikasi mobile: menarik layar dari atas saat sudah
+// paling atas akan memuat ulang data. Membungkus konten yang bisa di-refresh.
 export default function PullToRefresh({
     children,
     topOffset = 0,
     onRefresh,
 }: {
     children: React.ReactNode;
-    /** Where the indicator rests (px from top) — usually under the header. */
+    /** Where the indicator rests (px from top), usually under the header. */
     topOffset?: number;
     /** Custom refresh action. Defaults to window.location.reload(). */
     onRefresh?: () => Promise<void> | void;
@@ -83,14 +85,14 @@ export default function PullToRefresh({
                 setPullState(0);
             }
         } else {
-            // Hard reload — paling reliable di mobile browser nyata
+            // Hard reload, paling reliable di mobile browser nyata
             await new Promise((r) => setTimeout(r, MIN_SPIN_MS));
             window.location.reload();
         }
     }, [onRefresh]);
 
     useEffect(() => {
-        // Touch devices only — pull-to-refresh is meaningless with a mouse.
+        // Touch devices only, pull-to-refresh is meaningless with a mouse.
         if (typeof window === "undefined" || !window.matchMedia("(pointer: coarse)").matches) {
             return;
         }
@@ -113,7 +115,7 @@ export default function PullToRefresh({
                 return;
             }
             // useScrollLock mengunci scroll dengan position:fixed (bukan
-            // overflow:hidden), jadi cek keduanya — kalau tidak, PTR aktif saat
+            // overflow:hidden), jadi cek keduanya, kalau tidak, PTR aktif saat
             // modal terbuka dan spinner muncul ketika sheet di-drag turun.
             if (
                 document.body.style.position === "fixed" ||
@@ -132,7 +134,7 @@ export default function PullToRefresh({
 
         const onTouchMove = (e: TouchEvent) => {
             if (statusRef.current === "refreshing") return;
-            // A second finger landed mid-pull — bail out cleanly.
+            // A second finger landed mid-pull, bail out cleanly.
             if (e.touches.length > 1) {
                 resetPull();
                 return;
@@ -147,7 +149,7 @@ export default function PullToRefresh({
             if (!lockedRef.current) {
                 if (window.scrollY > 0 || dy <= 0) return;
                 if (Math.abs(dx) > dy) {
-                    engagedRef.current = false; // horizontal — carousel/chips
+                    engagedRef.current = false; // horizontal, carousel/chips
                     return;
                 }
                 if (dy < 6) return; // wait for clear vertical intent
@@ -156,7 +158,7 @@ export default function PullToRefresh({
 
             // Locked: this gesture belongs to the pull for its whole lifetime, so
             // you can play it up and down freely. The indicator just tracks the
-            // finger (clamped to 0..MAX) until you lift — then release decides.
+            // finger (clamped to 0..MAX) until you lift, then release decides.
             e.preventDefault();
             const dist = Math.min(MAX_PULL, Math.max(0, dy * DAMPING));
             setPullState(dist);
@@ -164,7 +166,7 @@ export default function PullToRefresh({
         };
 
         // Always resolve on release, even if the gesture was disengaged mid-way
-        // (horizontal bow-out, multi-touch) — otherwise the badge can freeze
+        // (horizontal bow-out, multi-touch), otherwise the badge can freeze
         // half-pulled.
         const onTouchEnd = () => {
             if (statusRef.current === "refreshing") return;

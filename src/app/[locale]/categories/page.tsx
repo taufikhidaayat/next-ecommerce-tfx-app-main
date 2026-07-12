@@ -6,6 +6,7 @@ export const metadata = {
     description: WEB_APP_NAME_CATEGORIES_DESCRIPTION,
 };
 
+// Halaman daftar kategori toko. Logika ada di komponen Categories.
 export default function CategoriesPage() {
     return <Categories />;
 }
