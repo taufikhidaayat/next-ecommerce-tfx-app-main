@@ -34,9 +34,14 @@ export function useBottomSheetDrag({ isOpen, onClose, canClose, sheetVh = 0.92 }
     const bodyRef = useRef<HTMLDivElement>(null);
     const hasEnteredRef = useRef(false);
     const onCloseRef = useRef(onClose);
-    const canCloseRef = useRef<() => boolean>(() => true);
-    onCloseRef.current = onClose;
-    canCloseRef.current = canClose ?? (() => true);
+    const canCloseRef = useRef<() => boolean>(canClose ?? (() => true));
+
+    // Simpan callback terbaru di ref (pola "latest ref") tanpa memasang ulang
+    // listener drag. Ditulis di useEffect (setelah render), bukan saat render.
+    useEffect(() => {
+        onCloseRef.current = onClose;
+        canCloseRef.current = canClose ?? (() => true);
+    });
 
     useEffect(() => {
         const update = () => {

@@ -66,9 +66,7 @@
         "passwordsNotMatch": "Sandi ora cocog.",
         "success": "Registrasi sukses. Priksa email kanggo verifikasi akun.",
         "failed": "Registrasi gagal",
-        "unexpectedError": "Ana kesalahan. Coba maneh utawa gunakake email liyane.",
-        "gender_male": "Lanang",
-        "gender_female": "Wadon"
+        "unexpectedError": "Ana kesalahan. Coba maneh utawa gunakake email liyane."
     },
     "forgotPassword": {
         "title": "Reset Sandi Panjenengan",
