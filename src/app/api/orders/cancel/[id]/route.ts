@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { api } from "@/lib/axios";
 import { cookies } from "next/headers";
+import { AxiosError } from "axios";
 
 export async function PUT(
     _req: NextRequest,
@@ -26,9 +27,10 @@ export async function PUT(
         );
 
         return NextResponse.json(response.data, { status: response.status });
-    } catch (error: any) {
-        const status = error?.response?.status || 500;
-        const message = error?.response?.data?.message || "Failed to cancel order";
+    } catch (error) {
+        const err = error as AxiosError<{ message?: string }>;
+        const status = err?.response?.status || 500;
+        const message = err?.response?.data?.message || "Failed to cancel order";
         return NextResponse.json({ message }, { status });
     }
 }
