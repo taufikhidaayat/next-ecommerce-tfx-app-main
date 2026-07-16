@@ -1067,6 +1067,8 @@
         "deliveryInfo": "Info Pengiriman",
         "deliveryProof": "Bukti Pengiriman",
         "deliveredAt": "Dikirim Ing",
+        "courierName": "Jeneng Pengantar",
+        "courierPhone": "No. Telpon Pengantar",
         "selectEligibleAddress": "Pilih Alamat Kasimpen sing Cocog",
         "noEligibleAddressTitle": "Lokasi Sampeyan Ora Nyukupi",
         "noEligibleAddressDesc": "Alamat kasimpenmu ana ing njaba jangkauan pangiriman (maks {radius} km saka toko). Tenang, kowe isih isa milih Jupuk ing Toko kok!"

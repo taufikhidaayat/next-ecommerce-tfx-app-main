@@ -3,7 +3,7 @@ import { Order } from "@/types/order/order";
 import { User } from "@/types/user/user";
 import { formatDateAndTimeForUser } from "@/utils/formatDateAndTimeForUser";
 import { useTranslations, useLocale } from "next-intl";
-import { FaStore, FaTruck } from "react-icons/fa";
+import { FaStore, FaTruck, FaUser, FaPhoneAlt } from "react-icons/fa";
 
 type Props = {
   order: Order;
@@ -70,6 +70,29 @@ export default function OrderInformation({ order, user }: Props) {
           <h3 className="text-sm font-bold text-blue-700 flex items-center gap-1.5">
             <FaTruck size={13} /> {td("deliveryInfo")}
           </h3>
+
+          {/* Data pengantar — muncul saat pesanan mulai diantar */}
+          {order.courierName && (
+            <div className="rounded-xl border border-indigo-100 bg-indigo-50/60 p-3 space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="font-medium text-gray-600 flex items-center gap-1.5">
+                  <FaUser size={11} /> {td("courierName")}
+                </span>
+                <span className="font-bold text-gray-800">{order.courierName}</span>
+              </div>
+              {order.courierPhone && (
+                <div className="flex justify-between items-center">
+                  <span className="font-medium text-gray-600 flex items-center gap-1.5">
+                    <FaPhoneAlt size={10} /> {td("courierPhone")}
+                  </span>
+                  <a href={`tel:${order.courierPhone}`} className="font-bold text-indigo-600 hover:underline">
+                    {order.courierPhone}
+                  </a>
+                </div>
+              )}
+            </div>
+          )}
+
           <div className="text-xs sm:text-sm text-gray-700 space-y-2">
             {order.deliveryPhone && (
               <div className="flex justify-between">

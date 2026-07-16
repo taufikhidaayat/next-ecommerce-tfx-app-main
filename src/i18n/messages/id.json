@@ -895,7 +895,9 @@
         "goToProfile": "Ke Halaman Profil",
         "deliveryInfo": "Informasi Pengiriman",
         "deliveryProof": "Bukti Pengiriman",
-        "deliveredAt": "Diantar Pada"
+        "deliveredAt": "Diantar Pada",
+        "courierName": "Nama Pengantar",
+        "courierPhone": "No. Telepon Pengantar"
     },
     "orderList": {
         "hide": "Sembunyikan",

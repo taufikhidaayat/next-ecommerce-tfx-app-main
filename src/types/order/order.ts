@@ -28,6 +28,8 @@ export interface Order {
     deliveryLongitude?: number;
     deliveryDistance?: number;
     deliveryProofUrl?: string;
+    courierName?: string;
+    courierPhone?: string;
     deliveredAt?: string;
     firstPurchaseDiscount?: boolean;
     discountPercent?: number;

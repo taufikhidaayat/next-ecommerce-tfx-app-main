@@ -895,7 +895,9 @@
         "goToProfile": "Go to Profile",
         "deliveryInfo": "Delivery Information",
         "deliveryProof": "Delivery Proof",
-        "deliveredAt": "Delivered At"
+        "deliveredAt": "Delivered At",
+        "courierName": "Courier Name",
+        "courierPhone": "Courier Phone"
     },
     "orderList": {
         "hide": "Hide",
